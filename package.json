@@ -4,7 +4,8 @@
   "description": "A simple responsive portfolio site built with 11ty.js",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npx @11ty/eleventy",
+    "serve": "npx @11ty/eleventy --serve"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/klalicki/portfolio-template-11ty/issues"
   },
-  "homepage": "https://github.com/klalicki/portfolio-template-11ty#readme"
+  "homepage": "https://github.com/klalicki/portfolio-template-11ty#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.0"
+  }
 }
