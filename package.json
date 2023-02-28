@@ -1,0 +1,19 @@
+{
+  "name": "portfolio-template-11ty",
+  "version": "1.0.0",
+  "description": "A simple responsive portfolio site built with 11ty.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/klalicki/portfolio-template-11ty.git"
+  },
+  "author": "Kristoff Lalicki",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/klalicki/portfolio-template-11ty/issues"
+  },
+  "homepage": "https://github.com/klalicki/portfolio-template-11ty#readme"
+}
