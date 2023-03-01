@@ -1,3 +1,8 @@
+---
+layout: index.njk
+title: My Page
+---
+
 # Welcome to Eleventy.js
 
 This is a static page built with Eleventy.

@@ -1,0 +1,15 @@
+<nav>
+<ul>
+    <li></li>
+    <ul>
+        {%- for page in collections.project -%}
+        <li><a href="{{page.url}}">{{ page.data.title }}</a></li>
+      {%- endfor -%}
+    </ul>
+    {%- for page in collections.page -%}
+        <li><a href="{{page.url}}">{{ page.data.title }}</a></li>
+      {%- endfor -%}
+</ul>    
+
+    
+</nav>
