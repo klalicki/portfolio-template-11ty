@@ -1,5 +1,5 @@
-# Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+# Simple workflow for building 11ty site and deploying to GitHub Pages
+name: Build 11ty site and deploy to Pages
 
 on:
   # Runs on pushes targeting the default branch
@@ -22,7 +22,7 @@ concurrency:
 
 jobs:
   # Single deploy job since we're just deploying
-  deploy:
+  build-and-deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -32,9 +32,12 @@ jobs:
         uses: actions/checkout@v3
       - name: Setup Pages
         uses: actions/configure-pages@v3
-      - run: npm install
-      - run: npm run build
-      - run: ls
+      - name: Install repo dependencies
+        run: npm install
+      - name: Build static assets to dist directory
+        run: npm run build
+      - name: list files in directory to confirm that build has occurred
+        run: ls
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
