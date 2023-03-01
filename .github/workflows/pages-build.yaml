@@ -1,9 +1,0 @@
-on:
-  push:
-    branches:
-      - main
-jobs:
-  print-hello:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "Hello World!"
