@@ -29,7 +29,7 @@ main {
 
 article {
   max-width: var(--main-col-width);
-  border: 2px solid red;
+  /* border: 2px solid red; */
   width: 100%;
 }
 
@@ -39,4 +39,22 @@ article {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 .portfolio-tile {
+}
+
+.portfolio-wide-img {
+  width: 100%;
+  height: auto;
+}
+.portfolio-wide-text-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  column-gap: var(--main-padding);
+}
+.portfolio-wide-text-sm {
+}
+.portfolio-wide-text-md {
+  font-size: 1.5rem;
+}
+.portfolio-wide-cta-link {
+  display: block;
 }

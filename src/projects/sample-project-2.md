@@ -1,8 +1,11 @@
 ---
-title: Sample Project 2 UX
+title: Sample Project 2
 layout: project.njk
 tags: project
 subset: ux
+thumbnail: /img/thumbnail-placeholder-wide.jpg
+description_short: a mobile app that solves a Very Important Issue
+description_medium: Sample Project 2 is a mobile app designed to help users solve this Very Important Problem. I conducted research, designed and tested wireframes, and produced a high-fidelity clickable prototype.
 ---
 
 # This is my second project
