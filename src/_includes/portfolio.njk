@@ -1,0 +1,38 @@
+{% extends "base.njk" %}
+{% block main %}
+<article>
+  {{content | safe}}
+  <section class="portfolio">
+    {% if portfolio_type == "wide" %}
+    <h2>using Wide layout</h2>
+      <nav class="portfolio-wide-container">
+      {%- for project in collections.project -%}
+      {% if subset in project.data.subset %}
+      <article class="portfolio-wide-tile">
+        <a href="{{project.url}}">{{ project.data.title }}</a>
+      </article>
+
+
+      {% endif %}
+      {%- endfor -%}
+    </nav>
+      {% else %}
+      <h2>using Grid layout</h2>
+      <nav class="portfolio-grid-container">
+      {%- for project in collections.project -%}
+      {% if subset in project.data.subset %}
+      <article class="portfolio-grid-tile">
+        <a href="{{project.url}}">{{ project.data.title }}</a>
+      </article>
+
+
+      {% endif %}
+      {%- endfor -%}
+    </nav>
+    {% endif %}
+    
+    
+  </section>
+</article>
+
+{% endblock %}

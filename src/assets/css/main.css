@@ -1,0 +1,42 @@
+:root {
+  font-size: 16px;
+  --main-padding: 2rem;
+  --sidebar-width: 300px;
+  --main-col-width: 800px;
+}
+
+body {
+  margin: 0;
+}
+header.main-nav {
+  width: var(--sidebar-width);
+  position: fixed;
+  background-color: yellow;
+  height: 100%;
+  padding: var(--main-padding) 0;
+}
+main {
+  padding-left: calc(var(--sidebar-width) + var(--main-padding));
+  padding-top: var(--main-padding);
+  padding-bottom: var(--main-padding);
+  padding-right: var(--main-padding);
+  /* width: 100%; */
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+article {
+  max-width: var(--main-col-width);
+  border: 2px solid red;
+  width: 100%;
+}
+
+/* Portfolio Grid */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.portfolio-tile {
+}

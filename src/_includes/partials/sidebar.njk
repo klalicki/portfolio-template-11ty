@@ -1,11 +1,17 @@
 <nav>
 <ul>
     <li></li>
+    {%- for portfolio in collections.portfolio -%}
+    <li><a href="{{portfolio.url}}">{{portfolio.data.title}}</a></li>
     <ul>
-        {%- for page in collections.project -%}
-        <li><a href="{{page.url}}">{{ page.data.title }}</a></li>
+        {%- for project in collections.project -%}
+        {% if portfolio.data.subset in project.data.subset %}
+          <li><a href="{{project.url}}">{{ project.data.title }}</a></li>
+        {% endif %}
+        
       {%- endfor -%}
     </ul>
+    {%- endfor -%}
     {%- for page in collections.page -%}
         <li><a href="{{page.url}}">{{ page.data.title }}</a></li>
       {%- endfor -%}
