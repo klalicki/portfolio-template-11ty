@@ -1,5 +1,9 @@
 @use "theme.css";
-
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 :root {
   font-size: 16px;
   --main-padding: 2rem;
