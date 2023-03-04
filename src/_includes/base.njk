@@ -10,26 +10,30 @@
 </head>
 
 <body data-barba="wrapper">
+    {% block splash %}
+        
+    {% endblock %}
     <header class="main-nav">
         {% block sidebar %}
         {% include 'partials/sidebar.njk' %}
         {% endblock %}
 
     </header>
-  
-        <main data-barba="container" data-barba-namespace="{{page.url}}">
-        
-            {% block main %}
-            <article>
-                <h1>{{title}}</h1>
-{{content | safe}}
-            </article>
-            
-            {% endblock %}
 
-        </main>
-   
+    <main data-barba="container" data-barba-namespace="{{page.url}}">
+
+        {% block main %}
+        <article>
+            <h1>{{title}}</h1>
+            {{content | safe}}
+        </article>
+
+        {% endblock %}
+
+    </main>
+
 
 </body>
 <script src="/bundle.js"></script>
+
 </html>

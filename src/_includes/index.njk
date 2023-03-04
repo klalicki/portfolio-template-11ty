@@ -1,1 +1,33 @@
 {% extends "base.njk" %}
+
+{% block main %}
+{% set portfolioTitle = collections.portfolioSorted[0].data.title %}
+  <article>
+  <h1>{{portfolioTitle}}</h1>
+  {# places website content above the portfolio grid #}
+  {{collections.portfolioSorted[0].content | safe}}
+  {% set subset = collections.portfolioSorted[0].data.subset %}
+ 
+  <section class="portfolio">
+    {# select which portfolio layout to use #}
+    {% if collections.portfolioSorted[0].data.portfolio_type == "wide" %}
+     {% include 'partials/portfolio-wide.njk' %}
+      {% else %}
+      {% include 'partials/portfolio-grid.njk' %}
+        
+    {% endif %}
+    
+    
+  </section>
+</article>
+{% endblock %}
+
+{% block splash %}
+  <section class="splash-section">
+    <div class="splash-section-content">
+{{content | safe}}
+<a href="{{collections.portfolioSorted[0].url}}" class="btn barba-prevent" id="btn-show-work">see my work</a>
+    </div>
+    
+  </section>
+{% endblock %}
