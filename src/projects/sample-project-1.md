@@ -1,8 +1,11 @@
 ---
-title: Sample Project 1 GD
+title: Sample Project 1 UX
 layout: project.njk
 tags: project
-subset: gd
+subset: ux
+thumbnail: /img/thumbnail-placeholder-wide.jpg
+description_short: a responsive website design for a local business
+description_medium: Sample Project 1 is a responsive website designed asdkaljsdklajskdl asdjklasjdkl asdjklasjdkl.
 ---
 
 # This is my first project

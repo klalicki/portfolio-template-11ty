@@ -6,37 +6,10 @@
   <section class="portfolio">
     {# select which portfolio layout to use #}
     {% if portfolio_type == "wide" %}
-      <nav class="portfolio-wide-container">
-      {%- for project in collections.project -%}
-      {% if subset in project.data.subset %}
-      <article class="portfolio-wide-tile">
-        <a href="{{project.url}}">{{ project.data.title }}</a>
-        <img class="portfolio-wide-img" src="{{project.data.thumbnail}}" alt="{{project.data.description_short}}">
-        <div class="portfolio-wide-text-wrapper">
-          <p class="portfolio-wide-text-md">{{project.data.description_short}}</p>
-          <p class="portfolio-wide-text-sm">{{project.data.description_medium}}
-            <a href="{{project.url}}" class="portfolio-wide-cta-link">View {{project.data.title}} Case Study</a>
-          </p>
-        </div>
-      </article>
-
-
-      {% endif %}
-      {%- endfor -%}
-    </nav>
+     {% include 'partials/portfolio-wide.njk' %}
       {% else %}
-      <h2>using Grid layout</h2>
-      <nav class="portfolio-grid-container">
-      {%- for project in collections.project -%}
-      {% if subset in project.data.subset %}
-      <article class="portfolio-grid-tile">
-        <a href="{{project.url}}">{{ project.data.title }}</a>
-      </article>
-
-
-      {% endif %}
-      {%- endfor -%}
-    </nav>
+      {% include 'partials/portfolio-grid.njk' %}
+        
     {% endif %}
     
     

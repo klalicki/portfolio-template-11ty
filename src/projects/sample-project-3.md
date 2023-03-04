@@ -2,7 +2,7 @@
 title: Sample Project 3
 layout: project.njk
 tags: project
-subset: ux
+subset: gd
 thumbnail: /img/thumbnail-placeholder-wide.jpg
 description_short: a responsive website design for a local business
 description_medium: Sample Project 3 is a responsive website designed asdkaljsdklajskdl asdjklasjdkl asdjklasjdkl.

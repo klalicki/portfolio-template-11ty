@@ -1,0 +1,17 @@
+      <nav class="portfolio-grid-container">
+        {%- for project in collections.project -%}
+        {% if subset in project.data.subset %}
+        <article class="portfolio-grid-tile">
+          <img src="{{project.data.thumbnail}}" alt="{{project.data}}">
+          <a href="{{project.url}}">{{ project.data.title }}</a>
+          {% if project.data.description_short %}
+            <p>{{project.data.description_short}}</p>
+          {% endif %}
+          {% if project.data.description_medium %}
+            <p>{{project.data.description_medium}}</p>
+          {% endif %}
+        </article>
+
+        {% endif %}
+        {%- endfor -%}
+      </nav>

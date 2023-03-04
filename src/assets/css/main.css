@@ -3,6 +3,7 @@
   --main-padding: 2rem;
   --sidebar-width: 300px;
   --main-col-width: 800px;
+  --card-padding: 0.5rem;
 }
 
 body {
@@ -34,13 +35,23 @@ article {
 }
 
 /* Portfolio Grid */
-.portfolio-grid {
+.portfolio-grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  column-gap: 0;
+  position: relative;
+  width: 100%;
 }
-.portfolio-tile {
+.portfolio-grid-tile {
+  box-sizing: border-box;
+  position: relative;
+  padding: var(--card-padding);
 }
-
+.portfolio-grid-tile img {
+  width: 100%;
+  position: relative;
+}
+/* wide (UX) portfolio layout */
 .portfolio-wide-img {
   width: 100%;
   height: auto;
