@@ -1,5 +1,5 @@
       <nav class="portfolio-grid-container">
-        {%- for project in collections.project -%}
+        {%- for project in collections.projectSorted -%}
         {% if subset in project.data.subset %}
         <article class="portfolio-grid-tile">
           <img src="{{project.data.thumbnail}}" alt="{{project.data}}">

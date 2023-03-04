@@ -1,5 +1,5 @@
  <nav class="portfolio-wide-container">
-      {%- for project in collections.project -%}
+      {%- for project in collections.projectSorted -%}
       {% if subset in project.data.subset %}
       <article class="portfolio-wide-tile">
         <a href="{{project.url}}">{{ project.data.title }}</a>

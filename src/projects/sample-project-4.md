@@ -3,6 +3,7 @@ title: Sample Project 4 GD
 layout: project.njk
 tags: project
 subset: gd
+order: 3
 thumbnail: /img/thumbnail-placeholder-wide.jpg
 description_short:
 description_medium: Sample Project 2 is a mobile app designed to help users solve this Very Important Problem. I conducted research, designed and tested wireframes, and produced a high-fidelity clickable prototype.
