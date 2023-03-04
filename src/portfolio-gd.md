@@ -3,6 +3,7 @@ title: Design Portfolio
 layout: portfolio.njk
 tags: portfolio
 subset: gd
+order: 1
 portfolio_type: grid
 ---
 

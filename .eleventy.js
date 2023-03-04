@@ -9,8 +9,14 @@ module.exports = function (eleventyConfig) {
       return (a.data.order || 0) - (b.data.order || 0);
     })
   );
+  /* Sorting the pages by the order parameter in the front matter. */
   eleventyConfig.addCollection("pageSorted", (collection) =>
     collection.getFilteredByTags("page").sort((a, b) => {
+      return (a.data.order || 0) - (b.data.order || 0);
+    })
+  );
+  eleventyConfig.addCollection("portfolioSorted", (collection) =>
+    collection.getFilteredByTags("portfolio").sort((a, b) => {
       return (a.data.order || 0) - (b.data.order || 0);
     })
   );

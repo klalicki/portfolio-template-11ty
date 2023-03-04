@@ -4,8 +4,8 @@
       <h2>{{siteInfo.designerName}}</h2>
       <p>{{siteInfo.designerTagline}}</p>
     </div>
-
-    {%- for portfolio in collections.portfolio -%}
+    
+    {%- for portfolio in collections.portfolioSorted -%}
     <li><a href="{{portfolio.url}}">{{portfolio.data.title}}</a></li>
     <ul>
       {%- for project in collections.projectSorted -%}

@@ -3,6 +3,7 @@ title: UX Work
 layout: portfolio.njk
 tags: portfolio
 subset: ux
+order: 0
 portfolio_type: wide
 ---
 
