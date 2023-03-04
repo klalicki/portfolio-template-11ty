@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/assets/css/main.css">
 </head>
 
-<body>
+<body data-barba="wrapper">
     <header class="main-nav">
         {% block sidebar %}
         {% include 'partials/sidebar.njk' %}
@@ -17,7 +17,8 @@
 
     </header>
   
-        <main>
+        <main data-barba="container" data-barba-namespace="{{page.url}}">
+        
             {% block main %}
             <article>
                 <h1>{{title}}</h1>
@@ -30,5 +31,5 @@
    
 
 </body>
-
+<script src="/bundle.js"></script>
 </html>
