@@ -1,11 +1,10 @@
 @use "theme.css";
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+@use "reset.css";
+
 :root {
   font-size: 16px;
+  font-family: "Work Sans", sans-serif;
+
   --main-padding: 2rem;
   --sidebar-width: 300px;
   --main-col-width: 800px;
@@ -20,7 +19,7 @@ header.main-nav {
   position: fixed;
   background-color: yellow;
   height: 100%;
-  padding: var(--main-padding) 0;
+  padding: var(--main-padding) var(--card-padding);
   z-index: 10;
   transition: all 0.5s;
 }
@@ -42,7 +41,7 @@ main {
 
 article {
   max-width: var(--main-col-width);
-  border: 2px solid red;
+  border: 1px solid lightgray;
   width: 100%;
 }
 
