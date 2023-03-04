@@ -1,16 +1,21 @@
       <nav class="portfolio-grid-container">
         {%- for project in collections.projectSorted -%}
         {% if subset in project.data.subset %}
-        <article class="portfolio-grid-tile">
-          <img src="{{project.data.thumbnail}}" alt="{{project.data}}">
-          <a href="{{project.url}}">{{ project.data.title }}</a>
-          {% if project.data.description_short %}
+        
+        <a class="portfolio-grid-tile" href="{{project.url}}">
+
+          <div class="portfolio-grid-tile-contents">
+            <img src="{{project.data.thumbnail}}" alt="{{project.data}}">
+            <h2 href="{{project.url}}">{{ project.data.title }}</h2>
+            {% if project.data.description_short %}
             <p>{{project.data.description_short}}</p>
-          {% endif %}
-          {% if project.data.description_medium %}
+            {% endif %}
+            {% if project.data.description_medium %}
             <p>{{project.data.description_medium}}</p>
-          {% endif %}
-        </article>
+            {% endif %}
+          </div>
+
+        </a>
 
         {% endif %}
         {%- endfor -%}

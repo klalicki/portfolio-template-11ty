@@ -15,8 +15,13 @@ header.main-nav {
   background-color: yellow;
   height: 100%;
   padding: var(--main-padding) 0;
+  z-index: 10;
 }
 main {
+  z-index: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
   padding-left: calc(var(--sidebar-width) + var(--main-padding));
   padding-top: var(--main-padding);
   padding-bottom: var(--main-padding);
@@ -30,7 +35,7 @@ main {
 
 article {
   max-width: var(--main-col-width);
-  /* border: 2px solid red; */
+  border: 2px solid red;
   width: 100%;
 }
 
@@ -43,9 +48,13 @@ article {
   width: 100%;
 }
 .portfolio-grid-tile {
-  box-sizing: border-box;
   position: relative;
   padding: var(--card-padding);
+  display: block;
+}
+.portfolio-grid-tile-contents {
+  position: relative;
+  max-width: 100%;
 }
 .portfolio-grid-tile img {
   width: 100%;
