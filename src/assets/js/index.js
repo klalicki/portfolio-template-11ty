@@ -29,5 +29,11 @@ document.querySelector("#btn-show-work").addEventListener("click", (e) => {
     .getAttribute("href")
     .slice(1);
   history.replaceState(null, "", newPath);
-  gsap.to(".splash-section", { opacity: 0, translateY: -50 });
+  gsap.to(".splash-section", {
+    opacity: 0,
+    translateY: -50,
+    onComplete: () => {
+      document.querySelector(".splash-section").remove();
+    },
+  });
 });

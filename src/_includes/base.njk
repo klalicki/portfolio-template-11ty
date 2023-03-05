@@ -10,9 +10,7 @@
 </head>
 
 <body data-barba="wrapper">
-    {% block splash %}
-        
-    {% endblock %}
+    
     <header class="main-nav">
         {% block sidebar %}
         {% include 'partials/sidebar.njk' %}
@@ -32,7 +30,9 @@
 
     </main>
 
-
+{% block splash %}
+        
+    {% endblock %}
 </body>
 <script src="/bundle.js"></script>
 
