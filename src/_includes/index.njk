@@ -3,6 +3,10 @@
 {% block main %}
 {% set portfolioTitle = collections.portfolioSorted[0].data.title %}
 <article>
+  {%  if siteInfo.homePageType == "portfolio" %}
+    {{content | safe}}
+  
+  {% endif %}
   {% if siteInfo.homePageType == "portfolio" or siteInfo.homePageType ==  "splash" %}
     <h1>{{portfolioTitle}}</h1>
   {# places website content above the portfolio grid #}
