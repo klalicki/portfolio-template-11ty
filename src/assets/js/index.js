@@ -1,23 +1,14 @@
 import barba from "@barba/core";
-import { gsap } from "gsap";
-
+import barbaCss from "@barba/css";
+// import { gsap } from "gsap";
+barba.use(barbaCss);
 barba.init({
   prevent: ({ el }) => el.classList && el.classList.contains("barba-prevent"),
   transitions: [
     {
-      name: "opacity-transition",
-      leave(data) {
-        return gsap.to(data.current.container, {
-          opacity: 0,
-          y: -10,
-        });
-      },
-      enter(data) {
-        return gsap.from(data.next.container, {
-          opacity: 0,
-          y: 10,
-        });
-      },
+      name: "fade",
+      leave() {},
+      enter() {},
     },
   ],
 });

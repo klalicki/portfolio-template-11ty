@@ -99,3 +99,34 @@ article {
   align-items: center;
   justify-content: center;
 }
+
+// transitions:
+html {
+  overflow-y: scroll;
+}
+
+.fade-leave {
+  opacity: 1;
+  transform: translateY(0);
+}
+.fade-leave-active {
+  transition: all 0.3s linear;
+}
+.fade-leave-to {
+  opacity: 0;
+  transform: translateY(20px);
+ 
+}
+
+.fade-enter {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+.fade-enter-active {
+  transition: all 0.3s linear;
+}
+.fade-enter-to {
+  opacity: 1;
+  transform: translateY(0);
+  
+}
