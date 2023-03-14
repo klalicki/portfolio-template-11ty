@@ -22,14 +22,21 @@
 
         {% block main %}
         <article>
+            
+            
+            {% if customTitle %}
+            
+                <h1>{{customTitle}}</h1>
+
+            {% else %}
             <h1>{{title}}</h1>
+            {% endif %}
+            
             {{content | safe}}
         </article>
 
         {% endblock %}
-        {% block endofpage %}
-            
-        {% endblock %}
+        
 
     </main>
 
