@@ -1,14 +1,43 @@
 @use "theme.css";
 @use "reset.css";
+// sass variables
+$font-size-base: 18px;
+
+$font-size-sm: 0.72rem; //figcaption
+$font-size-md: 1rem; //p
+$font-size-l: 1.41rem; //h3
+$font-size-xl: 2rem; //h2
+$font-size-xxl: 2.82rem; //h1
+
+h1 {
+  font-size: $font-size-xxl;
+}
+h2 {
+  font-size: $font-size-xl;
+}
+h3 {
+  font-size: $font-size-l;
+}
+h4,
+h5,
+h6 {
+  font-size: $font-size-md;
+}
+p {
+  line-height: 1.4em;
+}
 
 :root {
-  font-size: 16px;
+  font-size: $font-size-base;
   font-family: "Work Sans", sans-serif;
 
   --main-padding: 2rem;
   --sidebar-width: 300px;
   --main-col-width: 800px;
-  --card-padding: 0.5rem;
+  --card-padding: 1rem;
+  --sidebar-color: lightgrey;
+  --color-text-primary: black;
+  --color-highlight: yellow;
 }
 
 body {
@@ -17,11 +46,24 @@ body {
 header.main-nav {
   width: var(--sidebar-width);
   position: fixed;
-  background-color: yellow;
+  background-color: var(--sidebar-color);
   height: 100%;
   padding: var(--main-padding) var(--card-padding);
   z-index: 10;
   transition: all 0.5s;
+}
+.sidebar-nav-link-section {
+  * {
+    color: black;
+    text-decoration: none;
+  }
+  a {
+    display: inline-block;
+    padding: 0.25rem;
+    &:hover {
+      background-color: var(--color-highlight);
+    }
+  }
 }
 main {
   z-index: 0;
@@ -56,12 +98,17 @@ article {
 .portfolio-grid-tile {
   position: relative;
   padding: var(--card-padding);
+  color: var(--color-text-primary);
   display: block;
+  * {
+    color: var(--color-text-primary);
+    text-decoration: none;
+  }
   h2 {
     font-size: 1.25rem;
   }
-  :hover {
-    background-color: yellow;
+  &:hover {
+    background-color: var(--color-highlight);
   }
 }
 .portfolio-grid-tile-contents {
