@@ -115,7 +115,6 @@ html {
 .fade-leave-to {
   opacity: 0;
   transform: translateY(20px);
- 
 }
 
 .fade-enter {
@@ -128,5 +127,8 @@ html {
 .fade-enter-to {
   opacity: 1;
   transform: translateY(0);
-  
+}
+
+@media (max-width: 720px) {
+  // mobile styles
 }
