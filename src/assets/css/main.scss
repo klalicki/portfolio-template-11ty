@@ -57,6 +57,12 @@ article {
   position: relative;
   padding: var(--card-padding);
   display: block;
+  h2 {
+    font-size: 1.25rem;
+  }
+  :hover {
+    background-color: yellow;
+  }
 }
 .portfolio-grid-tile-contents {
   position: relative;
@@ -66,6 +72,7 @@ article {
   width: 100%;
   position: relative;
 }
+
 /* wide (UX) portfolio layout */
 .portfolio-wide-img {
   width: 100%;
