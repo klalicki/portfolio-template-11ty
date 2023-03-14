@@ -1,6 +1,20 @@
 import barba from "@barba/core";
 import barbaCss from "@barba/css";
 // import { gsap } from "gsap";
+
+const clearMenuActive = () => {
+  document.querySelectorAll(".active").forEach((item) => {
+    item.classList.remove("active");
+  });
+};
+const setNewMenuItem = (targetItem) => {
+  document.querySelectorAll(".sidebar-nav-link-section a").forEach((item) => {
+    if (item.getAttribute("href") === targetItem) {
+      item.classList.add("active");
+    }
+  });
+  console.log(item);
+};
 barba.use(barbaCss);
 barba.init({
   prevent: ({ el }) => el.classList && el.classList.contains("barba-prevent"),
@@ -12,6 +26,11 @@ barba.init({
     },
   ],
 });
+barba.hooks.before((data) => {
+  clearMenuActive();
+  setNewMenuItem(data.next.url.path);
+});
+barba.hooks.after((data) => {});
 
 document.querySelector("#btn-show-work").addEventListener("click", (e) => {
   e.preventDefault();
