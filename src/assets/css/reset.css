@@ -3,8 +3,8 @@
 *::after {
   box-sizing: border-box;
 }
-ol,
-ul {
+nav ol,
+nav ul {
   list-style: none;
   padding-inline-start: 1em;
 }
