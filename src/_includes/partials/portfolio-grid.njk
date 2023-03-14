@@ -1,10 +1,10 @@
       <nav class="portfolio-grid-container">
         {%- for project in collections.projectSorted -%}
         {% if subset in project.data.subset %}
-        <article class="portfolio-grid-tile" >
-        <a href="{{project.url}}">
+        <article class="portfolio-grid-tile">
+          <a href="{{project.url}}">
 
-         
+
             <img src="{{project.data.thumbnail}}" alt="{{project.data}}">
             <h2 href="{{project.url}}">{{ project.data.title }}</h2>
             {% if project.data.description_short %}
@@ -13,10 +13,10 @@
             {% if project.data.description_medium %}
             <p>{{project.data.description_medium}}</p>
             {% endif %}
-          
 
-        </a>
-</article>
+
+          </a>
+        </article>
         {% endif %}
         {%- endfor -%}
       </nav>
