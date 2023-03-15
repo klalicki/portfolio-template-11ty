@@ -31,6 +31,9 @@ barba.hooks.before((data) => {
   setNewMenuItem(data.next.url.path);
 });
 barba.hooks.after((data) => {});
+barba.hooks.beforeEnter(() => {
+  window.scrollTo(0, 0);
+});
 
 document.querySelector("#btn-show-work").addEventListener("click", (e) => {
   e.preventDefault();
