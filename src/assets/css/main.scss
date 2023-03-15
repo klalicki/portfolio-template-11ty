@@ -34,7 +34,7 @@ p {
   font-size: $font-size-base;
   font-family: "Work Sans", sans-serif;
 
-  --main-padding: 2rem;
+  --main-padding: 1rem;
   --sidebar-width: 300px;
   --main-col-width: 800px;
   --card-padding: 1rem;
@@ -89,6 +89,16 @@ article {
   max-width: var(--main-col-width);
   // border: 1px solid lightgray;
   width: 100%;
+  > h1,
+  > h2,
+  > h3,
+  > h4,
+  > h5,
+  > h6,
+  > p {
+    padding-left: var(--card-padding);
+    padding-right: var(--card-padding);
+  }
 }
 
 /* Portfolio Grid */

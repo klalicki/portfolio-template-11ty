@@ -4,7 +4,7 @@ layout: project.njk
 tags: project
 subset: gd
 order:
-thumbnail: /img/thumbnail-placeholder-wide.jpg
+thumbnail: /img/sample/brews-bites-tile.jpg
 description_short: Developing a Brand Identity for a Local Business
 description_medium:
 ---

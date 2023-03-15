@@ -4,7 +4,7 @@ layout: project.njk
 tags: project
 subset: gd
 order:
-thumbnail: /img/thumbnail-placeholder-wide.jpg
+thumbnail: /img/sample/community-builders-tile.jpg
 description_short:
 description_medium: Redesigning a Local Nonprofit's Branding for Increased Engagement
 ---
