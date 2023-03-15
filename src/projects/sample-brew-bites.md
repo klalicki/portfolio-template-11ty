@@ -5,8 +5,8 @@ tags: project
 subset: gd
 order:
 thumbnail: /img/thumbnail-placeholder-wide.jpg
-description_short: a responsive website design for a local business
-description_medium: Sample Project 1 is a responsive website designed asdkaljsdklajskdl asdjklasjdkl asdjklasjdkl.
+description_short: Developing a Brand Identity for a Local Business
+description_medium:
 ---
 
 ## Background
