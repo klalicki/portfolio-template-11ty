@@ -1,0 +1,144 @@
+---
+title: Markdown Demo
+layout: project.njk
+tags: project
+subset: gd
+order: 10
+thumbnail: /img/sample/green-earth-tile.jpg
+description_short: a sample project page showing different ways to format text in Markdown.
+description_medium:
+---
+
+# Basic Markdown
+
+# Headers
+
+# Header 1
+
+## Header 2
+
+### Header 3
+
+#### Header 4
+
+##### Header 5
+
+###### Header 6
+
+Here is a paragraph of text. To style text in _italic_, use _one_ pair of _underscores_ or _asterisks_ around it. To style text in **bold**, use **two** pairs of **underscores** or **asterisks** around it. To style text in **_bold and italic_**, use **_three_** pairs of **_underscores_** or **_asterisks_** around it.
+
+## Paragraphs
+
+To create paragraphs, use a blank line to separate one or more lines of text. If you don't use a blank line, the two paragraphs will be combined into one in the output.
+This line does not have a blank line before it, so it does not become its own paragraph.
+
+This line does have a blank line before it, so it does become its own paragraph.
+
+If you want to create a 'line break' (think Shift+Enter in InDesign), end a line with two or more spaces.  
+The previous line has 2 spaces at the end of it, so this line will show up on its own line.
+
+## Horizontal Line
+
+This is how you create a horizontal line (can be used as a section break in case studies):
+
+---
+
+## Blockquote
+
+To create a simple blockquote, put the > character in front of a line.
+
+> This is a simple blockquote.
+
+## Lists
+
+### Ordered list (numbered)
+
+To create an ordered list, start each line with a number followed by a period and a space.
+
+1. This is a list item.
+2. This is another list item.
+3. This is another list item.
+
+### Unordered List (bullets)
+
+To create a bulleted list, start each line with a dash (-), asterisk (\*), or plus sign (+)
+
+- This is a list item.
+- This is another list item.
+- This is a third list item.
+
+### Nested lists
+
+To nest a list inside another, press Tab or 3 spaces before each line you want to nest.
+
+1. This is the first list item
+
+   - This is an item inside item 1
+   - This is another item inside item 1.
+   - This is a third item inside item 1.
+
+2. This is the second list item.
+
+   1. you can have a numbered list inside a bulleted list and vice versa.
+   2. here's another item.
+   3. Here's a third item.
+
+3. etc.
+
+## Code Blocks
+
+If you want to show some code you have written, use a code block.
+
+### Full-Width Code Block
+
+To create a full-width code block, start and end it with a line of 3 backtick characters (`):
+
+```
+const sayHello=()=>{
+alert('hello!')
+}
+```
+
+### Inline Code Block
+
+If you want to place a `short piece of code` in a regular paragraph, surround it with a pair of backticks (`)
+
+## Links
+
+To create a link, there are two components:
+
+```
+[link text](URL)
+```
+
+_link text_ refers to the text that appears in the browser, while _URL_ is the web address you want the link to go to.
+
+For example:
+
+```
+[Google](https://www.google.com)
+```
+
+will produce the following link:
+
+[Google](https://www.google.com)
+
+### Shortcut
+
+If the link text and url are the same, you can just surround the link in angle brackets `< >`
+
+For example:
+
+```
+<https://www.google.com>
+```
+
+produces the link <https://www.google.com>.
+
+For this to work, it must be a full URL - it must include http:// or https:// at the start.
+
+# Advanced Markdown
+
+## Custom Classes and IDs (for custom CSS styling)
+
+This site is set up to use [markdown-it-attrs](https://www.npmjs.com/package/markdown-it-attrs), a package which allows you to add custom CSS classes and IDs to elements. 

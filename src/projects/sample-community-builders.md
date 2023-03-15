@@ -29,6 +29,10 @@ The redesigned branding and marketing materials were launched on the organizatio
 
 ## Evaluation
 
+> Working with [Designer's Name] was an absolute pleasure from start to finish. As the organizer of a large music festival, we needed a poster design that would capture the attention of music lovers and reflect the diverse range of genres we were featuring.
+
+> [Designer's Name] quickly understood our vision and developed a series of concept sketches that perfectly captured the spirit of the event. Their attention to detail and willingness to incorporate our feedback resulted in a final design that exceeded our expectations.
+
 To evaluate the effectiveness of the new branding, I conducted a survey among the organization's volunteers and donors. The survey aimed to measure the effectiveness of the new branding in communicating the organization's mission and values and to identify areas for improvement. The survey results showed that 95% of respondents felt that the new branding accurately reflected the organization's mission and values. Moreover, 80% of respondents reported that the new branding had encouraged them to participate in the organization's events and activities.
 
 ## Conclusion
