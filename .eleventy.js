@@ -1,3 +1,14 @@
+const markdownIt = require("markdown-it");
+const markdownItAttrs = require("markdown-it-attrs");
+
+const markdownItOptions = {
+  html: true,
+  breaks: true,
+  linkify: true,
+};
+
+const markdownLib = markdownIt(markdownItOptions).use(markdownItAttrs);
+
 module.exports = function (eleventyConfig) {
   // Return your Object options:
   eleventyConfig.addPassthroughCopy("./src/assets");
@@ -20,6 +31,7 @@ module.exports = function (eleventyConfig) {
       return (a.data.order || 0) - (b.data.order || 0);
     })
   );
+  eleventyConfig.setLibrary("md", markdownLib);
   return {
     passthroughFileCopy: true,
     dir: {
