@@ -4,7 +4,7 @@ layout: project.njk
 tags: project
 subset: gd
 order: 10
-thumbnail: /img/sample/green-earth-tile.jpg
+thumbnail: /img/sample/markdown-demo.jpg
 description_short: a sample project page showing different ways to format text in Markdown.
 description_medium:
 ---
@@ -137,7 +137,7 @@ produces the link <https://www.google.com>.
 
 For this to work, it must be a full URL - it must include http:// or https:// at the start.
 
-# Advanced Markdown
+# Advanced Markdown {#section-advanced-markdown}
 
 ## Using HTML Tags in Markdown:
 
@@ -158,7 +158,7 @@ This site is set up to use [markdown-it-attrs](https://www.npmjs.com/package/mar
 What this means is that you are able to add your own CSS and style any element however you want. To add a CSS class/ID to an element, put it inside curly brackets at the end of a line.
 
 ```
-#### This is a sample line {.red}
+#### This is a sample line of red text{.red-text}
 
 <style>.red-text{
   color:red
@@ -167,8 +167,20 @@ What this means is that you are able to add your own CSS and style any element h
 
 will produce:
 
-#### This is a sample line {.red-text}
+#### This is a sample line of red text {.red-text}
 
 <style>.red-text{
   color:red
   }</style>
+
+Notice that I used a style tag to add the color to that element. This works well if you are only adding custom CSS to a few elements on a page. If you find yourself adding the same custom CSS to multiple pages, you can add it to the **theme custom CSS file (NOT ADDED YET)**
+
+### Jump Links
+
+You can use custom IDs to create jump links within a page. I added the ID _#section-advanced-markdown_ to one of the headers above, which means I can link to it with the following link:
+
+```
+[Advanced Markdown Section](#section-advanced-markdown)
+```
+
+[Advanced Markdown Section](#section-advanced-markdown)
