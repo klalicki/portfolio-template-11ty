@@ -32,6 +32,10 @@ module.exports = function (eleventyConfig) {
     })
   );
   eleventyConfig.setLibrary("md", markdownLib);
+  eleventyConfig.addPairedShortcode("bigText", function (content) {
+    return '<section class="big-text">' + content + "</section>";
+  });
+
   return {
     passthroughFileCopy: true,
     dir: {

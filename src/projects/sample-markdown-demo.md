@@ -184,3 +184,17 @@ You can use custom IDs to create jump links within a page. I added the ID _#sect
 ```
 
 [Advanced Markdown Section](#section-advanced-markdown)
+
+## Special Components
+
+{% bigText %}
+
+## Big Text
+
+{% endbigText %}
+
+text after Big Text
+more text after big text
+this is not the end of the page
+
+### another heading

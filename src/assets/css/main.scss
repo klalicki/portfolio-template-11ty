@@ -89,17 +89,17 @@ article {
   max-width: var(--main-col-width);
   // border: 1px solid lightgray;
   width: 100%;
-  > h1,
-  > h2,
-  > h3,
-  > h4,
-  > h5,
-  > h6,
-  > p,
-  pre {
-    padding-left: var(--card-padding);
-    padding-right: var(--card-padding);
-  }
+  // > h1,
+  // > h2,
+  // > h3,
+  // > h4,
+  // > h5,
+  // > h6,
+  // > p,
+  // pre {
+  //   padding-left: var(--card-padding);
+  //   padding-right: var(--card-padding);
+  // }
 }
 
 /* Portfolio Grid */
@@ -203,6 +203,26 @@ html {
 }
 
 @media (max-width: 720px) {
+  header.main-nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    width: initial;
+    height: auto;
+  }
+  .site-masthead {
+    h3 {
+      margin: 0;
+    }
+    p {
+      display: none;
+    }
+  }
+  main {
+    padding-left: var(--card-padding);
+    padding-right: var(--card-padding);
+  }
   // mobile styles
 }
 
@@ -218,4 +238,14 @@ pre {
 .active {
   background-color: var(--color-highlight);
   transition: background-color 0.2s;
+}
+
+section.big-text {
+  background-color: green;
+  padding: var(--card-padding);
+  position: relative;
+  left: -100vw;
+  padding-left: 100vw;
+  right: 100vw;
+  padding-right: 100vw;
 }
