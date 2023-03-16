@@ -217,6 +217,16 @@ html {
       display: none;
     }
   }
+  .sidebar-nav-link-section {
+    margin: 0;
+    padding-top: var(--card-padding);
+    padding-bottom: var(--card-padding);
+  }
+  .sidebar-nav-link-section a {
+    font-size: $font-size-l;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
   .main-nav {
     transform: none;
     background-color: var(--sidebar-color);
@@ -224,7 +234,7 @@ html {
     transition: all 0.3s;
   }
   .main-nav-hidden {
-    transform: translateY(-1rem);
+    transform: translateY(-100%);
     opacity: 0;
     transition: all 0.3s;
   }
@@ -238,6 +248,7 @@ html {
     display: flex;
     padding: 0 var(--card-padding);
     flex-direction: row;
+    justify-content: space-around;
     align-items: center;
     h3 {
       margin: 0;

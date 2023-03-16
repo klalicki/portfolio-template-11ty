@@ -1,6 +1,6 @@
 import barba from "@barba/core";
 import barbaCss from "@barba/css";
-import "./menu-toggle.js";
+// import "./menu-toggle.js";
 // import { gsap } from "gsap";
 
 const clearMenuActive = () => {
@@ -16,6 +16,20 @@ const setNewMenuItem = (targetItem) => {
   });
   console.log(item);
 };
+const menuButtonSelector = ".btn-toggle-menu";
+const menuPanelSelector = ".main-nav";
+const classToToggle = "main-nav-hidden";
+
+const toggleHandler = () => {
+  document.querySelector(menuPanelSelector).classList.toggle(classToToggle);
+};
+document
+  .querySelector(menuButtonSelector)
+  .addEventListener("click", toggleHandler);
+const hideMenu = () => {
+  document.querySelector(menuPanelSelector).classList.add(classToToggle);
+};
+
 barba.use(barbaCss);
 barba.init({
   prevent: ({ el }) => el.classList && el.classList.contains("barba-prevent"),
@@ -28,6 +42,7 @@ barba.init({
   ],
 });
 barba.hooks.before((data) => {
+  hideMenu();
   clearMenuActive();
   setNewMenuItem(data.next.url.path);
 });
