@@ -46,7 +46,7 @@ p {
 body {
   margin: 0;
 }
-header.main-nav {
+.main-nav-container {
   width: var(--sidebar-width);
   position: fixed;
   background-color: var(--sidebar-color);
@@ -203,7 +203,7 @@ html {
 }
 
 @media (max-width: 720px) {
-  header.main-nav {
+  .main-nav-container {
     position: fixed;
     left: 0;
     top: 0;
