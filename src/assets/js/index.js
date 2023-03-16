@@ -1,5 +1,6 @@
 import barba from "@barba/core";
 import barbaCss from "@barba/css";
+import "./menu-toggle.js";
 // import { gsap } from "gsap";
 
 const clearMenuActive = () => {
