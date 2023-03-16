@@ -51,9 +51,12 @@ body {
   position: fixed;
   background-color: var(--sidebar-color);
   height: 100%;
-  padding: var(--main-padding) var(--card-padding);
+
   z-index: 10;
   transition: all 0.5s;
+}
+.btn-toggle-menu {
+  display: none;
 }
 .sidebar-nav-link-section {
   * {
@@ -209,9 +212,30 @@ html {
     top: 0;
     right: 0;
     width: initial;
-    height: auto;
+    height: 2rem;
+    hr {
+      display: none;
+    }
+  }
+  .main-nav {
+    transform: none;
+    opacity: 1;
+    transition: all 0.3s;
+  }
+  .main-nav-hidden {
+    transform: translateY(-5rem);
+    opacity: 0;
+    transition: all 0.3s;
+  }
+  .btn-toggle-menu {
+    display: block;
   }
   .site-masthead {
+    height: 2rem;
+    display: flex;
+    padding: 0 var(--card-padding);
+    flex-direction: row;
+    align-items: center;
     h3 {
       margin: 0;
     }
