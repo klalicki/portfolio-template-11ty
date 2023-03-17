@@ -20,6 +20,14 @@ module.exports = function (eleventyConfig) {
       return (a.data.order || 0) - (b.data.order || 0);
     })
   );
+
+  // custom URL transform to set 'content' directory to base directory
+  eleventyConfig.addUrlTransform(({ url }) => {
+    let newUrl = url.replace("/content", "");
+    return newUrl;
+
+    // Returning undefined skips the url transform.
+  });
   /* Sorting the pages by the order parameter in the front matter. */
   eleventyConfig.addCollection("pageSorted", (collection) =>
     collection.getFilteredByTags("page").sort((a, b) => {
