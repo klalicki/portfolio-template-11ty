@@ -27,6 +27,7 @@
   "dependencies": {
     "@barba/core": "^2.9.7",
     "@barba/css": "^2.1.15",
-    "markdown-it-attrs": "^4.1.6"
+    "markdown-it-attrs": "^4.1.6",
+    "sass": "^1.59.3"
   }
 }

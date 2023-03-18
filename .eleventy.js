@@ -1,5 +1,7 @@
 const markdownIt = require("markdown-it");
 const markdownItAttrs = require("markdown-it-attrs");
+const sass = require("sass");
+const fs = require("fs");
 
 const markdownItOptions = {
   html: true,
@@ -35,6 +37,13 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setLibrary("md", markdownLib);
   eleventyConfig.addPairedShortcode("bigText", function (content) {
     return '<section class="big-text">' + content + "</section>";
+  });
+
+  eleventyConfig.on("eleventy.before", () => {
+    let compiled = sass.compile("theme/assets/css/main.scss", {
+      style: "compressed",
+    });
+    fs.writeFileSync("theme/assets/css/main.css", compiled.css);
   });
 
   return {
