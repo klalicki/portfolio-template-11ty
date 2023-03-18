@@ -12,7 +12,7 @@ const markdownLib = markdownIt(markdownItOptions).use(markdownItAttrs);
 module.exports = function (eleventyConfig) {
   // Return your Object options:
   eleventyConfig.addPassthroughCopy("./src/assets");
-  eleventyConfig.addPassthroughCopy("./src/img");
+  eleventyConfig.addPassthroughCopy("./img");
   eleventyConfig.addPassthroughCopy("./src/assets/js");
 
   // adds custom collections for projects and pages which are sorted by an 'order' parameter in front matter.
