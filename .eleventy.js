@@ -16,7 +16,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "./theme/assets": "assets" });
   eleventyConfig.addPassthroughCopy({ "./content/img": "img" });
   eleventyConfig.addPassthroughCopy({ "./theme/assets/js": "assets/js" });
-
+  eleventyConfig.watchIgnores.add("theme/assets/css/main.css");
+  eleventyConfig.addWatchTarget("./content/");
   // adds custom collections for projects and pages which are sorted by an 'order' parameter in front matter.
   eleventyConfig.addCollection("projectSorted", (collection) =>
     collection.getFilteredByTags("project").sort((a, b) => {
