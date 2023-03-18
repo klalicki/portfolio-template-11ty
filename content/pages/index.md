@@ -1,6 +1,6 @@
 ---
 layout: index.njk
-title: My Page
+title: Your Title Here
 ---
 
 # Hello!

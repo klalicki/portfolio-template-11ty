@@ -11,9 +11,9 @@ const markdownLib = markdownIt(markdownItOptions).use(markdownItAttrs);
 
 module.exports = function (eleventyConfig) {
   // Return your Object options:
-  eleventyConfig.addPassthroughCopy({ "./src/assets": "assets" });
-  eleventyConfig.addPassthroughCopy({ "./img": "img" });
-  eleventyConfig.addPassthroughCopy({ "./src/assets/js": "assets/js" });
+  eleventyConfig.addPassthroughCopy({ "./theme/assets": "assets" });
+  eleventyConfig.addPassthroughCopy({ "./content/img": "img" });
+  eleventyConfig.addPassthroughCopy({ "./theme/assets/js": "assets/js" });
 
   // adds custom collections for projects and pages which are sorted by an 'order' parameter in front matter.
   eleventyConfig.addCollection("projectSorted", (collection) =>
@@ -40,9 +40,9 @@ module.exports = function (eleventyConfig) {
   return {
     passthroughFileCopy: true,
     dir: {
-      input: "content",
-      includes: "../src/_includes",
-      data: "../src/data",
+      input: "content/pages",
+      includes: "../../theme/_includes",
+      data: "../data",
 
       output: "dist",
     },
