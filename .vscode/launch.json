@@ -4,14 +4,21 @@
   // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
   "version": "0.2.0",
   "configurations": [
-   {
-     "name": "Start Server",
-     "type": "node",
-     "request": "launch",
-     "cwd": "${workspaceRoot}",
-     "runtimeExecutable": "npm",
-     "runtimeArgs": ["run-script", "serve"],
-     
-   }
+    {
+      "name": "Start Server",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceRoot}",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run-script", "serve"]
+    },
+    {
+      "name": "Install",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceRoot}",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["install"]
+    }
   ]
 }
