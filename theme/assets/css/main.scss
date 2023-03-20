@@ -141,7 +141,45 @@ article {
   width: 100%;
   position: relative;
 }
+// image tile layout
 
+.portfolio-image-tile-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax($min-card-width, 1fr));
+  column-gap: 0;
+  position: relative;
+  width: 100%;
+}
+.portfolio-image-tile {
+  position: relative;
+  overflow: hidden;
+  img {
+    width: 100%;
+  }
+}
+
+.portfolio-image-tile-text-overlay {
+  padding: var(--card-padding);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-color: yellow;
+  transform: scale(90%);
+  transition: all 0.5s;
+}
+.portfolio-image-tile:hover .portfolio-image-tile-text-overlay {
+  opacity: 1;
+  transform: scale(1);
+  transition: all 0.5s;
+}
 /* wide (UX) portfolio layout */
 .portfolio-wide-img {
   width: 100%;

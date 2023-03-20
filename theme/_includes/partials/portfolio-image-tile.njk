@@ -1,0 +1,25 @@
+      <nav class="portfolio-image-tile-container">
+        {%- for project in collections.projectSorted -%}
+        {% if subset in project.data.subset %}
+        <article class="portfolio-image-tile">
+          <a href="{{project.url}}">
+
+
+            <img src="{{project.data.thumbnail}}" alt="{{project.data}}">
+            <div class="portfolio-image-tile-text-overlay">
+              <h2 href="{{project.url}}">{{ project.data.title }}</h2>
+              {% if project.data.description_short %}
+              <p>{{project.data.description_short}}</p>
+              {% endif %}
+              {% if project.data.description_medium %}
+              <p>{{project.data.description_medium}}</p>
+              {% endif %}
+
+            </div>
+
+
+          </a>
+        </article>
+        {% endif %}
+        {%- endfor -%}
+      </nav>
