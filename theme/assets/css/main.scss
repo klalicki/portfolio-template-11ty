@@ -147,14 +147,18 @@ article {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax($min-card-width, 1fr));
   column-gap: 0;
+  // row-gap: 0;
   position: relative;
   width: 100%;
+  align-content: stretch;
+  height: auto;
 }
 .portfolio-image-tile {
   position: relative;
   overflow: hidden;
   img {
     width: 100%;
+    display: block;
   }
 }
 
@@ -166,12 +170,12 @@ article {
   justify-content: center;
   text-align: center;
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: var(--card-padding);
+  left: var(--card-padding);
+  right: var(--card-padding);
+  bottom: var(--card-padding);
   opacity: 0;
-  background-color: yellow;
+  background-color: white;
   transform: scale(90%);
   transition: all 0.5s;
 }
