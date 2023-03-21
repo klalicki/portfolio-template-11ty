@@ -41,9 +41,7 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.on("eleventy.before", () => {
-    let compiled = sass.compile("theme/assets/css/main.scss", {
-      style: "compressed",
-    });
+    let compiled = sass.compile("theme/assets/css/main.scss", {});
     fs.writeFileSync("theme/assets/css/main.css", compiled.css);
   });
 

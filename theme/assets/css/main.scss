@@ -27,9 +27,21 @@ h6 {
   font-size: $font-size-md;
 }
 p {
-  line-height: 1.4em;
+  line-height: 1.6;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0.75em;
+  margin-bottom: 0.25em;
+}
+p {
+  margin-bottom: 0.5em;
+}
 :root {
   font-size: $font-size-base;
   font-family: "Work Sans", sans-serif;
