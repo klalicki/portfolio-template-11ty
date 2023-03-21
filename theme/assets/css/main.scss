@@ -179,6 +179,7 @@ article {
   transform: scale(90%);
   transition: all 0.5s;
 }
+.portfolio-image-tile:focus .portfolio-image-tile-text-overlay,
 .portfolio-image-tile:hover .portfolio-image-tile-text-overlay {
   opacity: 1;
   transform: scale(1);
