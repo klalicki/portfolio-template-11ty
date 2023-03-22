@@ -37,7 +37,7 @@ body {
 }
 
 * {
-  color: black;
+  color: black !important;
 }
 
 h1 {
