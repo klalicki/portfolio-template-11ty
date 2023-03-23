@@ -4,7 +4,7 @@
   <h1>{{title}}</h1>
   {# places website content above the portfolio grid #}
   {{content | safe}}
-  <section class="portfolio">
+ 
     {# select which portfolio layout to use #}
     {% if portfolio_type == "wide" %}
      {% include 'partials/portfolio-wide.njk' %}

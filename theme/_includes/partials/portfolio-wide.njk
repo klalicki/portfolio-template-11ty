@@ -1,3 +1,4 @@
+  <section class="portfolio custom-width">
  <nav class="portfolio-wide-container">
       {%- for project in collections.projectSorted -%}
       {% if subset in project.data.subset %}
@@ -16,3 +17,4 @@
       {% endif %}
       {%- endfor -%}
     </nav>
+    </section>
