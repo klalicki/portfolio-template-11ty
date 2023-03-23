@@ -168,6 +168,8 @@ article {
   width: 100%;
 }
 article > *:not(.custom-width) {
+  padding-left: 1rem;
+  padding-right: 1rem;
   width: 100%;
   max-width: 35rem;
   flex-shrink: 0;
@@ -357,7 +359,8 @@ html {
     opacity: 1;
     transition: all 0.3s;
     padding-left: 1rem;
-    overflow: scroll;
+    overflow-y: auto;
+    overflow-x: hidden;
     max-height: calc(100vh - 3rem);
   }
   .main-nav-hidden {
@@ -406,16 +409,29 @@ pre {
 }
 
 section.big-text {
-  background-color: green;
-  padding: 1rem;
+  background-color: lightpink;
+  padding: 2rem;
   position: relative;
-  width: calc(100% + 1rem + 1rem);
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+section.big-text > :first-child {
+  margin-top: 0;
+}
+section.big-text > :last-child {
+  margin-bottom: 0;
+}
+section.big-text p {
+  font-size: 1.41rem;
 }
 section.big-text > * {
   width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
   max-width: 35rem;
   flex-shrink: 0;
 }

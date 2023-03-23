@@ -153,6 +153,8 @@ article {
 
   width: 100%;
   > *:not(.custom-width) {
+    padding-left: $padding-main;
+    padding-right: $padding-main;
     width: 100%;
     max-width: $main-col-width;
     flex-shrink: 0;
@@ -347,7 +349,8 @@ html {
     opacity: 1;
     transition: all 0.3s;
     padding-left: $padding-main;
-    overflow: scroll;
+    overflow-y: auto;
+    overflow-x: hidden;
     max-height: calc(100vh - 3rem);
   }
   .main-nav-hidden {
@@ -397,15 +400,29 @@ pre {
 // components
 
 section.big-text {
-  background-color: green;
-  padding: $padding-main;
+  background-color: lightpink;
+  padding: $padding-main * 2;
   position: relative;
-  width: calc(100% + $padding-main + $padding-main);
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: $padding-main;
+  margin-bottom: $padding-main;
+  // ensure correct margins on big-text component
+  > :first-child {
+    margin-top: 0;
+  }
+  > :last-child {
+    margin-bottom: 0;
+  }
+  p {
+    font-size: $font-size-l;
+  }
   > * {
     width: 100%;
+    padding-left: $padding-main;
+    padding-right: $padding-main;
     max-width: $main-col-width;
     flex-shrink: 0;
   }

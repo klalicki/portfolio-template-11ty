@@ -191,6 +191,8 @@ You can use custom IDs to create jump links within a page. I added the ID _#sect
 
 ## Big Text
 
+This is a special component that displays a bar the full width of the screen. All text within this component is large as well. This could be nice for section headers, or pull quotes, etc.
+
 {% endbigText %}
 
 text after Big Text
