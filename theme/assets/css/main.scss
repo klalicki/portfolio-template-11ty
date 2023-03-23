@@ -120,10 +120,10 @@ main {
   position: absolute;
   left: 0;
   right: 0;
-  padding-left: calc($sidebar-width + $padding-main);
+  padding-left: calc($sidebar-width);
   padding-top: $padding-main;
   padding-bottom: $padding-main;
-  padding-right: $padding-main;
+  padding-right: 0;
   /* width: 100%; */
   min-height: 100%;
   display: flex;
@@ -202,7 +202,7 @@ pre {
 
 .portfolio-image-tile-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax($min-card-width, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(600px, 100%), 1fr));
   column-gap: 0;
   // row-gap: 0;
   position: relative;
@@ -415,4 +415,7 @@ section.big-text {
 }
 .custom-width-75 {
   max-width: $main-col-width * 0.75;
+}
+.custom-width-full {
+  width: 100%;
 }
