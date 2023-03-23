@@ -306,6 +306,7 @@ html {
 @media (max-width: 720px) {
   .main-nav-container {
     position: fixed;
+    padding: 0;
     left: 0;
     top: 0;
     right: 0;
@@ -330,6 +331,9 @@ html {
     background-color: var(--sidebar-color);
     opacity: 1;
     transition: all 0.3s;
+    padding-left: $padding-main;
+    overflow: scroll;
+    max-height: calc(100vh - 3rem);
   }
   .main-nav-hidden {
     transform: translateY(-100%);
@@ -344,9 +348,9 @@ html {
     position: relative;
     height: 3rem;
     display: flex;
-    padding: 0 $padding-main;
+    padding: $padding-main;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     h3 {
       margin: 0;
