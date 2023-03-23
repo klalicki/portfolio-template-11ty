@@ -34,7 +34,6 @@ body {
 :root {
   font-size: 110%;
   font-family: "IBM Plex Sans", sans-serif;
-  --sidebar-width: 300px;
   --card-padding: 1rem;
   --sidebar-color: lightgrey;
   --color-text-primary: black;
@@ -89,7 +88,7 @@ body {
 }
 
 .main-nav-container {
-  width: var(--sidebar-width);
+  width: 300px;
   position: fixed;
   background-color: var(--sidebar-color);
   height: 100%;
@@ -140,7 +139,7 @@ main {
   position: absolute;
   left: 0;
   right: 0;
-  padding-left: calc(var(--sidebar-width) + 1rem);
+  padding-left: calc(300px + 1rem);
   padding-top: 1rem;
   padding-bottom: 1rem;
   padding-right: 1rem;
@@ -162,6 +161,12 @@ article > *:not(.custom-width) {
   width: 100%;
   max-width: 35rem;
   flex-shrink: 0;
+}
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  padding: 0.5rem;
 }
 
 /* Portfolio Grid */

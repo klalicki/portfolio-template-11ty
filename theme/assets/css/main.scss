@@ -17,11 +17,11 @@ $padding-card: 0.5rem;
 
 $main-col-width: 35rem;
 
+$sidebar-width: 300px;
+
 :root {
   font-size: $font-size-base;
   font-family: $theme-font-stack-main;
-
-  --sidebar-width: 300px;
 
   --card-padding: 1rem;
   --sidebar-color: lightgrey;
@@ -71,7 +71,7 @@ body {
   margin: 0;
 }
 .main-nav-container {
-  width: var(--sidebar-width);
+  width: $sidebar-width;
   position: fixed;
   background-color: var(--sidebar-color);
   height: 100%;
@@ -120,7 +120,7 @@ main {
   position: absolute;
   left: 0;
   right: 0;
-  padding-left: calc(var(--sidebar-width) + $padding-main);
+  padding-left: calc($sidebar-width + $padding-main);
   padding-top: $padding-main;
   padding-bottom: $padding-main;
   padding-right: $padding-main;
@@ -155,6 +155,11 @@ article {
   //   padding-left: $padding-main;
   //   padding-right: $padding-main;
   // }
+}
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  padding: $padding-card;
 }
 
 /* Portfolio Grid */
