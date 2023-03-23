@@ -58,10 +58,6 @@ h6 {
   font-size: 1rem;
 }
 
-p {
-  line-height: 1.6;
-}
-
 h1,
 h2,
 h3,
@@ -76,11 +72,25 @@ h6 {
 }
 
 p {
-  margin-bottom: 0.5em;
+  line-height: 1.6;
+  margin-bottom: 0.75em;
   max-width: 35rem;
 }
 p > img {
   width: 100%;
+}
+
+main ul,
+main ol {
+  padding-inline-start: 1em;
+}
+main ul li,
+main ol li {
+  margin-bottom: 0.25em;
+}
+main ul li p,
+main ol li p {
+  margin-bottom: 0.25em;
 }
 
 body {
