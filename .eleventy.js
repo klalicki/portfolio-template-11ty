@@ -39,11 +39,7 @@ module.exports = function (eleventyConfig) {
   );
   eleventyConfig.setLibrary("md", markdownLib);
   eleventyConfig.addPairedShortcode("bigText", function (content) {
-    return (
-      '</div><section class="big-text">' +
-      content +
-      '</section><div class="col-standard-width"'
-    );
+    return '<section class="big-text custom-width">' + content + "</section>";
   });
 
   eleventyConfig.on("eleventy.before", () => {

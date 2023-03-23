@@ -1,8 +1,8 @@
 @use "reset.css";
-@use "../../../content/css/theme.css";
+@use "../../../content/css/theme.scss" as *;
 // sass variables
-$font-size-base: 18px;
-$font-size-mobile: 16px;
+$font-size-base: 125%;
+$font-size-mobile: 100%;
 
 $font-size-sm: 0.72rem; //figcaption
 $font-size-md: 1rem; //p
@@ -11,6 +11,8 @@ $font-size-xl: 2rem; //h2
 $font-size-xxl: 2.82rem; //h1
 
 $min-card-width: 300px;
+
+$padding-main: 1rem;
 
 h1 {
   font-size: $font-size-xxl;
@@ -38,15 +40,17 @@ h5,
 h6 {
   margin-top: 0.75em;
   margin-bottom: 0.25em;
+  font-family: $theme-font-stack-headers;
+  display: block;
+  max-width: var(--main-col-width);
 }
 p {
   margin-bottom: 0.5em;
 }
 :root {
   font-size: $font-size-base;
-  font-family: "Work Sans", sans-serif;
+  font-family: $theme-font-stack-main;
 
-  --main-padding: 1rem;
   --sidebar-width: 300px;
   --main-col-width: 800px;
   --card-padding: 1rem;
@@ -89,10 +93,10 @@ main {
   position: absolute;
   left: 0;
   right: 0;
-  padding-left: calc(var(--sidebar-width) + var(--main-padding));
-  padding-top: var(--main-padding);
-  padding-bottom: var(--main-padding);
-  padding-right: var(--main-padding);
+  padding-left: calc(var(--sidebar-width) + $padding-main);
+  padding-top: $padding-main;
+  padding-bottom: $padding-main;
+  padding-right: $padding-main;
   /* width: 100%; */
   min-height: 100%;
   display: flex;
@@ -101,9 +105,18 @@ main {
 }
 
 article {
-  max-width: var(--main-col-width);
-  // border: 1px solid lightgray;
+  // max-width: var(--main-col-width);
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  > *:not(.custom-width) {
+    width: 100%;
+    max-width: var(--main-col-width);
+    flex-shrink: 0;
+  }
   // > h1,
   // > h2,
   // > h3,
@@ -204,10 +217,12 @@ article {
 }
 .portfolio-wide-text-wrapper {
   display: grid;
+  padding-top: $padding-main;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  column-gap: var(--main-padding);
+  column-gap: $padding-main;
 }
 .portfolio-wide-text-sm {
+  font-size: $font-size-sm;
 }
 .portfolio-wide-text-md {
   font-size: 1.5rem;
@@ -337,4 +352,13 @@ section.big-text {
   background-color: green;
   padding: var(--card-padding);
   position: relative;
+  width: calc(100% + $padding-main + $padding-main);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  > * {
+    width: 100%;
+    max-width: var(--main-col-width);
+    flex-shrink: 0;
+  }
 }

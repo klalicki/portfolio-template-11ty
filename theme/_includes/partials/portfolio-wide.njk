@@ -2,7 +2,7 @@
       {%- for project in collections.projectSorted -%}
       {% if subset in project.data.subset %}
       <article class="portfolio-wide-tile">
-        <a href="{{project.url}}">{{ project.data.title }}</a>
+        <a href="{{project.url}}"><h2>{{ project.data.title }}</h2></a>
         <img class="portfolio-wide-img" src="{{project.data.thumbnail}}" alt="{{project.data.description_short}}">
         <div class="portfolio-wide-text-wrapper">
           <p class="portfolio-wide-text-md">{{project.data.description_short}}</p>
