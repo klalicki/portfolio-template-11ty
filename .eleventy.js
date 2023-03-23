@@ -3,6 +3,8 @@ const markdownItAttrs = require("markdown-it-attrs");
 const sass = require("sass");
 const fs = require("fs");
 
+const markdownSections = () => {};
+
 const markdownItOptions = {
   html: true,
   breaks: true,
@@ -45,8 +47,14 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.on("eleventy.before", () => {
-    let compiled = sass.compile("theme/assets/css/main.scss", {});
-    fs.writeFileSync("theme/assets/css/main.css", compiled.css);
+    try {
+      let compiled = sass.compile("theme/assets/css/main.scss", {});
+      fs.writeFileSync("theme/assets/css/main.css", compiled.css);
+      console.log("successfully built and wrote SASS!");
+    } catch (err) {
+      console.log("error compiling SASS!");
+      console.log(err);
+    }
   });
 
   return {
