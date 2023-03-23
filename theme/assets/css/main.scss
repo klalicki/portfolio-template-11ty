@@ -14,6 +14,20 @@ $min-card-width: 300px;
 
 $padding-main: 1rem;
 
+$main-col-width: 35rem;
+
+:root {
+  font-size: $font-size-base;
+  font-family: $theme-font-stack-main;
+
+  --sidebar-width: 300px;
+
+  --card-padding: 1rem;
+  --sidebar-color: lightgrey;
+  --color-text-primary: black;
+  --color-highlight: lightgreen;
+}
+
 h1 {
   font-size: $font-size-xxl;
 }
@@ -42,21 +56,14 @@ h6 {
   margin-bottom: 0.25em;
   font-family: $theme-font-stack-headers;
   display: block;
-  max-width: var(--main-col-width);
+  max-width: $main-col-width;
 }
 p {
   margin-bottom: 0.5em;
-}
-:root {
-  font-size: $font-size-base;
-  font-family: $theme-font-stack-main;
-
-  --sidebar-width: 300px;
-  --main-col-width: 800px;
-  --card-padding: 1rem;
-  --sidebar-color: lightgrey;
-  --color-text-primary: black;
-  --color-highlight: lightgreen;
+  max-width: $main-col-width;
+  > img {
+    width: 100%;
+  }
 }
 
 body {
@@ -105,7 +112,7 @@ main {
 }
 
 article {
-  // max-width: var(--main-col-width);
+  // max-width: $main-col-width;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -114,7 +121,7 @@ article {
   width: 100%;
   > *:not(.custom-width) {
     width: 100%;
-    max-width: var(--main-col-width);
+    max-width: $main-col-width;
     flex-shrink: 0;
   }
   // > h1,
@@ -347,6 +354,7 @@ pre {
   background-color: var(--color-highlight);
   transition: background-color 0.2s;
 }
+// components
 
 section.big-text {
   background-color: green;
@@ -358,7 +366,22 @@ section.big-text {
   align-items: center;
   > * {
     width: 100%;
-    max-width: var(--main-col-width);
+    max-width: $main-col-width;
     flex-shrink: 0;
   }
+}
+
+// utility classes
+
+.custom-width-125 {
+  max-width: $main-col-width * 1.25;
+}
+.custom-width-150 {
+  max-width: $main-col-width * 1.5;
+}
+.custom-width-200 {
+  max-width: $main-col-width * 2;
+}
+.custom-width-75 {
+  max-width: $main-col-width * 0.75;
 }
