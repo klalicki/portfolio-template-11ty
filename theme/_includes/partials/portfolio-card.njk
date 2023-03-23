@@ -1,8 +1,8 @@
        <section class="portfolio custom-width">
-      <nav class="portfolio-grid-container">
+      <nav class="portfolio-card-container">
         {%- for project in collections.projectSorted -%}
         {% if subset in project.data.subset %}
-        <article class="portfolio-grid-tile">
+        <article class="portfolio-card-tile">
           <a href="{{project.url}}">
 
 

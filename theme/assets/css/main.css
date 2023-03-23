@@ -169,8 +169,8 @@ pre {
   padding: 0.5rem;
 }
 
-/* Portfolio Grid */
-.portfolio-grid-container {
+/* Portfolio Card */
+.portfolio-card-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   column-gap: 0;
@@ -178,48 +178,50 @@ pre {
   width: 100%;
 }
 
-.portfolio-grid-tile {
+.portfolio-card-tile {
   position: relative;
   padding: 1rem;
   color: var(--color-text-primary);
   display: block;
 }
-.portfolio-grid-tile * {
+.portfolio-card-tile * {
   color: var(--color-text-primary);
   text-decoration: none;
 }
-.portfolio-grid-tile h2 {
+.portfolio-card-tile h2 {
   font-size: 1.25rem;
 }
-.portfolio-grid-tile:hover {
+.portfolio-card-tile:hover {
   background-color: var(--color-highlight);
 }
 
-.portfolio-grid-tile-contents {
+.portfolio-card-tile-contents {
   position: relative;
   max-width: 100%;
 }
 
-.portfolio-grid-tile img {
+.portfolio-card-tile img {
   width: 100%;
   position: relative;
 }
 
-.portfolio-image-tile-container {
+.portfolio-tile-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(max(450px, 33%), 1fr));
+  padding: 10px;
+  gap: 10px 10px;
 }
 
-.portfolio-image-tile {
+.portfolio-tile {
   position: relative;
   overflow: hidden;
 }
-.portfolio-image-tile img {
+.portfolio-tile img {
   width: 100%;
   display: block;
 }
 
-.portfolio-image-tile-text-overlay {
+.portfolio-tile-text-overlay {
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -237,8 +239,8 @@ pre {
   transition: all 0.5s;
 }
 
-.portfolio-image-tile:focus .portfolio-image-tile-text-overlay,
-.portfolio-image-tile:hover .portfolio-image-tile-text-overlay {
+.portfolio-tile:focus .portfolio-tile-text-overlay,
+.portfolio-tile:hover .portfolio-tile-text-overlay {
   opacity: 1;
   transform: scale(1);
   transition: all 0.5s;

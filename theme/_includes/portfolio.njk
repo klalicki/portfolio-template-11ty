@@ -8,11 +8,11 @@
     {# select which portfolio layout to use #}
     {% if portfolio_type == "wide" %}
      {% include 'partials/portfolio-wide.njk' %}
-     {% elif portfolio_type == "image-tile"  %}
-      {% include "partials/portfolio-image-tile.njk" %}
+     {% elif portfolio_type == "tile"  %}
+      {% include "partials/portfolio-tile.njk" %}
      
       {% else %}
-      {% include 'partials/portfolio-grid.njk' %}
+      {% include 'partials/portfolio-card.njk' %}
         
     {% endif %}
     

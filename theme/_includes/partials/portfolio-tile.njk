@@ -1,13 +1,13 @@
        <section class="portfolio custom-width custom-width-full">
-      <nav class="portfolio-image-tile-container">
+      <nav class="portfolio-tile-container">
         {%- for project in collections.projectSorted -%}
         {% if subset in project.data.subset %}
-        <a class="portfolio-image-tile" href="{{project.url}}">
+        <a class="portfolio-tile" href="{{project.url}}">
        
 
 
             <img src="{{project.data.thumbnail}}" alt="{{project.data.title}}">
-            <div class="portfolio-image-tile-text-overlay">
+            <div class="portfolio-tile-text-overlay">
               <h2 href="{{project.url}}">{{ project.data.title }}</h2>
               {% if project.data.description_short %}
               <p>{{project.data.description_short}}</p>
