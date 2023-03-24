@@ -193,10 +193,12 @@ pre {
 .portfolio-card-tile {
   position: relative;
   padding: 1rem;
+  text-decoration: none;
   color: var(--color-text-primary);
   display: block;
 }
 .portfolio-card-tile * {
+  display: block;
   color: var(--color-text-primary);
   text-decoration: none;
 }
@@ -220,8 +222,8 @@ pre {
 .portfolio-tile-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(max(450px, 33%), 1fr));
-  padding: 10px;
-  gap: 10px 10px;
+  padding: 0px;
+  gap: 0px 0px;
 }
 
 .portfolio-tile {
@@ -249,6 +251,12 @@ pre {
   background-color: white;
   transform: scale(90%);
   transition: all 0.5s;
+}
+.portfolio-tile-text-overlay :first-child {
+  margin-top: 0;
+}
+.portfolio-tile-text-overlay :last-child {
+  margin-bottom: 0;
 }
 
 .portfolio-tile:focus .portfolio-tile-text-overlay,
@@ -388,8 +396,16 @@ html {
     display: none;
   }
   main {
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .portfolio-tile-text-overlay {
+    position: static;
+    opacity: 1;
+    transform: none;
+  }
+  .portfolio-tile-text-overlay :last-child {
+    margin-bottom: 2rem;
   }
 }
 code {

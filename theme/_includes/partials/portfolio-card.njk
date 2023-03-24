@@ -2,8 +2,8 @@
       <nav class="portfolio-card-container">
         {%- for project in collections.projectSorted -%}
         {% if subset in project.data.subset %}
-        <article class="portfolio-card-tile">
-          <a href="{{project.url}}">
+        
+          <a href="{{project.url}}" class="portfolio-card-tile">
 
 
             <img src="{{project.data.thumbnail}}" alt="{{project.data}}">
@@ -17,7 +17,7 @@
 
 
           </a>
-        </article>
+      
         {% endif %}
         {%- endfor -%}
       </nav>

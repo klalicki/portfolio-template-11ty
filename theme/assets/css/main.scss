@@ -159,17 +159,6 @@ article {
     max-width: $main-col-width;
     flex-shrink: 0;
   }
-  // > h1,
-  // > h2,
-  // > h3,
-  // > h4,
-  // > h5,
-  // > h6,
-  // > p,
-  // pre {
-  //   padding-left: $padding-main;
-  //   padding-right: $padding-main;
-  // }
 }
 pre {
   white-space: pre-wrap;
@@ -188,14 +177,13 @@ pre {
 .portfolio-card-tile {
   position: relative;
   padding: $padding-main;
-
+  text-decoration: none;
   color: var(--color-text-primary);
   display: block;
   * {
+    display: block;
     color: var(--color-text-primary);
     text-decoration: none;
-  }
-  a {
   }
 
   h2 {
@@ -246,6 +234,12 @@ pre {
   background-color: white;
   transform: scale(90%);
   transition: all 0.5s;
+  :first-child {
+    margin-top: 0;
+  }
+  :last-child {
+    margin-bottom: 0;
+  }
 }
 .portfolio-tile:focus .portfolio-tile-text-overlay,
 .portfolio-tile:hover .portfolio-tile-text-overlay {
@@ -378,8 +372,17 @@ html {
     }
   }
   main {
-    padding-left: $padding-main;
-    padding-right: $padding-main;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .portfolio-tile-text-overlay {
+    position: static;
+    opacity: 1;
+
+    transform: none;
+    :last-child {
+      margin-bottom: $padding-main * 2;
+    }
   }
   // mobile styles
 }
