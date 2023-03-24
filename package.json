@@ -21,7 +21,7 @@
   "homepage": "https://github.com/klalicki/portfolio-template-11ty#readme",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.0",
-    "webpack": "^5.75.0",
+    "webpack": "^5.76.3",
     "webpack-cli": "^5.0.1"
   },
   "dependencies": {
