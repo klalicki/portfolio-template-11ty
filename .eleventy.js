@@ -3,8 +3,6 @@ const markdownItAttrs = require("markdown-it-attrs");
 const sass = require("sass");
 const fs = require("fs");
 
-const markdownSections = () => {};
-
 const markdownItOptions = {
   html: true,
   breaks: true,
@@ -38,8 +36,23 @@ module.exports = function (eleventyConfig) {
     })
   );
   eleventyConfig.setLibrary("md", markdownLib);
+
   eleventyConfig.addPairedShortcode("bigText", function (content) {
     return '<section class="big-text custom-width">' + content + "</section>";
+  });
+  eleventyConfig.addPairedShortcode("carousel", function (content) {
+    let rendered = markdownLib.render(content);
+    let lines = rendered.split("\n").filter((item) => {
+      return item.length > 0;
+    });
+    console.log(lines);
+    let wrappedLines = lines
+      .map((line) => {
+        return "<div class='carousel-item'>" + line + "</div>";
+      })
+      .join("\n");
+    // console.log(wrappedLines);
+    return '<div class="carousel">' + wrappedLines + "</div>";
   });
 
   eleventyConfig.on("eleventy.before", () => {
