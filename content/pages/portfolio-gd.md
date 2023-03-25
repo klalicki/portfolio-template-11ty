@@ -3,7 +3,7 @@ layout: portfolio.njk
 tags: portfolio
 subset: gd
 order: 1
-portfolio_type: card
+portfolio_type: tile
 eleventyNavigation:
   key: Design Portfolio
 ---

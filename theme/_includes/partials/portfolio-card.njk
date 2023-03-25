@@ -1,24 +1,12 @@
-{# 
-    
-    {% for pageItem in collections.sorted %}
-    
-    
-    {% if pageItem.data.eleventyNavigation.parent == eleventyNavigation.key %}
-      {% set project = pageItem.data %} #}
-                <a href="{{project.page.url}}" class="portfolio-card-tile">
+<a href="{{project.page.url}}" class="portfolio-card-tile">
 
 
-            <img src="{{project.thumbnail}}" alt="{{project.data}}">
-            <h2 href="{{project.page.url}}"> {{project.eleventyNavigation.key}}</h2>
-            {% if project.description_short %}
-            <p>{{project.description_short}}</p>
-            {% endif %}
-            {% if project.description_medium %}
-            <p>{{project.description_medium}}</p>
-            {% endif %}
-    {# {% endif %}
-   
-   
-    {% endfor %}
-  </nav>
-</section> #}
+  <img src="{{project.thumbnail}}" alt="{{project.description_short}}">
+  <h2 href="{{project.page.url}}"> {{project.eleventyNavigation.key}}</h2>
+  {% if project.description_short %}
+  <p>{{project.description_short}}</p>
+  {% endif %}
+  {% if project.description_medium %}
+  <p>{{project.description_medium}}</p>
+  {% endif %}
+</a>

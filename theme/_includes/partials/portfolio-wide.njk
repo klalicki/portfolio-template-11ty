@@ -1,19 +1,10 @@
-
-      {%- for project in collections.projectSorted -%}
-      {% if subset in project.data.subset %}
-      <article class="portfolio-wide-tile">
-        <a href="{{project.url}}"><h2>{{ project.data.title }}</h2></a>
-        <img class="portfolio-wide-img" src="{{project.data.thumbnail}}" alt="{{project.data.description_short}}">
+    <article class="portfolio-wide-tile">
+        <a href="{{project.page.url}}"><h2>{{ project.eleventyNavigation.key }}</h2></a>
+        <img class="portfolio-wide-img" src="{{project.thumbnail}}" alt="{{project.description_short}}">
         <div class="portfolio-wide-text-wrapper">
-          <p class="portfolio-wide-text-md">{{project.data.description_short}}</p>
-          <p class="portfolio-wide-text-sm">{{project.data.description_medium}}
-            <a href="{{project.url}}" class="portfolio-wide-cta-link">View {{project.data.title}} Case Study</a>
+          <p class="portfolio-wide-text-md">{{project.description_short}}</p>
+          <p class="portfolio-wide-text-sm">{{project.description_medium}}
+            <a href="{{project.url}}" class="portfolio-wide-cta-link">View {{project.eleventyNavigation.key}} Case Study</a>
           </p>
         </div>
       </article>
-
-
-      {% endif %}
-      {%- endfor -%}
-    </nav>
-    </section>

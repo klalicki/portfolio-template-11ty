@@ -24,16 +24,19 @@
     
     {% if pageItem.data.eleventyNavigation.parent == eleventyNavigation.key %}
       {% set project = pageItem.data %}
+      {# {% if project.portfolio == true %} #}
+   
 
               {% if portfolio_type == "wide" %}
-              {% include "partials/portfolio-card.njk" %}
+              {% include "partials/portfolio-wide.njk" %}
               {% elif portfolio_type == "tile"  %}
-              {% include "partials/portfolio-card.njk" %}
+              {% include "partials/portfolio-tile.njk" %}
 
               {% elif portfolio_type == "card"  %}
 
               {% include "partials/portfolio-card.njk" %}
               {% endif %}
+      
       {% endif %}
 
     {% endfor %}
