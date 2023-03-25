@@ -1,5 +1,4 @@
 ---
-title: Daily Gratitude
 layout: project.njk
 tags: project
 subset: ux

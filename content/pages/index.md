@@ -1,5 +1,4 @@
 ---
-layout: index.njk
 title: Your Title Here
 eleventyNavigation:
   key: Home

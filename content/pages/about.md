@@ -1,5 +1,4 @@
 ---
-title: About/Contact
 layout: project.njk
 tags: page
 customTitle: About

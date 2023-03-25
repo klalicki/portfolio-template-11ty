@@ -1,5 +1,4 @@
 ---
-title: Meal Prep Master
 layout: project.njk
 tags: project
 subset: ux

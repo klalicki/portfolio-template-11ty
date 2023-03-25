@@ -1,5 +1,4 @@
 ---
-title: Brew and Bites
 layout: project.njk
 tags: project
 subset: gd
@@ -10,6 +9,7 @@ description_medium:
 eleventyNavigation:
   key: Brew & Bites
   parent: Design Portfolio
+  order: 10
 ---
 
 ## Background

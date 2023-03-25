@@ -1,5 +1,4 @@
 ---
-title: Community Builders
 layout: project.njk
 tags: project
 subset: gd

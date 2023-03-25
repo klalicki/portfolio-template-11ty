@@ -1,5 +1,4 @@
 ---
-title: Green Earth Brochure
 layout: project.njk
 tags: project
 subset: gd

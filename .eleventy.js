@@ -24,22 +24,16 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addWatchTarget("./content/");
   // adds custom collections for projects and pages which are sorted by an 'order' parameter in front matter.
 
-  eleventyConfig.addCollection("projectSorted", (collection) =>
-    collection.getFilteredByTags("project").sort((a, b) => {
-      return (a.data.order || 0) - (b.data.order || 0);
-    })
-  );
-  /* Sorting the pages by the order parameter in the front matter. */
-  eleventyConfig.addCollection("pageSorted", (collection) =>
-    collection.getFilteredByTags("page").sort((a, b) => {
-      return (a.data.order || 0) - (b.data.order || 0);
-    })
-  );
-  eleventyConfig.addCollection("portfolioSorted", (collection) =>
-    collection.getFilteredByTags("portfolio").sort((a, b) => {
-      return (a.data.order || 0) - (b.data.order || 0);
-    })
-  );
+  // adds a custom collection that is sorted by the eleventyNavigation order parameter in front matter.
+  eleventyConfig.addCollection("sorted", (collection) => {
+    return collection.sort((a, b) => {
+      return (
+        (a.data.eleventyNavigation.order || 0) -
+        (b.data.eleventyNavigation.order || 0)
+      );
+    });
+  });
+
   eleventyConfig.setLibrary("md", markdownLib);
 
   eleventyConfig.addPairedShortcode("bigText", function (content) {
@@ -59,7 +53,18 @@ module.exports = function (eleventyConfig) {
     // console.log(wrappedLines);
     return '<div class="carousel">' + wrappedLines + "</div>";
   });
+  eleventyConfig.addNunjucksFilter("logKeys", (arg1) => {
+    console.log(Object.keys(arg1));
 
+    // arg1.page.url
+    //arg1.url
+  });
+  eleventyConfig.addNunjucksFilter("logAll", (arg1) => {
+    console.log(arg1);
+
+    // arg1.page.url
+    //arg1.url
+  });
   eleventyConfig.on("eleventy.before", () => {
     try {
       let compiled = sass.compile("theme/assets/css/main.scss", {});

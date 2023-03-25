@@ -1,24 +1,25 @@
-       <section class="portfolio custom-width">
-      <nav class="portfolio-card-container">
-        {%- for project in collections.projectSorted -%}
-        {% if subset in project.data.subset %}
-        
-          <a href="{{project.url}}" class="portfolio-card-tile">
+<section class="portfolio custom-width">
+  <nav class="portfolio-card-container">
+    
+    {% for pageItem in collections.sorted %}
+    
+    
+    {% if pageItem.data.eleventyNavigation.parent == eleventyNavigation.key %}
+      {% set project = pageItem.data %}
+                <a href="{{project.page.url}}" class="portfolio-card-tile">
 
 
-            <img src="{{project.data.thumbnail}}" alt="{{project.data}}">
-            <h2 href="{{project.url}}">{{ project.data.title }}</h2>
-            {% if project.data.description_short %}
-            <p>{{project.data.description_short}}</p>
+            <img src="{{project.thumbnail}}" alt="{{project.data}}">
+            <h2 href="{{project.page. url}}">{{ project.title }}</h2>
+            {% if project.description_short %}
+            <p>{{project.description_short}}</p>
             {% endif %}
-            {% if project.data.description_medium %}
-            <p>{{project.data.description_medium}}</p>
+            {% if project.description_medium %}
+            <p>{{project.description_medium}}</p>
             {% endif %}
-
-
-          </a>
-      
-        {% endif %}
-        {%- endfor -%}
-      </nav>
-      </section>
+    {% endif %}
+   
+   
+    {% endfor %}
+  </nav>
+</section>

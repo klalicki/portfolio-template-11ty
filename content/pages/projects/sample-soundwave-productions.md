@@ -1,5 +1,4 @@
 ---
-title: Soundwave Productions
 layout: project.njk
 tags: project
 subset: gd

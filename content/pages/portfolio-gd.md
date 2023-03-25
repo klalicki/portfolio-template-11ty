@@ -1,10 +1,9 @@
 ---
-title: Design Portfolio
 layout: portfolio.njk
 tags: portfolio
 subset: gd
 order: 1
-portfolio_type: tile
+portfolio_type: card
 eleventyNavigation:
   key: Design Portfolio
 ---
