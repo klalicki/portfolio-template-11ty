@@ -7,6 +7,9 @@ order:
 thumbnail: /img/sample/community-builders-tile.jpg
 description_short:
 description_medium: Redesigning a Local Nonprofit's Branding for Increased Engagement
+eleventyNavigation:
+  key: Community Builders
+  parent: Design Portfolio
 ---
 
 ## Background

@@ -7,6 +7,9 @@ order: 3
 thumbnail: /img/thumbnail-placeholder-wide.jpg
 description_short: a meal prep app
 description_medium: The Meal Prep Master project was a collaborative UX design project that aimed to address the needs and preferences of busy individuals who want to plan and prepare meals more efficiently. Through research, ideation, prototyping, testing, and iteration, a high-fidelity prototype of the app was created that met the needs of its target audience.
+eleventyNavigation:
+  key: Meal Prep Master
+  parent: UX Portfolio
 ---
 
 ## Background

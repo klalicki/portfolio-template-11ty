@@ -7,6 +7,9 @@ order:
 thumbnail: /img/sample/brews-bites-tile.jpg
 description_short: Developing a Brand Identity for a Local Business
 description_medium:
+eleventyNavigation:
+  key: Brew & Bites
+  parent: Design Portfolio
 ---
 
 ## Background

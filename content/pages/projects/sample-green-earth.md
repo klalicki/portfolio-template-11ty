@@ -7,6 +7,9 @@ order: 2
 thumbnail: /img/sample/green-earth-tile.jpg
 description_short: Creating a Print Publication for a Nonprofit Organization
 description_medium:
+eleventyNavigation:
+  key: Green Earth Brochure
+  parent: Design Portfolio
 ---
 
 ## Introduction

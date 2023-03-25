@@ -7,6 +7,9 @@ order:
 thumbnail: /img/sample/soundwave-productions-tile.jpg
 description_short: Designing a Promotional Poster for a Music Festival
 description_medium:
+eleventyNavigation:
+  key: Soundwave Productions
+  parent: Design Portfolio
 ---
 
 ## Background

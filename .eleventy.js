@@ -2,6 +2,7 @@ const markdownIt = require("markdown-it");
 const markdownItAttrs = require("markdown-it-attrs");
 const sass = require("sass");
 const fs = require("fs");
+const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 
 const markdownItOptions = {
   html: true,
@@ -12,6 +13,9 @@ const markdownItOptions = {
 const markdownLib = markdownIt(markdownItOptions).use(markdownItAttrs);
 
 module.exports = function (eleventyConfig) {
+  // add eleventy navigation plugin
+  eleventyConfig.addPlugin(eleventyNavigationPlugin);
+
   // Return your Object options:
   eleventyConfig.addPassthroughCopy({ "./theme/assets": "assets" });
   eleventyConfig.addPassthroughCopy({ "./content/img": "img" });
@@ -19,6 +23,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.watchIgnores.add("theme/assets/css/main.css");
   eleventyConfig.addWatchTarget("./content/");
   // adds custom collections for projects and pages which are sorted by an 'order' parameter in front matter.
+
   eleventyConfig.addCollection("projectSorted", (collection) =>
     collection.getFilteredByTags("project").sort((a, b) => {
       return (a.data.order || 0) - (b.data.order || 0);

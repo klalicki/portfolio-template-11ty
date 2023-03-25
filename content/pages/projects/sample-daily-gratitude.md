@@ -7,6 +7,9 @@ order: 1
 thumbnail: /img/thumbnail-placeholder-wide.jpg
 description_short: a mindfulness app
 description_medium: Daily Gratitude is a mobile app designed to encourage users to practice gratitude through daily reflections and positive affirmations. Through research, ideation, prototyping, testing, and iteration, the app was designed to provide a simple and user-friendly experience that encourages users to practice gratitude through daily reflections and positive affirmations.
+eleventyNavigation:
+  key: Daily Gratitude
+  parent: UX Portfolio
 ---
 
 ## Background

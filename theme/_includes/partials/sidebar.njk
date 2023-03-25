@@ -7,8 +7,9 @@
   <hr>
   <nav class="main-nav main-nav-hidden">
     <ul class="sidebar-nav-link-section">
+     {{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
 
-
+{# 
       {%- for portfolio in collections.portfolioSorted -%}
       <li><a href="{{portfolio.url}}" class="{{'active' if portfolio.url in page.url}}">{{portfolio.data.title}}</a>
       </li>
@@ -27,7 +28,7 @@
       {%- for staticpage in collections.pageSorted -%}
       <li><a href="{{staticpage.url}}"
           class="{{'active' if staticpage.url in page.url}}">{{ staticpage.data.title }}</a></li>
-      {%- endfor -%}
+      {%- endfor -%} #}
     </ul>
 
 
