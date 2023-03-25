@@ -1,4 +1,5 @@
 ---
+title: Brew & Bites
 layout: project.njk
 tags: project
 subset: gd

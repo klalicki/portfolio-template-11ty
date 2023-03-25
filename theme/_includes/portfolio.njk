@@ -5,19 +5,41 @@
   {# places website content above the portfolio grid #}
   {{content | safe}}
 
-  {# select which portfolio layout to use #}
+  {# insert opening tag for correct portfolio type #}
   {% if portfolio_type == "wide" %}
-    {% include "partials/portfolio-wide.njk" %}
+  <section class="portfolio custom-width">
+  <nav class="portfolio-wide-container">
   {% elif portfolio_type == "tile"  %}
-    {% include "partials/portfolio-tile.njk" %}
+  <section class="portfolio custom-width custom-width-full">
+  <nav class="portfolio-tile-container">
 
   {% elif portfolio_type == "card"  %}
+  <section class="portfolio custom-width">
+  <nav class="portfolio-card-container">
+ {% endif %}
 
-    {% include "partials/portfolio-card.njk" %}
-  {% endif %}
+  {# loop through all the projects in the portfolio #}
+   {% for pageItem in collections.sorted %}
+    
+    
+    {% if pageItem.data.eleventyNavigation.parent == eleventyNavigation.key %}
+      {% set project = pageItem.data %}
 
+              {% if portfolio_type == "wide" %}
+              {% include "partials/portfolio-card.njk" %}
+              {% elif portfolio_type == "tile"  %}
+              {% include "partials/portfolio-card.njk" %}
 
-  </section>
+              {% elif portfolio_type == "card"  %}
+
+              {% include "partials/portfolio-card.njk" %}
+              {% endif %}
+      {% endif %}
+
+    {% endfor %}
+            </nav>
+          </section>
+      </section>
 </article>
 
 {% endblock %}

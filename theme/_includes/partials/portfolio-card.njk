@@ -1,25 +1,24 @@
-<section class="portfolio custom-width">
-  <nav class="portfolio-card-container">
+{# 
     
     {% for pageItem in collections.sorted %}
     
     
     {% if pageItem.data.eleventyNavigation.parent == eleventyNavigation.key %}
-      {% set project = pageItem.data %}
+      {% set project = pageItem.data %} #}
                 <a href="{{project.page.url}}" class="portfolio-card-tile">
 
 
             <img src="{{project.thumbnail}}" alt="{{project.data}}">
-            <h2 href="{{project.page. url}}">{{ project.title }}</h2>
+            <h2 href="{{project.page.url}}"> {{project.eleventyNavigation.key}}</h2>
             {% if project.description_short %}
             <p>{{project.description_short}}</p>
             {% endif %}
             {% if project.description_medium %}
             <p>{{project.description_medium}}</p>
             {% endif %}
-    {% endif %}
+    {# {% endif %}
    
    
     {% endfor %}
   </nav>
-</section>
+</section> #}
