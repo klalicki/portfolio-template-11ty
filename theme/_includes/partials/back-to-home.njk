@@ -1,0 +1,9 @@
+
+{% set breadCrumbs = collections.all | eleventyNavigationBreadcrumb(eleventyNavigation.key) %}
+ {% set parentPage = breadCrumbs[0] %}
+{{parentPage | logAll}}
+{% if parentPage %}
+<article class="inline-nav-section">
+  <a href="{{parentPage.url}}">Return to {{parentPage.title}}</a>
+</article>
+{% endif %}

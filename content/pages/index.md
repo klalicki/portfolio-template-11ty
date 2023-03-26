@@ -1,8 +1,10 @@
 ---
 title: Your Title Here
+layout: portfolio.njk
+portfolio_type: tile
 eleventyNavigation:
   key: Home
-  parent: 
+  parent:
 ---
 
 # Hello!

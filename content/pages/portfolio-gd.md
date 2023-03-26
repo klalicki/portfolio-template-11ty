@@ -1,7 +1,6 @@
 ---
 layout: portfolio.njk
-tags: portfolio
-subset: gd
+# tags: portfolio
 order: 1
 portfolio_type: tile
 eleventyNavigation:
