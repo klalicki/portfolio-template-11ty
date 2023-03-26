@@ -241,8 +241,12 @@ pre {
     margin-bottom: 0;
   }
 }
+.portfolio-tile-text-overlay {
+  pointer-events: none;
+}
 .portfolio-tile:focus .portfolio-tile-text-overlay,
 .portfolio-tile:hover .portfolio-tile-text-overlay {
+  pointer-events: all;
   opacity: 1;
   transform: scale(1);
   transition: all 0.5s;
