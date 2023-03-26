@@ -241,7 +241,7 @@ pre {
     margin-bottom: 0;
   }
 }
-.portfolio-tile-text-overlay {
+.portfolio-tile:not(:focus, :hover) .portfolio-tile-text-overlay {
   pointer-events: none;
 }
 .portfolio-tile:focus .portfolio-tile-text-overlay,
