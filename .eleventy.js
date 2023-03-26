@@ -65,6 +65,16 @@ module.exports = function (eleventyConfig) {
     // arg1.page.url
     //arg1.url
   });
+  eleventyConfig.addNunjucksFilter("getProjectPagesByParent", (arg1, arg2) => {
+    let siblings = arg1.filter((item) => {
+      // console.log(item.data.eleventyNavigation.parent);
+      // console.log(arg2);
+      return item.data.eleventyNavigation.parent === arg2;
+    });
+    // console.log(Object.keys(siblings[0]));
+    return siblings;
+  });
+
   eleventyConfig.on("eleventy.before", () => {
     try {
       let compiled = sass.compile("theme/assets/css/main.scss", {});
