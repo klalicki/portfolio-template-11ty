@@ -379,15 +379,15 @@ html {
     padding-left: 0;
     padding-right: 0;
   }
-  .portfolio-tile-text-overlay {
-    position: static;
-    opacity: 1;
+  // .portfolio-tile-text-overlay {
+  //   position: static;
+  //   opacity: 1;
 
-    transform: none;
-    :last-child {
-      margin-bottom: $padding-main * 2;
-    }
-  }
+  //   transform: none;
+  //   :last-child {
+  //     margin-bottom: $padding-main * 2;
+  //   }
+  // }
   // mobile styles
 }
 
