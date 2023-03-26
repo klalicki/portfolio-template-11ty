@@ -1,7 +1,7 @@
 
-        <a class="portfolio-tile" href="{{project.page.url}}">
+        <div class="portfolio-tile" >
              <img src="{{project.thumbnail}}" alt="{{project.description_short}}">
-            <div class="portfolio-tile-text-overlay">
+            <a class="portfolio-tile-text-overlay" href="{{project.page.url}}">
               <h2 class="portfolio-tile-project-title"href="{{project.url}}">{{ project.eleventyNavigation.key }}</h2>
               {% if project.description_short %}
               <p class="portfolio-tile-project-desc-short">{{project.description_short}}</p>
@@ -10,5 +10,5 @@
               <p class="portfolio-tile-project-desc-med">{{project.description_medium}}</p>
               {% endif %}
 
-            </div>
-        </a>
+            </a>
+        </div>
