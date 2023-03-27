@@ -3,14 +3,21 @@
  {% set parentPage = breadCrumbs[0] %}
 
 {% if parentPage %}
-<article class="inline-nav-section">
+<article class="component-inline-nav">
   <a href="{{parentPage.url}}">Return to {{parentPage.title}}</a>
-</article>
+
 {% endif %}
 
 
-{% set siblingPages = collections.sorted | getProjectPagesByParent(eleventyNavigation.parent) %}
+{% set siblingPages = collections.sorted | getSiblingPages(eleventyNavigation) %}
+<nav class="sibling-navigation">
+  
+    {% for siblingPage in siblingPages %}
+      
+        <a href="{{siblingPage.url}}"><p>prev/next project</p><h4>{{siblingPage.data.eleventyNavigation.key}}</h4></a>
+      
+    {% endfor %}
+ 
+</nav>
 
-{% for siblingPage in siblingPages %}
-  {{siblingPage.data.eleventyNavigation.key}}
-{% endfor %}
+</article>

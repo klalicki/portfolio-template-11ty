@@ -437,6 +437,15 @@ section.big-text {
     flex-shrink: 0;
   }
 }
+// inline-nav component
+.component-inline-nav {
+  margin-top: $padding-main;
+  margin-bottom: $padding-main;
+}
+.sibling-navigation {
+  display: flex;
+  justify-content: space-between;
+}
 
 // utility classes
 

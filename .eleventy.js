@@ -76,6 +76,27 @@ module.exports = function (eleventyConfig) {
     // console.log(Object.keys(siblings[0]));
     return siblings;
   });
+  //arg2 is the EleventyNavigation object of the page requesting the siblings
+  eleventyConfig.addNunjucksFilter("getSiblingPages", (arg1, arg2) => {
+    let siblings = arg1.filter((item) => {
+      return item.data.eleventyNavigation.parent === arg2.parent;
+    });
+
+    const curPageIndex = siblings.findIndex((page) => {
+      return page.data.eleventyNavigation.key == arg2.key;
+    });
+    let nextPageIndex = curPageIndex + 1;
+    let prevPageIndex = curPageIndex - 1;
+    if (nextPageIndex >= siblings.length) {
+      nextPageIndex = 0;
+    }
+    if (prevPageIndex < 0) {
+      prevPageIndex = siblings.length - 1;
+    }
+
+    let navSiblings = [siblings[prevPageIndex], siblings[nextPageIndex]];
+    return navSiblings;
+  });
 
   eleventyConfig.on("eleventy.before", () => {
     try {
