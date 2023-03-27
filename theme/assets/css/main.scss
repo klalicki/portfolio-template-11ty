@@ -356,6 +356,9 @@ html {
     opacity: 0;
     transition: all 0.3s;
   }
+  .portfolio-tile-container {
+    grid-template-columns: 100%;
+  }
   .btn-toggle-menu {
     display: block;
   }

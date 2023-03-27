@@ -53,6 +53,8 @@ module.exports = function (eleventyConfig) {
     // console.log(wrappedLines);
     return '<div class="carousel">' + wrappedLines + "</div>";
   });
+
+  // add custom filters for debugging - logs the object's keys to the console.
   eleventyConfig.addNunjucksFilter("logKeys", (arg1) => {
     console.log(Object.keys(arg1));
 
