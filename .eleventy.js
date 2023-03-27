@@ -77,6 +77,7 @@ module.exports = function (eleventyConfig) {
     return siblings;
   });
   //arg2 is the EleventyNavigation object of the page requesting the siblings
+
   eleventyConfig.addNunjucksFilter("getSiblingPages", (arg1, arg2) => {
     let siblings = arg1.filter((item) => {
       return item.data.eleventyNavigation.parent === arg2.parent;
@@ -95,6 +96,11 @@ module.exports = function (eleventyConfig) {
     }
 
     let navSiblings = [siblings[prevPageIndex], siblings[nextPageIndex]];
+    navSiblings[0].labelText = "previous";
+    navSiblings[1].labelText = "next";
+    if (navSiblings[0] === navSiblings[1]) {
+      navSiblings.shift();
+    }
     return navSiblings;
   });
 

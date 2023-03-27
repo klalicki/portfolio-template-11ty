@@ -14,7 +14,7 @@
   
     {% for siblingPage in siblingPages %}
       
-        <a href="{{siblingPage.url}}"><p>prev/next project</p><h4>{{siblingPage.data.eleventyNavigation.key}}</h4></a>
+        <a href="{{siblingPage.url}}"><p>see {{siblingPage.labelText}} project</p><h4>{{siblingPage.data.eleventyNavigation.key}}</h4></a>
       
     {% endfor %}
  
