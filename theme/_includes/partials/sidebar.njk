@@ -7,7 +7,7 @@
   <hr>
   <nav class="main-nav main-nav-hidden">
     <ul class="sidebar-nav-link-section">
-     {{ collections.sorted | eleventyNavigation | eleventyNavigationToHtml | safe }}
+     {{ collections.sorted | eleventyNavigation | eleventyNavigationToHtml({activeKey: eleventyNavigation.key ,activeAnchorClass: "active"}) | safe }}
 
 {# 
       {%- for portfolio in collections.portfolioSorted -%}
