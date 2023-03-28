@@ -23,12 +23,19 @@ $font-size-mobile: 100%;
 $font-size-scale-factor: 1.4;
 
 // COLORS:
+
+// This line sets the background color for the entire page
+// default is white
 $color-page-background: white;
-$color-sidebar-background: rgb(228, 228, 228);
+
+// This line sets the background color for the sidebar area, and for the top bar on mobile
+// default is a light gray (#c0c0c0)
+$color-sidebar-background: #c0c0c0;
 $color-text-primary: black;
 $color-text-headers: purple;
 $color-text-link: red;
 $color-highlight: yellow;
+$color-hover: lightpink;
 
 // This section is for the 'tile' portfolio layout:
 

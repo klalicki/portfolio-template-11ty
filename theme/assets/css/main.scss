@@ -426,11 +426,25 @@ section.big-text {
   max-width: $main-col-width;
   border-top: $border-width solid $border-color;
   padding-top: $padding-main;
-  padding-bottom: $padding-main;
+  // padding-bottom: $padding-main;
   margin-top: 2 * $padding-main;
-  margin-bottom: $padding-main;
 }
-.sibling-navigation {
+.component-inline-nav .sibling-navigation {
+  padding-left: 0;
+  padding-right: 0;
+  a {
+    padding: $padding-main;
+  }
+
+  a,
+  a:visited {
+    color: $color-text-primary;
+    text-decoration: none;
+  }
+  a:hover,
+  a:focus {
+    background-color: $color-hover;
+  }
   display: flex;
   justify-content: space-between;
   > :first-child {

@@ -98,7 +98,7 @@ body {
 .main-nav-container {
   width: clamp(250px, 30%, 500px);
   position: fixed;
-  background-color: rgb(228, 228, 228);
+  background-color: #c0c0c0;
   height: 100%;
   padding: 1rem;
   z-index: 10;
@@ -366,7 +366,7 @@ html {
   }
   .main-nav {
     transform: none;
-    background-color: rgb(228, 228, 228);
+    background-color: #c0c0c0;
     opacity: 1;
     transition: all 0.3s;
     padding-left: 1rem;
@@ -459,19 +459,31 @@ section.big-text > * {
   max-width: 40rem;
   border-top: 3px solid black;
   padding-top: 1rem;
-  padding-bottom: 1rem;
   margin-top: 2rem;
-  margin-bottom: 1rem;
 }
 
-.sibling-navigation {
+.component-inline-nav .sibling-navigation {
+  padding-left: 0;
+  padding-right: 0;
   display: flex;
   justify-content: space-between;
 }
-.sibling-navigation > :first-child {
+.component-inline-nav .sibling-navigation a {
+  padding: 1rem;
+}
+.component-inline-nav .sibling-navigation a,
+.component-inline-nav .sibling-navigation a:visited {
+  color: black;
+  text-decoration: none;
+}
+.component-inline-nav .sibling-navigation a:hover,
+.component-inline-nav .sibling-navigation a:focus {
+  background-color: lightpink;
+}
+.component-inline-nav .sibling-navigation > :first-child {
   text-align: left;
 }
-.sibling-navigation > :last-child {
+.component-inline-nav .sibling-navigation > :last-child {
   text-align: right;
 }
 
