@@ -1,21 +1,22 @@
 
 {% set breadCrumbs = collections.all | eleventyNavigationBreadcrumb(eleventyNavigation.key) %}
  {% set parentPage = breadCrumbs[0] %}
-
-{% if parentPage %}
 <article class="component-inline-nav">
-  <a href="{{parentPage.url}}">Return to {{parentPage.title}}</a>
-
-{% endif %}
 
 
 {% set siblingPages = collections.sorted | getSiblingPages(eleventyNavigation) %}
 <nav class="sibling-navigation">
   
     {% for siblingPage in siblingPages %}
+
+    {% if siblingPage %}
+      <a href="{{siblingPage.url}}"><p>{{siblingPage.labelText}}</p><h4>{{siblingPage.data.eleventyNavigation.key}}</h4></a>
+
+    {% else %}
+     <div class="placeholder"></div>  
+    {% endif %}
       
-        <a href="{{siblingPage.url}}"><p>see {{siblingPage.labelText}} project</p><h4>{{siblingPage.data.eleventyNavigation.key}}</h4></a>
-      
+        
     {% endfor %}
  
 </nav>

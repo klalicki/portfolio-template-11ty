@@ -25,10 +25,10 @@
             
             {% if customTitle %}
             
-                <h1>{{customTitle}}</h1>
+                <h1 class="page-title">{{customTitle}}</h1>
 
             {% else %}
-            <h1>{{ eleventyNavigation.key if eleventyNavigation.key else title }}</h1>
+            <h1 class="page-title">{{ eleventyNavigation.key if eleventyNavigation.key else title }}</h1>
             {% endif %}
             
             {{content | safe}}

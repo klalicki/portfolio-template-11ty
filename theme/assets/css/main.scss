@@ -13,6 +13,9 @@ $font-size-l: 1.41rem; //h3
 $font-size-xl: 2rem; //h2
 $font-size-xxl: 2.82rem; //h1
 
+$border-width: 3px;
+$border-color: black;
+
 $min-card-width: 300px;
 
 $padding-main: 1rem;
@@ -391,16 +394,11 @@ html {
     padding-left: 0;
     padding-right: 0;
   }
-  // .portfolio-tile-text-overlay {
-  //   position: static;
-  //   opacity: 1;
+}
 
-  //   transform: none;
-  //   :last-child {
-  //     margin-bottom: $padding-main * 2;
-  //   }
-  // }
-  // mobile styles
+.page-title {
+  border-bottom: $border-width solid $border-color;
+  padding-bottom: $padding-main;
 }
 
 code {
@@ -448,12 +446,22 @@ section.big-text {
 }
 // inline-nav component
 .component-inline-nav {
-  margin-top: $padding-main;
+  max-width: $main-col-width;
+  border-top: $border-width solid $border-color;
+  padding-top: $padding-main;
+  padding-bottom: $padding-main;
+  margin-top: 2 * $padding-main;
   margin-bottom: $padding-main;
 }
 .sibling-navigation {
   display: flex;
   justify-content: space-between;
+  > :first-child {
+    text-align: left;
+  }
+  > :last-child {
+    text-align: right;
+  }
 }
 
 // utility classes

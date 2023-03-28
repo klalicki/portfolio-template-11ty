@@ -404,6 +404,11 @@ html {
     padding-right: 0;
   }
 }
+.page-title {
+  border-bottom: 3px solid black;
+  padding-bottom: 1rem;
+}
+
 code {
   white-space: pre-wrap;
   line-height: 1.2;
@@ -449,13 +454,23 @@ section.big-text > * {
 }
 
 .component-inline-nav {
-  margin-top: 1rem;
+  max-width: 40rem;
+  border-top: 3px solid black;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-top: 2rem;
   margin-bottom: 1rem;
 }
 
 .sibling-navigation {
   display: flex;
   justify-content: space-between;
+}
+.sibling-navigation > :first-child {
+  text-align: left;
+}
+.sibling-navigation > :last-child {
+  text-align: right;
 }
 
 .custom-width-125 {

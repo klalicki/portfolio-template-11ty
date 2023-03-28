@@ -82,6 +82,9 @@ module.exports = function (eleventyConfig) {
     let siblings = arg1.filter((item) => {
       return item.data.eleventyNavigation.parent === arg2.parent;
     });
+    if (siblings.length == 1) {
+      return ["", ""];
+    }
 
     const curPageIndex = siblings.findIndex((page) => {
       return page.data.eleventyNavigation.key == arg2.key;
@@ -96,11 +99,17 @@ module.exports = function (eleventyConfig) {
     }
 
     let navSiblings = [siblings[prevPageIndex], siblings[nextPageIndex]];
-    navSiblings[0].labelText = "previous";
-    navSiblings[1].labelText = "next";
-    if (navSiblings[0] === navSiblings[1]) {
-      navSiblings.shift();
+    navSiblings[0].labelText = `← see previous project`;
+
+    navSiblings[1].labelText = "see next project →";
+
+    if (curPageIndex == 0) {
+      navSiblings[0] = "";
     }
+    if (curPageIndex == siblings.length - 1) {
+      navSiblings[1] = "";
+    }
+
     return navSiblings;
   });
 
