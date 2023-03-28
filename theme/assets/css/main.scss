@@ -1,31 +1,8 @@
 @use "reset.css";
+@use "sass:math";
 @use "../../../content/css/theme.scss" as *;
-// sass variables
-$font-size-base: 110%;
-$font-size-mobile: 100%;
 
-$portfolio-tile-gap: 0px;
-$portfolio-tile-max-columns: 3;
-
-$font-size-sm: 0.72rem; //figcaption
-$font-size-md: 1rem; //p
-$font-size-l: 1.41rem; //h3
-$font-size-xl: 2rem; //h2
-$font-size-xxl: 2.82rem; //h1
-
-$border-width: 3px;
-$border-color: black;
-
-$min-card-width: 300px;
-
-$padding-main: 1rem;
-$padding-card: 0.5rem;
-
-$main-col-width: 40rem;
-
-$sidebar-width: 30%;
-$sidebar-min-width: 250px;
-$sidebar-max-width: 500px;
+// sass calculations:
 
 $sidebar-calc-width: clamp(
   $sidebar-min-width,
@@ -33,11 +10,11 @@ $sidebar-calc-width: clamp(
   $sidebar-max-width
 );
 
-$color-page-background: white;
-$color-sidebar-background: rgb(228, 228, 228);
-$color-text-primary: black;
-$color-text-link: red;
-$color-highlight: yellow;
+$font-size-sm: math.pow($font-size-scale-factor, -1) + 0rem; //figcaption
+$font-size-md: math.pow($font-size-scale-factor, 0) + 0rem; //p
+$font-size-l: math.pow($font-size-scale-factor, 1) + 0rem; //h3
+$font-size-xl: math.pow($font-size-scale-factor, 2) + 0rem; //h2
+$font-size-xxl: math.pow($font-size-scale-factor, 3) + 0rem; //h1
 
 :root {
   font-size: $font-size-base;

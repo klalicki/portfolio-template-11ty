@@ -31,21 +31,23 @@ body {
   line-height: 1;
 }
 
+/* This line sets the default font for most text, including the body text and navigation */
+/* This line sets the font for headers, including the site title*/
 :root {
   font-size: 110%;
   font-family: "IBM Plex Sans", sans-serif;
 }
 
 h1 {
-  font-size: 2.82rem;
+  font-size: 2.744rem;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 1.96rem;
 }
 
 h3 {
-  font-size: 1.41rem;
+  font-size: 1.4rem;
 }
 
 h4,
@@ -282,7 +284,7 @@ pre {
 }
 
 .portfolio-wide-text-sm {
-  font-size: 0.72rem;
+  font-size: 0.7142857143rem;
 }
 
 .portfolio-wide-text-md {
@@ -358,7 +360,7 @@ html {
     padding-bottom: 1rem;
   }
   .sidebar-nav-link-section a {
-    font-size: 1.41rem;
+    font-size: 1.4rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
   }
@@ -443,7 +445,7 @@ section.big-text > :last-child {
   margin-bottom: 0;
 }
 section.big-text p {
-  font-size: 1.41rem;
+  font-size: 1.4rem;
 }
 section.big-text > * {
   width: 100%;
