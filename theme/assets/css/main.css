@@ -34,10 +34,6 @@ body {
 :root {
   font-size: 110%;
   font-family: "IBM Plex Sans", sans-serif;
-  --card-padding: 1rem;
-  --sidebar-color: lightgrey;
-  --color-text-primary: black;
-  --color-highlight: lightgreen;
 }
 
 h1 {
@@ -68,13 +64,13 @@ h6 {
   margin-bottom: 0.25em;
   font-family: "IBM Plex Serif", serif;
   display: block;
-  max-width: 35rem;
+  max-width: 40rem;
 }
 
 p {
   line-height: 1.6;
   margin-bottom: 0.75em;
-  max-width: 35rem;
+  max-width: 40rem;
 }
 p > img {
   width: 100%;
@@ -98,9 +94,9 @@ body {
 }
 
 .main-nav-container {
-  width: 300px;
+  width: clamp(250px, 30%, 500px);
   position: fixed;
-  background-color: var(--sidebar-color);
+  background-color: rgb(228, 228, 228);
   height: 100%;
   padding: 1rem;
   z-index: 10;
@@ -141,7 +137,7 @@ body {
   transition: background-color 0.2s;
 }
 .sidebar-nav-link-section a:hover {
-  background-color: var(--color-highlight);
+  background-color: yellow;
 }
 
 main {
@@ -149,7 +145,7 @@ main {
   position: absolute;
   left: 0;
   right: 0;
-  padding-left: 300px;
+  padding-left: clamp(250px, 30%, 500px);
   padding-top: 1rem;
   padding-bottom: 1rem;
   padding-right: 0;
@@ -171,7 +167,7 @@ article > *:not(.custom-width) {
   padding-left: 1rem;
   padding-right: 1rem;
   width: 100%;
-  max-width: 35rem;
+  max-width: 40rem;
   flex-shrink: 0;
 }
 
@@ -206,7 +202,7 @@ pre {
   font-size: 1.25rem;
 }
 .portfolio-card-tile:hover {
-  background-color: var(--color-highlight);
+  background-color: yellow;
 }
 
 .portfolio-card-tile-contents {
@@ -368,7 +364,7 @@ html {
   }
   .main-nav {
     transform: none;
-    background-color: var(--sidebar-color);
+    background-color: rgb(228, 228, 228);
     opacity: 1;
     transition: all 0.3s;
     padding-left: 1rem;
@@ -420,7 +416,7 @@ pre {
 }
 
 .active {
-  background-color: var(--color-highlight);
+  background-color: yellow;
   transition: background-color 0.2s;
 }
 
@@ -448,7 +444,7 @@ section.big-text > * {
   width: 100%;
   padding-left: 1rem;
   padding-right: 1rem;
-  max-width: 35rem;
+  max-width: 40rem;
   flex-shrink: 0;
 }
 
@@ -463,19 +459,19 @@ section.big-text > * {
 }
 
 .custom-width-125 {
-  max-width: 43.75rem;
+  max-width: 50rem;
 }
 
 .custom-width-150 {
-  max-width: 52.5rem;
+  max-width: 60rem;
 }
 
 .custom-width-200 {
-  max-width: 70rem;
+  max-width: 80rem;
 }
 
 .custom-width-75 {
-  max-width: 26.25rem;
+  max-width: 30rem;
 }
 
 .custom-width-full {

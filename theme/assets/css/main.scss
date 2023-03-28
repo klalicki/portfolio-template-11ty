@@ -18,18 +18,27 @@ $min-card-width: 300px;
 $padding-main: 1rem;
 $padding-card: 0.5rem;
 
-$main-col-width: 35rem;
+$main-col-width: 40rem;
 
-$sidebar-width: 300px;
+$sidebar-width: 30%;
+$sidebar-min-width: 250px;
+$sidebar-max-width: 500px;
+
+$sidebar-calc-width: clamp(
+  $sidebar-min-width,
+  $sidebar-width,
+  $sidebar-max-width
+);
+
+$color-page-background: white;
+$color-sidebar-background: rgb(228, 228, 228);
+$color-text-primary: black;
+$color-text-link: red;
+$color-highlight: yellow;
 
 :root {
   font-size: $font-size-base;
   font-family: $theme-font-stack-main;
-
-  --card-padding: 1rem;
-  --sidebar-color: lightgrey;
-  --color-text-primary: black;
-  --color-highlight: lightgreen;
 }
 
 h1 {
@@ -84,15 +93,15 @@ body {
   margin: 0;
 }
 .main-nav-container {
-  width: $sidebar-width;
+  width: $sidebar-calc-width;
   position: fixed;
-  background-color: var(--sidebar-color);
+  background-color: $color-sidebar-background;
   height: 100%;
   padding: $padding-main;
   z-index: 10;
   transition: all 0.5s;
   hr {
-    color: black;
+    color: $color-text-primary;
   }
 }
 .site-masthead {
@@ -116,7 +125,7 @@ body {
   padding-bottom: $padding-main;
   padding-inline-start: 0;
   * {
-    color: black;
+    color: $color-text-primary;
     text-decoration: none;
   }
   a {
@@ -124,7 +133,7 @@ body {
     padding: 0.25rem;
     transition: background-color 0.2s;
     &:hover {
-      background-color: var(--color-highlight);
+      background-color: $color-highlight;
     }
   }
 }
@@ -133,7 +142,7 @@ main {
   position: absolute;
   left: 0;
   right: 0;
-  padding-left: calc($sidebar-width);
+  padding-left: $sidebar-calc-width;
   padding-top: $padding-main;
   padding-bottom: $padding-main;
   padding-right: 0;
@@ -190,7 +199,7 @@ pre {
     font-size: 1.25rem;
   }
   &:hover {
-    background-color: var(--color-highlight);
+    background-color: $color-highlight;
   }
 }
 .portfolio-card-tile-contents {
@@ -343,7 +352,7 @@ html {
   }
   .main-nav {
     transform: none;
-    background-color: var(--sidebar-color);
+    background-color: $color-sidebar-background;
     opacity: 1;
     transition: all 0.3s;
     padding-left: $padding-main;
@@ -404,7 +413,7 @@ pre {
   padding-bottom: $padding-main;
 }
 .active {
-  background-color: var(--color-highlight);
+  background-color: $color-highlight;
   transition: background-color 0.2s;
 }
 // components
