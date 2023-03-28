@@ -229,6 +229,8 @@ pre {
   :last-child {
     margin-bottom: 0;
   }
+  color: $color-text-primary;
+  text-decoration: none;
 }
 .portfolio-tile:not(:focus, :hover) .portfolio-tile-text-overlay {
   pointer-events: none;
