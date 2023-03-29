@@ -1,9 +1,12 @@
 {% extends "base.njk" %}
 {% block main %}
 <article>
+  <section class="portfolio-intro">
   <h1>{{ eleventyNavigation.key if eleventyNavigation.key else title }}</h1>
   {# places website content above the portfolio grid #}
   {{content | safe}}
+  </section>
+
 
   {# insert opening tag for correct portfolio type #}
   {% if portfolio_type == "wide" %}

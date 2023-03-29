@@ -1,6 +1,6 @@
 ---
 layout: portfolio.njk
-portfolio_type: card
+portfolio_type: tile
 eleventyNavigation:
   key: Design Portfolio
 ---

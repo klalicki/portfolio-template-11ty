@@ -52,16 +52,20 @@ const addTileListeners = () => {
 addTileListeners();
 
 const hideItems = () => {
-  document.querySelectorAll(".text-page > *").forEach((item) => {
+  const itemList = document.querySelectorAll(
+    ".portfolio-intro, .text-page > *, .component-inline-nav, .portfolio > * > *"
+  );
+  // itemList.push(document.querySelectorAll(".component-inline-nav"));
+  itemList.forEach((item) => {
+    item.classList.add("transition-animation-base");
     item.classList.add("transition-hide-item");
   });
 };
 const showItems = () => {
   const totalTransitionTimeMax = 1000;
-  const itemDelay = 100;
-  const itemList = document.querySelectorAll(".text-page > *");
-  const itemCount = itemList.length;
-  // const transitionDelay = totalTransitionTimeMax / itemCount;
+  const itemDelay = 50;
+  const itemList = document.querySelectorAll(".transition-hide-item");
+
   itemList.forEach((item, index) => {
     const curTransitionDelay = Math.min(
       index * itemDelay,
