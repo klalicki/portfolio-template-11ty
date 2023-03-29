@@ -194,11 +194,11 @@ pre {
   position: relative;
   padding: $padding-main;
   text-decoration: none;
-  color: var(--color-text-primary);
+  color: $color-text-primary;
   display: block;
   * {
     display: block;
-    color: var(--color-text-primary);
+    color: $color-text-primary;
     text-decoration: none;
   }
 
@@ -289,21 +289,6 @@ pre {
 }
 .portfolio-wide-cta-link {
   display: block;
-}
-
-// splash page
-.splash-section {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: lightgreen;
-  z-index: 100;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
 // transitions:
@@ -421,7 +406,7 @@ pre {
 // components
 
 section.big-text {
-  background-color: lightpink;
+  background-color: $color-big-text-background;
   padding: $padding-main * 2;
   position: relative;
   width: 100%;
