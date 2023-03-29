@@ -46,7 +46,7 @@ h4,
 h5,
 h6 {
   margin-top: 0.75em;
-  margin-bottom: 0.25em;
+  margin-bottom: 0.5em;
   font-family: $theme-font-stack-headers;
   display: block;
   max-width: $main-col-width;
@@ -60,6 +60,20 @@ p {
   }
 }
 main {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $color-text-headers;
+  }
+  * {
+    color: $color-text-primary;
+  }
+  a {
+    color: $color-text-link;
+  }
   ul,
   ol {
     padding-inline-start: 1em;

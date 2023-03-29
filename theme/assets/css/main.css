@@ -39,7 +39,7 @@ body {
 }
 
 html {
-  background-color: white;
+  background-color: rgb(31, 31, 31);
 }
 
 h1 {
@@ -67,7 +67,7 @@ h4,
 h5,
 h6 {
   margin-top: 0.75em;
-  margin-bottom: 0.25em;
+  margin-bottom: 0.5em;
   font-family: "IBM Plex Serif", serif;
   display: block;
   max-width: 40rem;
@@ -82,6 +82,20 @@ p > img {
   width: 100%;
 }
 
+main h1,
+main h2,
+main h3,
+main h4,
+main h5,
+main h6 {
+  color: cyan;
+}
+main * {
+  color: lightgreen;
+}
+main a {
+  color: magenta;
+}
 main ul,
 main ol {
   padding-inline-start: 1em;
@@ -102,16 +116,16 @@ body {
 .main-nav-container {
   width: clamp(250px, 30%, 500px);
   position: fixed;
-  background-color: darkgreen;
+  background-color: lightgreen;
   height: 100%;
   padding: 1rem;
   z-index: 10;
   transition: all 0.5s;
-  color: yellow;
+  color: rgb(0, 61, 61);
 }
 .main-nav-container hr {
-  color: yellow;
-  border: 1.5px solid yellow;
+  color: rgb(0, 61, 61);
+  border: 1.5px solid rgb(0, 61, 61);
 }
 
 .site-masthead {
@@ -120,7 +134,7 @@ body {
   padding-bottom: 1rem;
 }
 .site-masthead a {
-  color: yellow;
+  color: rgb(0, 61, 61);
   text-decoration: none;
 }
 .site-masthead h3 {
@@ -135,7 +149,7 @@ body {
 }
 
 .active {
-  background-color: blue;
+  background-color: cyan;
   transition: background-color 0.2s;
 }
 
@@ -145,7 +159,7 @@ body {
   padding-inline-start: 0;
 }
 .sidebar-nav-link-section * {
-  color: yellow;
+  color: rgb(0, 61, 61);
   text-decoration: none;
 }
 .sidebar-nav-link-section a {
@@ -154,7 +168,7 @@ body {
   transition: background-color 0.2s;
 }
 .sidebar-nav-link-section a:hover {
-  background-color: blue;
+  background-color: cyan;
 }
 
 main {
@@ -219,7 +233,7 @@ pre {
   font-size: 1.25rem;
 }
 .portfolio-card-tile:hover {
-  background-color: yellow;
+  background-color: rgb(173, 0, 121);
 }
 
 .portfolio-card-tile-contents {
@@ -264,7 +278,7 @@ pre {
   background-color: white;
   transform: scale(90%);
   transition: all 0.5s;
-  color: black;
+  color: lightgreen;
   text-decoration: none;
 }
 .portfolio-tile-text-overlay :first-child {
@@ -383,7 +397,7 @@ html {
   }
   .main-nav {
     transform: none;
-    background-color: darkgreen;
+    background-color: lightgreen;
     opacity: 1;
     transition: all 0.3s;
     padding-left: 1rem;
@@ -424,7 +438,7 @@ html {
   }
 }
 .page-title {
-  border-bottom: 3px solid black;
+  border-bottom: 3px solid rgb(0, 255, 0);
   padding-bottom: 1rem;
 }
 
@@ -469,7 +483,7 @@ section.big-text > * {
 
 .component-inline-nav {
   max-width: 40rem;
-  border-top: 3px solid black;
+  border-top: 3px solid rgb(0, 255, 0);
   padding-top: 1rem;
   margin-top: 2rem;
 }
@@ -485,12 +499,12 @@ section.big-text > * {
 }
 .component-inline-nav .sibling-navigation a,
 .component-inline-nav .sibling-navigation a:visited {
-  color: black;
+  color: lightgreen;
   text-decoration: none;
 }
 .component-inline-nav .sibling-navigation a:hover,
 .component-inline-nav .sibling-navigation a:focus {
-  background-color: lightpink;
+  background-color: rgb(173, 0, 121);
 }
 .component-inline-nav .sibling-navigation > :first-child {
   text-align: left;

@@ -26,18 +26,18 @@ $font-size-scale-factor: 1.4;
 
 // This line sets the background color for the entire page
 // default is white
-$color-page-background: white;
+$color-page-background: rgb(31, 31, 31);
 
 // This line sets the background color for the sidebar area, and for the top bar on mobile
 // default is a light gray (#c0c0c0)
-$color-sidebar-background: darkgreen;
-$color-sidebar-text: yellow;
-$color-sidebar-highlight: blue;
-$color-text-primary: black;
-$color-text-headers: purple;
-$color-text-link: red;
-$color-highlight: yellow;
-$color-hover: lightpink;
+$color-sidebar-background: lightgreen;
+$color-sidebar-text: rgb(0, 61, 61);
+$color-sidebar-highlight: cyan;
+$color-text-primary: lightgreen;
+$color-text-headers: cyan;
+$color-text-link: magenta;
+$color-highlight: rgb(173, 0, 121);
+$color-hover: rgb(173, 0, 121);
 
 // This section is for the 'tile' portfolio layout:
 
@@ -54,7 +54,7 @@ $portfolio-tile-max-columns: 3;
 // default is 3px;
 
 $border-width: 3px;
-$border-color: black;
+$border-color: rgb(0, 255, 0);
 
 $min-card-width: 300px;
 
