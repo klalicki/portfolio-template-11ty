@@ -38,6 +38,10 @@ body {
   font-family: "IBM Plex Sans", sans-serif;
 }
 
+html {
+  background-color: white;
+}
+
 h1 {
   font-size: 2.744rem;
 }
@@ -98,20 +102,26 @@ body {
 .main-nav-container {
   width: clamp(250px, 30%, 500px);
   position: fixed;
-  background-color: #d4d4d4;
+  background-color: darkgreen;
   height: 100%;
   padding: 1rem;
   z-index: 10;
   transition: all 0.5s;
+  color: yellow;
 }
 .main-nav-container hr {
-  color: black;
+  color: yellow;
+  border: 1.5px solid yellow;
 }
 
 .site-masthead {
   z-index: 10;
   position: relative;
   padding-bottom: 1rem;
+}
+.site-masthead a {
+  color: yellow;
+  text-decoration: none;
 }
 .site-masthead h3 {
   margin-top: 0;
@@ -124,13 +134,18 @@ body {
   display: none;
 }
 
+.active {
+  background-color: blue;
+  transition: background-color 0.2s;
+}
+
 .sidebar-nav-link-section {
   padding-top: 1rem;
   padding-bottom: 1rem;
   padding-inline-start: 0;
 }
 .sidebar-nav-link-section * {
-  color: black;
+  color: yellow;
   text-decoration: none;
 }
 .sidebar-nav-link-section a {
@@ -139,7 +154,7 @@ body {
   transition: background-color 0.2s;
 }
 .sidebar-nav-link-section a:hover {
-  background-color: yellow;
+  background-color: blue;
 }
 
 main {
@@ -368,7 +383,7 @@ html {
   }
   .main-nav {
     transform: none;
-    background-color: #d4d4d4;
+    background-color: darkgreen;
     opacity: 1;
     transition: all 0.3s;
     padding-left: 1rem;
@@ -422,11 +437,6 @@ pre {
   background-color: yellow;
   padding-top: 1rem;
   padding-bottom: 1rem;
-}
-
-.active {
-  background-color: yellow;
-  transition: background-color 0.2s;
 }
 
 section.big-text {

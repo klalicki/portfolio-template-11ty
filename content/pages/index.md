@@ -1,12 +1,8 @@
 ---
-title: Your Title Here
 layout: portfolio.njk
-portfolio_type: tile
+portfolio_type: card
 eleventyNavigation:
-  key: Home
-  parent:
+  key: Design Portfolio
 ---
 
-# Hello!
-
-This is some content in index.md. This content goes on the _homepage_ of the site.
+Any text in this document appears above the project grid in the Portfolio view
