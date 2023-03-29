@@ -4,9 +4,9 @@
   <img src="{{project.thumbnail}}" alt="{{project.description_short}}">
   <h2 href="{{project.page.url}}"> {{project.eleventyNavigation.key}}</h2>
   {% if project.description_short %}
-  <p>{{project.description_short}}</p>
+  <p class="portfolio-card-desc-short">{{project.description_short}}</p>
   {% endif %}
   {% if project.description_medium %}
-  <p>{{project.description_medium}}</p>
+  <p class="portfolio-card-desc-med">{{project.description_medium}}</p>
   {% endif %}
 </a>
