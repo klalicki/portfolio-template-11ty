@@ -247,7 +247,7 @@ pre {
   right: $padding-main;
   bottom: $padding-main;
   opacity: 0;
-  background-color: white;
+  background-color: $color-tile-overlay;
   transform: scale(90%);
   transition: all 0.5s;
   :first-child {

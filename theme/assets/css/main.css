@@ -275,7 +275,7 @@ pre {
   right: 1rem;
   bottom: 1rem;
   opacity: 0;
-  background-color: white;
+  background-color: #910091;
   transform: scale(90%);
   transition: all 0.5s;
   color: lightgreen;
