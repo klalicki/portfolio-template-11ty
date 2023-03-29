@@ -499,3 +499,15 @@ section.big-text {
 .custom-width-full {
   width: 100%;
 }
+
+.text-page > .transition-hide-item {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: none;
+}
+
+.text-page > * {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.3s;
+}

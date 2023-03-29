@@ -1,7 +1,5 @@
 import barba from "@barba/core";
 import barbaCss from "@barba/css";
-// import "./menu-toggle.js";
-// import { gsap } from "gsap";
 
 const clearMenuActive = () => {
   document.querySelectorAll(".active").forEach((item) => {
@@ -52,6 +50,33 @@ const addTileListeners = () => {
   });
 };
 addTileListeners();
+
+const hideItems = () => {
+  document.querySelectorAll(".text-page > *").forEach((item) => {
+    item.classList.add("transition-hide-item");
+  });
+};
+const showItems = () => {
+  const totalTransitionTimeMax = 1000;
+  const itemDelay = 100;
+  const itemList = document.querySelectorAll(".text-page > *");
+  const itemCount = itemList.length;
+  // const transitionDelay = totalTransitionTimeMax / itemCount;
+  itemList.forEach((item, index) => {
+    const curTransitionDelay = Math.min(
+      index * itemDelay,
+      totalTransitionTimeMax
+    );
+    console.log(curTransitionDelay);
+    setTimeout(() => {
+      item.classList.remove("transition-hide-item");
+    }, curTransitionDelay);
+  });
+};
+
+window.hideItems = hideItems;
+window.showItems = showItems;
+console.log("registered functions");
 barba.hooks.before((data) => {
   hideMenu();
   clearMenuActive();
@@ -59,7 +84,11 @@ barba.hooks.before((data) => {
 });
 barba.hooks.after((data) => {});
 barba.hooks.beforeEnter(() => {
+  hideItems();
   window.scrollTo(0, 0);
+});
+barba.hooks.afterEnter(() => {
+  showItems();
 });
 
 document.querySelector("#btn-show-work").addEventListener("click", (e) => {
