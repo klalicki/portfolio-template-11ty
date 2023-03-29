@@ -25,4 +25,4 @@ eleventyNavigation:
 
 ![Poppy](/img/work-photos/4_copy.jpg)
 
-## 
+## Queen Anne's Lace
