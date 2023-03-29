@@ -1,10 +1,12 @@
 /* font imports here */
+//copy and paste these from Google Fonts, Adobe Fonts, etc.
+// you only need to copy the '@import' line; if the code has <style> tags, delete them.
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400;1,600&family=IBM+Plex+Serif:wght@600&display=swap");
 
-/* This line sets the default font for most text, including the body text and navigation */
+/* This line sets the default font for most text, including the body text, navigation, and the smaller headers (h4-h6) */
 $theme-font-stack-main: "IBM Plex Sans", sans-serif;
 
-/* This line sets the font for headers, including the site title*/
+/* This line sets the font for larger headers (h1-h3), including the site title*/
 $theme-font-stack-headers: "IBM Plex Serif", serif;
 
 // This line sets the base font size for desktop
@@ -25,8 +27,13 @@ $font-size-scale-factor: 1.4;
 // This sets the size of the site title in the masthead (typically your name)
 // default value is 1.4rem
 $font-size-nav-masthead: 3rem;
-$font-size-nav-pages: 1.4rem;
+$font-size-nav-pages: 1rem;
 $font-size-nav-projects: 1rem;
+
+// This sets the indent amount for project pages in the sidebar.
+// Set this to 0 to remove the indent.
+// default value is 1em
+$nav-project-indent: 1em;
 
 // COLORS:
 
@@ -60,7 +67,7 @@ $portfolio-tile-max-columns: 3;
 // set this to 0px to remove borders
 // default is 3px;
 
-$border-width: 3px;
+$border-width: 2px;
 $border-color: rgb(0, 255, 0);
 
 $min-card-width: 300px;

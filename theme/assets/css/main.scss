@@ -38,7 +38,17 @@ h5,
 h6 {
   font-size: $font-size-md;
 }
+h1,
+h2,
+h3,
+h4 {
+  font-family: $theme-font-stack-headers;
+}
 
+h5,
+h6 {
+  font-family: $theme-font-stack-main;
+}
 h1,
 h2,
 h3,
@@ -47,7 +57,7 @@ h5,
 h6 {
   margin-top: 0.75em;
   margin-bottom: 0.5em;
-  font-family: $theme-font-stack-headers;
+
   display: block;
   max-width: $main-col-width;
 }
@@ -60,6 +70,10 @@ p {
   }
 }
 main {
+  hr {
+    border-bottom: $border-width solid $border-color;
+    border-top: none;
+  }
   h1,
   h2,
   h3,
@@ -133,6 +147,9 @@ body {
 
 .nav-list-item {
   font-size: $font-size-nav-pages;
+}
+.nav-list-item-has-children ul {
+  padding-left: $nav-project-indent;
 }
 .nav-list-item-has-children .nav-list-item {
   font-size: $font-size-nav-projects;

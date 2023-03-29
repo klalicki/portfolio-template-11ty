@@ -31,8 +31,8 @@ body {
   line-height: 1;
 }
 
-/* This line sets the default font for most text, including the body text and navigation */
-/* This line sets the font for headers, including the site title*/
+/* This line sets the default font for most text, including the body text, navigation, and the smaller headers (h4-h6) */
+/* This line sets the font for larger headers (h1-h3), including the site title*/
 :root {
   font-size: 110%;
   font-family: "IBM Plex Sans", sans-serif;
@@ -63,12 +63,23 @@ h6 {
 h1,
 h2,
 h3,
+h4 {
+  font-family: "IBM Plex Serif", serif;
+}
+
+h5,
+h6 {
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+h1,
+h2,
+h3,
 h4,
 h5,
 h6 {
   margin-top: 0.75em;
   margin-bottom: 0.5em;
-  font-family: "IBM Plex Serif", serif;
   display: block;
   max-width: 40rem;
 }
@@ -82,6 +93,10 @@ p > img {
   width: 100%;
 }
 
+main hr {
+  border-bottom: 2px solid rgb(0, 255, 0);
+  border-top: none;
+}
 main h1,
 main h2,
 main h3,
@@ -151,7 +166,11 @@ body {
 }
 
 .nav-list-item {
-  font-size: 1.4rem;
+  font-size: 1rem;
+}
+
+.nav-list-item-has-children ul {
+  padding-left: 1em;
 }
 
 .nav-list-item-has-children .nav-list-item {
@@ -430,7 +449,7 @@ html {
   }
 }
 .page-title {
-  border-bottom: 3px solid rgb(0, 255, 0);
+  border-bottom: 2px solid rgb(0, 255, 0);
   padding-bottom: 1rem;
 }
 
@@ -475,7 +494,7 @@ section.big-text > * {
 
 .component-inline-nav {
   max-width: 40rem;
-  border-top: 3px solid rgb(0, 255, 0);
+  border-top: 2px solid rgb(0, 255, 0);
   padding-top: 1rem;
   margin-top: 2rem;
 }

@@ -201,17 +201,6 @@ text after Big Text
 more text after big text
 this is not the end of the page
 
-{% carousel %}
-
-![](/img/sample/markdown-demo.jpg)
-
-![](/img/sample/markdown-demo.jpg)
-
-![](/img/sample/markdown-demo.jpg)
-
-{% endcarousel%}
-
 ### another heading
 
 ![](/img/sample/markdown-demo.jpg) {.custom-width .custom-width-125}
-
