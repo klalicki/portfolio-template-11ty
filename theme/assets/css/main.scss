@@ -500,6 +500,10 @@ section.big-text {
   width: 100%;
 }
 
+// these styles are used for the per-element staggered transition.
+// this selector is duplicated so it has higher specificity than the 'transition-animation-base' class,
+// since both are applied to the same element, we want the 'hide-item' class to have precedence.
+
 .transition-hide-item.transition-hide-item {
   opacity: 0;
   transform: translateX(-30px);
