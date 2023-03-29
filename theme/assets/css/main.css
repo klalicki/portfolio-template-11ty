@@ -1,5 +1,5 @@
 /* font imports here */
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400;1,600&family=IBM+Plex+Serif:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;800&family=Viaoda+Libre&display=swap");
 *,
 *::before,
 *::after {
@@ -34,8 +34,8 @@ body {
 /* This line sets the default font for most text, including the body text and navigation */
 /* This line sets the font for headers, including the site title*/
 :root {
-  font-size: 110%;
-  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 130%;
+  font-family: "Montserrat Alternates", sans-serif;
 }
 
 h1 {
@@ -64,7 +64,7 @@ h5,
 h6 {
   margin-top: 0.75em;
   margin-bottom: 0.25em;
-  font-family: "IBM Plex Serif", serif;
+  font-family: "Viaoda Libre", cursive;
   display: block;
   max-width: 40rem;
 }
@@ -98,14 +98,14 @@ body {
 .main-nav-container {
   width: clamp(250px, 30%, 500px);
   position: fixed;
-  background-color: #d4d4d4;
+  background-color: #0d3a2c;
   height: 100%;
   padding: 1rem;
   z-index: 10;
   transition: all 0.5s;
 }
 .main-nav-container hr {
-  color: black;
+  color: rgb(228, 228, 228);
 }
 
 .site-masthead {
@@ -130,7 +130,7 @@ body {
   padding-inline-start: 0;
 }
 .sidebar-nav-link-section * {
-  color: black;
+  color: rgb(228, 228, 228);
   text-decoration: none;
 }
 .sidebar-nav-link-section a {
@@ -139,7 +139,7 @@ body {
   transition: background-color 0.2s;
 }
 .sidebar-nav-link-section a:hover {
-  background-color: yellow;
+  background-color: rgb(4, 38, 28);
 }
 
 main {
@@ -204,7 +204,7 @@ pre {
   font-size: 1.25rem;
 }
 .portfolio-card-tile:hover {
-  background-color: yellow;
+  background-color: rgb(4, 38, 28);
 }
 
 .portfolio-card-tile-contents {
@@ -249,7 +249,7 @@ pre {
   background-color: white;
   transform: scale(90%);
   transition: all 0.5s;
-  color: black;
+  color: rgb(228, 228, 228);
   text-decoration: none;
 }
 .portfolio-tile-text-overlay :first-child {
@@ -368,7 +368,7 @@ html {
   }
   .main-nav {
     transform: none;
-    background-color: #d4d4d4;
+    background-color: #0d3a2c;
     opacity: 1;
     transition: all 0.3s;
     padding-left: 1rem;
@@ -425,7 +425,7 @@ pre {
 }
 
 .active {
-  background-color: yellow;
+  background-color: rgb(4, 38, 28);
   transition: background-color 0.2s;
 }
 
@@ -475,7 +475,7 @@ section.big-text > * {
 }
 .component-inline-nav .sibling-navigation a,
 .component-inline-nav .sibling-navigation a:visited {
-  color: black;
+  color: rgb(228, 228, 228);
   text-decoration: none;
 }
 .component-inline-nav .sibling-navigation a:hover,
@@ -507,4 +507,11 @@ section.big-text > * {
 
 .custom-width-full {
   width: 100%;
+}
+
+.site-masthead h3 {
+  color: white;
+}
+.site-masthead p {
+  color: white;
 }

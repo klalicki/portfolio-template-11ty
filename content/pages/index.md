@@ -1,12 +1,10 @@
 ---
-title: Your Title Here
 layout: portfolio.njk
+# tags: portfolio
+order: 1
 portfolio_type: tile
 eleventyNavigation:
-  key: Home
-  parent:
+  key: Portfolio
 ---
 
-# Hello!
-
-This is some content in index.md. This content goes on the _homepage_ of the site.
+Any text in this document appears above the project grid in the Portfolio view

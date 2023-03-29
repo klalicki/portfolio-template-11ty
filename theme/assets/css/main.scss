@@ -474,3 +474,12 @@ section.big-text {
 .custom-width-full {
   width: 100%;
 }
+
+.site-masthead {
+  h3 {
+    color: $name-color;
+  }
+  p {
+    color: $tagline-color;
+  }
+}

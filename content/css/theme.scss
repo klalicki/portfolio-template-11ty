@@ -1,15 +1,14 @@
 /* font imports here */
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400;1,600&family=IBM+Plex+Serif:wght@600&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;800&family=Viaoda+Libre&display=swap');
 /* This line sets the default font for most text, including the body text and navigation */
-$theme-font-stack-main: "IBM Plex Sans", sans-serif;
+$theme-font-stack-main: 'Montserrat Alternates', sans-serif;
 
 /* This line sets the font for headers, including the site title*/
-$theme-font-stack-headers: "IBM Plex Serif", serif;
+$theme-font-stack-headers: 'Viaoda Libre', cursive;
 
 // This line sets the base font size for desktop
 // default is 110%
-$font-size-base: 110%;
+$font-size-base: 130%;
 
 // This line sets the base font size for mobile
 // default is 100%
@@ -30,11 +29,13 @@ $color-page-background: white;
 
 // This line sets the background color for the sidebar area, and for the top bar on mobile
 // default is a light gray (#c0c0c0)
-$color-sidebar-background: #d4d4d4;
-$color-text-primary: black;
-$color-text-headers: purple;
+$color-sidebar-background: #0d3a2c;
+$name-color: white;
+$tagline-color: white;
+$color-text-primary: rgb(228, 228, 228);
+$color-text-headers: rgb(190, 190, 190);
 $color-text-link: red;
-$color-highlight: yellow;
+$color-highlight: rgb(4, 38, 28);
 $color-hover: lightpink;
 
 // This section is for the 'tile' portfolio layout:

@@ -8,7 +8,7 @@ description_short: Creating a Print Publication for a Nonprofit Organization
 description_medium:
 eleventyNavigation:
   key: Green Earth Brochure
-  parent: Design Portfolio
+  parent: Portfolio
 ---
 
 ## Introduction
