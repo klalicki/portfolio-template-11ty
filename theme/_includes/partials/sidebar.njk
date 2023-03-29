@@ -10,7 +10,8 @@
   <hr>
   <nav class="main-nav main-nav-hidden">
     <ul class="sidebar-nav-link-section">
-     {{ collections.sorted | eleventyNavigation | eleventyNavigationToHtml({activeKey: eleventyNavigation.key ,activeAnchorClass: "active"}) | safe }}
+     {{ collections.sorted | eleventyNavigation | eleventyNavigationToHtml({activeKey: eleventyNavigation.key ,activeAnchorClass: "active",listItemClass: "nav-list-item",
+		listItemHasChildrenClass: "nav-list-item-has-children"}) | safe }}
 
 
     </ul>

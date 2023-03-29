@@ -10,7 +10,7 @@
 
 nav ul {
   list-style: none;
-  padding-inline-start: 1em;
+  /* padding-inline-start: 1em; */
 }
 
 article,
@@ -96,10 +96,6 @@ main * {
 main a {
   color: magenta;
 }
-main ul,
-main ol {
-  padding-inline-start: 1em;
-}
 main ul li,
 main ol li {
   margin-bottom: 0.25em;
@@ -139,6 +135,7 @@ body {
 }
 .site-masthead h3 {
   margin-top: 0;
+  font-size: 3rem;
 }
 .site-masthead p {
   margin-bottom: 0;
@@ -151,6 +148,14 @@ body {
 .active {
   background-color: cyan;
   transition: background-color 0.2s;
+}
+
+.nav-list-item {
+  font-size: 1.4rem;
+}
+
+.nav-list-item-has-children .nav-list-item {
+  font-size: 1rem;
 }
 
 .sidebar-nav-link-section {
@@ -414,6 +419,7 @@ html {
   }
   .site-masthead h3 {
     margin: 0;
+    font-size: 1.4rem;
   }
   .site-masthead p {
     display: none;

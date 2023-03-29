@@ -76,7 +76,6 @@ main {
   }
   ul,
   ol {
-    padding-inline-start: 1em;
     li {
       margin-bottom: 0.25em;
       p {
@@ -112,6 +111,7 @@ body {
   }
   h3 {
     margin-top: 0;
+    font-size: $font-size-nav-masthead;
   }
   p {
     margin-bottom: 0;
@@ -127,6 +127,17 @@ body {
   background-color: $color-sidebar-highlight;
   transition: background-color 0.2s;
 }
+
+// listItemClass: "",
+// listItemHasChildrenClass: "",
+
+.nav-list-item {
+  font-size: $font-size-nav-pages;
+}
+.nav-list-item-has-children .nav-list-item {
+  font-size: $font-size-nav-projects;
+}
+
 .sidebar-nav-link-section {
   padding-top: $padding-main;
   padding-bottom: $padding-main;
@@ -377,6 +388,7 @@ html {
     align-items: center;
     h3 {
       margin: 0;
+      font-size: 1.4rem;
     }
     p {
       display: none;
