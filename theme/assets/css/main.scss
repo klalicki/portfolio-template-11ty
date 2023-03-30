@@ -28,6 +28,11 @@ img {
   max-width: 100%;
   height: auto;
 }
+* {
+}
+main {
+  overflow-x: hidden;
+}
 html {
   background-color: $color-page-background;
 }
@@ -62,6 +67,9 @@ h3,
 h4,
 h5,
 h6 {
+  word-wrap: break-word;
+  display: block;
+  // hyphens: auto;
   margin-top: 0.75em;
   margin-bottom: 0.5em;
 
@@ -394,14 +402,17 @@ html {
 
 //begin mobile
 @media (max-width: 720px) {
+  :root {
+    font-size: $font-size-mobile;
+  }
   .main-nav-container {
     position: fixed;
     padding: 0;
     left: 0;
     top: 0;
     right: 0;
-    width: initial;
-    height: 3rem;
+    width: 100vw;
+    height: $nav-height-mobile;
     hr {
       display: none;
     }
@@ -421,16 +432,19 @@ html {
     transform: none;
     background-color: $color-sidebar-background;
     opacity: 1;
+    width: 100vw;
     transition: all 0.3s;
     padding-left: $padding-main;
+    padding-bottom: $padding-main;
     overflow-y: auto;
     overflow-x: hidden;
-    max-height: calc(100vh - 3rem);
+    max-height: calc(100vh - $nav-height-mobile);
   }
   .main-nav-hidden {
     transform: translateY(-50%);
     opacity: 0;
     transition: all 0.3s;
+    pointer-events: none;
   }
   .portfolio-tile-container {
     grid-template-columns: 100%;
@@ -452,14 +466,17 @@ html {
   .site-masthead {
     z-index: 10;
     position: relative;
-    height: 3rem;
+    height: $nav-height-mobile;
+
     display: flex;
-    padding: $padding-card;
-    padding-right: 0;
+    padding: 0 $padding-card;
+
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     background-color: $color-sidebar-background;
+    a {
+    }
     h3 {
       margin: 0;
       font-size: $font-size-l;

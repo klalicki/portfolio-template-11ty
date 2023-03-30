@@ -45,6 +45,10 @@ img {
   height: auto;
 }
 
+main {
+  overflow-x: hidden;
+}
+
 html {
   background-color: rgb(31, 31, 31);
 }
@@ -85,6 +89,8 @@ h3,
 h4,
 h5,
 h6 {
+  word-wrap: break-word;
+  display: block;
   margin-top: 0.75em;
   margin-bottom: 0.5em;
   display: block;
@@ -428,14 +434,17 @@ html {
 }
 
 @media (max-width: 720px) {
+  :root {
+    font-size: 200%;
+  }
   .main-nav-container {
     position: fixed;
     padding: 0;
     left: 0;
     top: 0;
     right: 0;
-    width: initial;
-    height: 3rem;
+    width: 100vw;
+    height: 4rem;
   }
   .main-nav-container hr {
     display: none;
@@ -454,16 +463,19 @@ html {
     transform: none;
     background-color: lightgreen;
     opacity: 1;
+    width: 100vw;
     transition: all 0.3s;
     padding-left: 1rem;
+    padding-bottom: 1rem;
     overflow-y: auto;
     overflow-x: hidden;
-    max-height: calc(100vh - 3rem);
+    max-height: calc(100vh - 4rem);
   }
   .main-nav-hidden {
     transform: translateY(-50%);
     opacity: 0;
     transition: all 0.3s;
+    pointer-events: none;
   }
   .portfolio-tile-container {
     grid-template-columns: 100%;
@@ -485,10 +497,9 @@ html {
   .site-masthead {
     z-index: 10;
     position: relative;
-    height: 3rem;
+    height: 4rem;
     display: flex;
-    padding: 0.5rem;
-    padding-right: 0;
+    padding: 0 0.5rem;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;

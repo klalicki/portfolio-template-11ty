@@ -15,7 +15,7 @@ $font-size-base: 110%;
 
 // This line sets the base font size for mobile
 // default is 100%
-$font-size-mobile: 100%;
+$font-size-mobile: 200%;
 
 // This line controls the amount of variation between font sizes.
 // Increasing this number will make headers larger overall.
@@ -34,7 +34,9 @@ $font-size-nav-projects: 1.4rem;
 // This sets the indent amount for project pages in the sidebar.
 // Set this to 0 to remove the indent.
 // default value is 1em
+
 $nav-project-indent: 1em;
+$nav-height-mobile: 4rem;
 
 // COLORS:
 
