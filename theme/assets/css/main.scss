@@ -430,10 +430,16 @@ html {
   }
   .btn-toggle-menu {
     display: block;
-    background-color: transparent;
     border: none;
+    padding: $padding-card;
+    background-color: transparent;
     svg {
+      height: 100%;
+      width: 100%;
       fill: $color-sidebar-text;
+    }
+    &:hover {
+      background-color: $color-sidebar-highlight;
     }
   }
   .site-masthead {
@@ -441,7 +447,8 @@ html {
     position: relative;
     height: 3rem;
     display: flex;
-    padding: $padding-main;
+    padding: $padding-card;
+    padding-right: 0;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -456,6 +463,7 @@ html {
   main {
     padding-left: 0;
     padding-right: 0;
+    margin-top: 2rem;
   }
 }
 

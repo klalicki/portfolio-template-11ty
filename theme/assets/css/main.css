@@ -466,18 +466,25 @@ html {
   }
   .btn-toggle-menu {
     display: block;
-    background-color: transparent;
     border: none;
+    padding: 0.5rem;
+    background-color: transparent;
   }
   .btn-toggle-menu svg {
+    height: 100%;
+    width: 100%;
     fill: rgb(0, 61, 61);
+  }
+  .btn-toggle-menu:hover {
+    background-color: cyan;
   }
   .site-masthead {
     z-index: 10;
     position: relative;
     height: 3rem;
     display: flex;
-    padding: 1rem;
+    padding: 0.5rem;
+    padding-right: 0;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -492,6 +499,7 @@ html {
   main {
     padding-left: 0;
     padding-right: 0;
+    margin-top: 2rem;
   }
 }
 .page-title {
