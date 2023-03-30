@@ -101,9 +101,9 @@ module.exports = function (eleventyConfig) {
     }
 
     let navSiblings = [siblings[prevPageIndex], siblings[nextPageIndex]];
-    navSiblings[0].labelText = `← see previous project`;
+    navSiblings[0].labelText = `← previous project`;
 
-    navSiblings[1].labelText = "see next project →";
+    navSiblings[1].labelText = "next project →";
 
     if (curPageIndex == 0) {
       navSiblings[0] = "";

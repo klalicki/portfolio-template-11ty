@@ -88,13 +88,13 @@ h6 {
   margin-top: 0.75em;
   margin-bottom: 0.5em;
   display: block;
-  max-width: 40rem;
+  max-width: 50rem;
 }
 
 p {
   line-height: 1.6;
   margin-bottom: 0.75em;
-  max-width: 40rem;
+  max-width: 50rem;
 }
 p > img {
   width: 100%;
@@ -118,12 +118,11 @@ main * {
 main a {
   color: magenta;
 }
-main ul,
-main ol {
-  margin-left: 2rem;
-}
 main ul li,
 main ol li {
+  position: relative;
+  left: 1rem;
+  width: calc(100% - 1rem);
   margin-bottom: 0.25em;
   line-height: 1.4;
 }
@@ -235,7 +234,7 @@ article > *:not(.custom-width) {
   padding-left: 1rem;
   padding-right: 1rem;
   width: 100%;
-  max-width: 40rem;
+  max-width: 50rem;
   flex-shrink: 0;
 }
 
@@ -548,12 +547,12 @@ section.big-text > * {
   width: 100%;
   padding-left: 1rem;
   padding-right: 1rem;
-  max-width: 40rem;
+  max-width: 50rem;
   flex-shrink: 0;
 }
 
 .component-inline-nav {
-  max-width: 40rem;
+  max-width: 50rem;
   border-top: 2px solid rgb(0, 255, 0);
   padding-top: 1rem;
   margin-top: 2rem;
@@ -585,19 +584,19 @@ section.big-text > * {
 }
 
 .custom-width-125 {
-  max-width: 50rem;
+  max-width: 62.5rem;
 }
 
 .custom-width-150 {
-  max-width: 60rem;
+  max-width: 75rem;
 }
 
 .custom-width-200 {
-  max-width: 80rem;
+  max-width: 100rem;
 }
 
 .custom-width-75 {
-  max-width: 30rem;
+  max-width: 37.5rem;
 }
 
 .custom-width-full {

@@ -97,10 +97,14 @@ main {
   }
   ul,
   ol {
-    margin-left: $padding-main * 2;
+    // padding-left: $padding-main * 2;
     li {
+      position: relative;
+      left: $padding-main;
+      width: calc(100% - $padding-main);
       margin-bottom: 0.25em;
       line-height: 1.4;
+
       p {
         margin-bottom: 0.25em;
       }

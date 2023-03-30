@@ -45,12 +45,6 @@ This is how you create a horizontal line (can be used as a section break in case
 
 ---
 
-## Blockquote
-
-To create a simple blockquote, put the > character in front of a line.
-
-> This is a simple blockquote.
-
 ## Lists
 
 ### Ordered list (numbered)
@@ -71,11 +65,12 @@ To create a bulleted list, start each line with a dash (-), asterisk (\*), or pl
 
 ### Nested lists
 
-To nest a list inside another, press Tab or 3 spaces before each line you want to nest.
+To nest a list inside another, put 4 spaces before each line you want to nest.
 
 1. This is the first list item
 
    - This is an item inside item 1
+
    - This is another item inside item 1.
    - This is a third item inside item 1.
 
@@ -95,11 +90,11 @@ If you want to show some code you have written, use a code block.
 
 To create a full-width code block, start and end it with a line of 3 backtick characters (`):
 
-```
+<!-- ```
 const sayHello=()=>{
 alert('hello!')
 }
-```
+``` -->
 
 ### Inline Code Block
 
@@ -109,17 +104,18 @@ If you want to place a `short piece of code` in a regular paragraph, surround it
 
 To create a link, there are two components:
 
+<!--
 ```
 [link text](URL)
-```
+``` -->
 
 _link text_ refers to the text that appears in the browser, while _URL_ is the web address you want the link to go to.
 
 For example:
 
-```
+<!-- ```
 [Google](https://www.google.com)
-```
+``` -->
 
 will produce the following link:
 
@@ -131,9 +127,9 @@ If the link text and url are the same, you can just surround the link in angle b
 
 For example:
 
-```
+<!-- ```
 <https://www.google.com>
-```
+``` -->
 
 produces the link <https://www.google.com>.
 
@@ -147,11 +143,9 @@ In this site generator (11ty.js) Markdown is processed and rendered into HTML. I
 
 One common use for this would be to place an embed code (ie for Youtube, Vimeo, Figma, Issuu) in a project page. For example:
 
-```
+<!-- ```
 <iframe width="800" height="400" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-```
-
-<iframe width="800" height="400" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+``` -->
 
 ## Custom Classes and IDs (for custom CSS styling)
 
@@ -159,13 +153,13 @@ This site is set up to use [markdown-it-attrs](https://www.npmjs.com/package/mar
 
 What this means is that you are able to add your own CSS and style any element however you want. To add a CSS class/ID to an element, put it inside curly brackets at the end of a line.
 
-```
+<!-- ```
 #### This is a sample line of red text{.red-text}
 
 <style>.red-text{
   color:red
   }</style>
-```
+``` -->
 
 will produce:
 
@@ -181,9 +175,9 @@ Notice that I used a style tag to add the color to that element. This works well
 
 You can use custom IDs to create jump links within a page. I added the ID _#section-advanced-markdown_ to one of the headers above, which means I can link to it with the following link:
 
-```
+<!-- ```
 [Advanced Markdown Section](#section-advanced-markdown)
-```
+``` -->
 
 [Advanced Markdown Section](#section-advanced-markdown)
 
