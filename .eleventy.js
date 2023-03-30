@@ -3,6 +3,7 @@ const markdownItAttrs = require("markdown-it-attrs");
 const sass = require("sass");
 const fs = require("fs");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+const lazyImagesPlugin = require("eleventy-plugin-lazyimages");
 
 const markdownItOptions = {
   html: true,
@@ -15,10 +16,11 @@ const markdownLib = markdownIt(markdownItOptions).use(markdownItAttrs);
 module.exports = function (eleventyConfig) {
   // add eleventy navigation plugin
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
+  eleventyConfig.addPlugin(lazyImagesPlugin, {});
 
   // Return your Object options:
   eleventyConfig.addPassthroughCopy({ "./theme/assets": "assets" });
-  eleventyConfig.addPassthroughCopy({ "./content/img": "img" });
+  eleventyConfig.addPassthroughCopy({ "./img": "img" });
   eleventyConfig.addPassthroughCopy({ "./theme/assets/js": "assets/js" });
   eleventyConfig.watchIgnores.add("theme/assets/css/main.css");
   eleventyConfig.addWatchTarget("./content/");

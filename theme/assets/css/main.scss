@@ -21,6 +21,12 @@ $font-size-xxl: math.pow($font-size-scale-factor, 3) + 0rem; //h1
   font-family: $theme-font-stack-main;
 }
 
+img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
 html {
   background-color: $color-page-background;
 }
