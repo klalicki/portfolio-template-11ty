@@ -1,14 +1,12 @@
 ---
 layout: project.njk
-tags: project
-subset: gd
-order:
+
 thumbnail: /img/sample/brews-bites-tile.jpg
 description_short: Developing a Brand Identity for a Local Business
 description_medium: branding, print design, etc.
 eleventyNavigation:
   key: Brew & Bites
-  parent: Design Portfolio
+  parent:  design
   order: 10
 ---
 

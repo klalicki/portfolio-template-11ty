@@ -1,11 +1,12 @@
 ---
 layout: page.njk
-tags: page
-customTitle: About
+hideDefaultTitle: true
 eleventyNavigation:
-  key: About
+  key: About/Contact
   order: 10
 ---
+
+# About{.page-title}
 
 Hi there! My name is _Name_, and I'm a graphic designer with a passion for creating beautiful and effective designs. As a recent graduate with a Bachelor's degree in Graphic Design, I have spent the past few years honing my skills and developing my expertise in the field. I am excited to use my skills to help businesses and individuals communicate their message through effective visual design.
 

@@ -2,7 +2,7 @@
 {% block main %}
 <article>
   <section class="portfolio-intro">
-  <h1>{{ eleventyNavigation.key if eleventyNavigation.key else title }}</h1>
+  <h1>{{ eleventyNavigation.title if eleventyNavigation.title else eleventyNavigation.key }}</h1>
   {# places website content above the portfolio grid #}
   {{content | safe}}
   </section>

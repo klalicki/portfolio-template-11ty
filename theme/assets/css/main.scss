@@ -11,12 +11,6 @@ $sidebar-calc-width: clamp(
   $sidebar-max-width
 );
 
-$font-size-sm: math.pow($font-size-scale-factor, -1) + 0rem; //figcaption
-$font-size-md: math.pow($font-size-scale-factor, 0) + 0rem; //p
-$font-size-l: math.pow($font-size-scale-factor, 1) + 0rem; //h3
-$font-size-xl: math.pow($font-size-scale-factor, 2) + 0rem; //h2
-$font-size-xxl: math.pow($font-size-scale-factor, 3) + 0rem; //h1
-
 :root {
   font-size: $font-size-base;
   font-family: $theme-font-stack-main;
@@ -86,7 +80,7 @@ p {
 }
 main {
   hr {
-    border-bottom: $border-width solid $border-color;
+    border-bottom: $border-width solid $color-borders;
     border-top: none;
   }
   h1,
@@ -256,7 +250,7 @@ pre {
     font-size: 1.25rem;
   }
   &:hover {
-    background-color: $color-highlight;
+    background-color: $color-portfolio-card-highlight;
   }
 }
 p.portfolio-card-desc-short {
@@ -493,7 +487,7 @@ html {
 }
 
 .page-title {
-  border-bottom: $border-width solid $border-color;
+  border-bottom: $border-width solid $color-borders;
   padding-bottom: $padding-main;
 }
 
@@ -535,12 +529,13 @@ section.big-text {
     padding-right: $padding-main;
     max-width: $main-col-width;
     flex-shrink: 0;
+    color: $color-big-text-text;
   }
 }
 // inline-nav component
 .component-inline-nav {
   max-width: $main-col-width;
-  border-top: $border-width solid $border-color;
+  border-top: $border-width solid $color-borders;
   padding-top: $padding-main;
   // padding-bottom: $padding-main;
   margin-top: 2 * $padding-main;
@@ -560,7 +555,7 @@ section.big-text {
   }
   a:hover,
   a:focus {
-    background-color: $color-hover;
+    background-color: $color-next-project-hover;
   }
   display: flex;
   justify-content: space-between;

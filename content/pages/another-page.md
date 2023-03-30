@@ -1,7 +1,5 @@
 ---
-title: Your Title Here
-layout: portfolio.njk
-portfolio_type: tile
+layout: page.njk
 eleventyNavigation:
   key: Another Page
   parent:

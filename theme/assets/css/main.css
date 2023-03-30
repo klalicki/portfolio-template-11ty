@@ -50,7 +50,7 @@ main {
 }
 
 html {
-  background-color: rgb(31, 31, 31);
+  background-color: white;
 }
 
 h1 {
@@ -107,7 +107,7 @@ p > img {
 }
 
 main hr {
-  border-bottom: 2px solid rgb(0, 255, 0);
+  border-bottom: 2px solid black;
   border-top: none;
 }
 main h1,
@@ -116,13 +116,13 @@ main h3,
 main h4,
 main h5,
 main h6 {
-  color: cyan;
+  color: black;
 }
 main * {
-  color: lightgreen;
+  color: black;
 }
 main a {
-  color: magenta;
+  color: blue;
 }
 main ul li,
 main ol li {
@@ -144,16 +144,16 @@ body {
 .main-nav-container {
   width: clamp(250px, 30%, 500px);
   position: fixed;
-  background-color: lightgreen;
+  background-color: #c0c0c0;
   height: 100%;
   padding: 1rem;
   z-index: 10;
   transition: all 0.5s;
-  color: rgb(0, 61, 61);
+  color: black;
 }
 .main-nav-container hr {
-  color: rgb(0, 61, 61);
-  border: 1.5px solid rgb(0, 61, 61);
+  color: black;
+  border: 1.5px solid black;
 }
 
 .site-masthead {
@@ -162,16 +162,16 @@ body {
   padding-bottom: 1rem;
 }
 .site-masthead a {
-  color: rgb(0, 61, 61);
+  color: black;
   text-decoration: none;
 }
 .site-masthead h3 {
   margin-top: 0;
-  font-size: 3rem;
+  font-size: 1.4rem;
 }
 .site-masthead p {
   margin-bottom: 0;
-  font-size: 1.4rem;
+  font-size: 1rem;
 }
 
 .btn-toggle-menu {
@@ -179,12 +179,12 @@ body {
 }
 
 .active {
-  background-color: cyan;
+  background-color: white;
   transition: background-color 0.2s;
 }
 
 .nav-list-item {
-  font-size: 1.4rem;
+  font-size: 1rem;
 }
 
 .nav-list-item-has-children ul {
@@ -192,7 +192,7 @@ body {
 }
 
 .nav-list-item-has-children .nav-list-item {
-  font-size: 1.4rem;
+  font-size: 1rem;
 }
 
 .sidebar-nav-link-section {
@@ -201,7 +201,7 @@ body {
   padding-inline-start: 0;
 }
 .sidebar-nav-link-section * {
-  color: rgb(0, 61, 61);
+  color: black;
   text-decoration: none;
 }
 .sidebar-nav-link-section a {
@@ -210,7 +210,7 @@ body {
   transition: background-color 0.2s;
 }
 .sidebar-nav-link-section a:hover {
-  background-color: cyan;
+  background-color: white;
 }
 
 main {
@@ -263,19 +263,19 @@ pre {
   position: relative;
   padding: 1rem;
   text-decoration: none;
-  color: lightgreen;
+  color: black;
   display: block;
 }
 .portfolio-card-tile * {
   display: block;
-  color: lightgreen;
+  color: black;
   text-decoration: none;
 }
 .portfolio-card-tile h2 {
   font-size: 1.25rem;
 }
 .portfolio-card-tile:hover {
-  background-color: rgb(173, 0, 121);
+  background-color: rgba(40, 173, 0, 0.664);
 }
 
 p.portfolio-card-desc-short {
@@ -336,7 +336,7 @@ p.portfolio-card-desc-short {
   background-color: #910091;
   transform: scale(90%);
   transition: all 0.5s;
-  color: lightgreen;
+  color: black;
   text-decoration: none;
 }
 .portfolio-tile-text-overlay :first-child {
@@ -356,7 +356,7 @@ p.portfolio-card-desc-short {
 
 /* wide (UX) portfolio layout */
 .portfolio-wide-tile a {
-  color: lightgreen;
+  color: black;
   text-decoration: none;
 }
 
@@ -394,7 +394,7 @@ p.portfolio-card-desc-short {
   display: inline-block;
   font-size: 0.7142857143rem;
   padding: 0.5em;
-  background-color: magenta;
+  background-color: blue;
   width: auto;
   text-transform: uppercase;
   font-weight: bold;
@@ -435,7 +435,7 @@ html {
 
 @media (max-width: 720px) {
   :root {
-    font-size: 200%;
+    font-size: 100%;
   }
   .main-nav-container {
     position: fixed;
@@ -444,7 +444,7 @@ html {
     top: 0;
     right: 0;
     width: 100vw;
-    height: 4rem;
+    height: 3rem;
   }
   .main-nav-container hr {
     display: none;
@@ -461,7 +461,7 @@ html {
   }
   .main-nav {
     transform: none;
-    background-color: lightgreen;
+    background-color: #c0c0c0;
     opacity: 1;
     width: 100vw;
     transition: all 0.3s;
@@ -469,7 +469,7 @@ html {
     padding-bottom: 1rem;
     overflow-y: auto;
     overflow-x: hidden;
-    max-height: calc(100vh - 4rem);
+    max-height: calc(100vh - 3rem);
   }
   .main-nav-hidden {
     transform: translateY(-50%);
@@ -489,21 +489,21 @@ html {
   .btn-toggle-menu svg {
     height: 100%;
     width: 100%;
-    fill: rgb(0, 61, 61);
+    fill: black;
   }
   .btn-toggle-menu:hover {
-    background-color: cyan;
+    background-color: white;
   }
   .site-masthead {
     z-index: 10;
     position: relative;
-    height: 4rem;
+    height: 3rem;
     display: flex;
     padding: 0 0.5rem;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: lightgreen;
+    background-color: #c0c0c0;
   }
   .site-masthead h3 {
     margin: 0;
@@ -519,7 +519,7 @@ html {
   }
 }
 .page-title {
-  border-bottom: 2px solid rgb(0, 255, 0);
+  border-bottom: 2px solid black;
   padding-bottom: 1rem;
 }
 
@@ -560,11 +560,12 @@ section.big-text > * {
   padding-right: 1rem;
   max-width: 50rem;
   flex-shrink: 0;
+  color: white;
 }
 
 .component-inline-nav {
   max-width: 50rem;
-  border-top: 2px solid rgb(0, 255, 0);
+  border-top: 2px solid black;
   padding-top: 1rem;
   margin-top: 2rem;
 }
@@ -581,12 +582,12 @@ section.big-text > * {
 }
 .component-inline-nav .sibling-navigation a,
 .component-inline-nav .sibling-navigation a:visited {
-  color: lightgreen;
+  color: black;
   text-decoration: none;
 }
 .component-inline-nav .sibling-navigation a:hover,
 .component-inline-nav .sibling-navigation a:focus {
-  background-color: rgb(173, 0, 121);
+  background-color: lightpink;
 }
 .component-inline-nav .sibling-navigation > :first-child {
   text-align: left;
