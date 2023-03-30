@@ -267,6 +267,14 @@ pre {
   background-color: rgb(173, 0, 121);
 }
 
+p.portfolio-card-desc-short {
+  margin-bottom: 0.25em;
+}
+
+.portfolio-card-desc-med {
+  font-size: 0.7142857143rem;
+}
+
 .portfolio-card-tile-contents {
   position: relative;
   max-width: 100%;
@@ -291,6 +299,14 @@ pre {
 .portfolio-tile img {
   width: 100%;
   display: block;
+}
+
+.portfolio-tile-project-desc-short {
+  font-size: 1.4rem;
+}
+
+.portfolio-tile-project-desc-med {
+  font-size: 1rem;
 }
 
 .portfolio-tile-text-overlay {
@@ -319,10 +335,6 @@ pre {
   margin-bottom: 0;
 }
 
-.portfolio-tile:not(:focus, :hover) .portfolio-tile-text-overlay {
-  pointer-events: none;
-}
-
 .portfolio-tile:focus .portfolio-tile-text-overlay,
 .portfolio-tile:hover .portfolio-tile-text-overlay {
   pointer-events: all;
@@ -332,6 +344,11 @@ pre {
 }
 
 /* wide (UX) portfolio layout */
+.portfolio-wide-tile a {
+  color: lightgreen;
+  text-decoration: none;
+}
+
 .portfolio-wide-img {
   width: 100%;
   height: auto;
@@ -341,7 +358,7 @@ pre {
   width: 100%;
   display: grid;
   padding-top: 1rem;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   column-gap: 1rem;
 }
 
@@ -351,10 +368,26 @@ pre {
 
 .portfolio-wide-text-md {
   font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+.portfolio-wide-right-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
 }
 
 .portfolio-wide-cta-link {
-  display: block;
+  margin-top: 0.5em;
+  display: inline-block;
+  font-size: 0.7142857143rem;
+  padding: 0.5em;
+  background-color: magenta;
+  width: auto;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.08em;
 }
 
 html {
