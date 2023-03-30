@@ -509,6 +509,9 @@ html {
     margin-top: 0;
     transform: scale(1);
   }
+  .sidebar-rule {
+    display: none;
+  }
   .portfolio-tile-container,
   .portfolio-card-container {
     grid-template-columns: 100%;
@@ -533,7 +536,7 @@ html {
     height: 3rem;
     display: flex;
     padding: 0 0.5rem;
-    border-bottom: 2px solid black;
+    border-bottom: 0px solid black;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;

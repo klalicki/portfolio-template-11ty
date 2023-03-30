@@ -478,7 +478,9 @@ html {
     margin-top: 0;
     transform: scale(1);
   }
-
+  .sidebar-rule {
+    display: none;
+  }
   .portfolio-tile-container,
   .portfolio-card-container {
     grid-template-columns: 100%;
