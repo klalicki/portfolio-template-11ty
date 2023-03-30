@@ -160,16 +160,13 @@ $color-next-project-hover: lightpink;
 // Portfolio 'Tile' Layout
 // This is the layout that uses image tiles, with a hover effect that shows the title of the project.
 
-$color-tile-overlay: #910091;
+// This line sets the hover color for the 'tile' portfolio layout
+//default is white
+$color-tile-overlay: white;
 
-//Portfolio 'Card' Layout
-// This is the layout that uses cards, where the project title is always shown below the thumbnail.
-
-// This line sets the hover color for the 'card' portfolio layout
-// default is lightgreen
-$color-portfolio-card-highlight: lightgreen;
-
-// This section is for the 'tile' portfolio layout:
+//this line sets the text color for the overlays on the tile layout
+//default is black
+$color-tile-overlay-text: black;
 
 // This line sets the gap between tiles
 // default is 0px
@@ -179,6 +176,21 @@ $portfolio-tile-gap: 0px;
 // default is 3
 $portfolio-tile-max-columns: 3;
 
+//Portfolio 'Card' Layout
+// This is the layout that uses cards, where the project title is always shown below the thumbnail.
+
+// This line sets the hover color for the 'card' portfolio layout
+// default is lightgreen
+$color-portfolio-card-highlight: lightgreen;
+
+//This is the minimum width of a card in the 'card' portfolio layout.
+// default is 400px
 $min-card-width: 400px;
 
+// This section is for the 'tile' portfolio layout:
+
+//This section is for the 'wide' portfolio layout:
+
+//this sets the color for the CTA button on the wide portfolio layout.
+//defualt is orange
 $portfolio-wide-cta-color: rgb(255, 123, 0);

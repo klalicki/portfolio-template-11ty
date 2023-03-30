@@ -22,8 +22,7 @@ img {
   max-width: 100%;
   height: auto;
 }
-* {
-}
+
 main {
   overflow-x: hidden;
 }
@@ -127,10 +126,6 @@ body {
   z-index: 10;
   transition: all 0.5s;
   color: $color-sidebar-text;
-  hr {
-    color: $color-sidebar-text;
-    border: 1.5px solid $color-sidebar-text;
-  }
 }
 .site-masthead {
   z-index: 10;
@@ -150,7 +145,9 @@ body {
   padding-bottom: $padding-main;
   // padding: $padding-card $padding-main;
 }
-
+.sidebar-rule {
+  border-bottom: $weight-sidebar-rule solid $color-sidebar-rule;
+}
 .btn-toggle-menu {
   display: none;
 }
@@ -230,7 +227,7 @@ pre {
 /* Portfolio Card */
 .portfolio-card-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax($min-card-width, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax($min-card-width, 1fr));
   column-gap: 0;
   position: relative;
   width: 100%;
@@ -275,7 +272,10 @@ p.portfolio-card-desc-short {
 
 .portfolio-tile-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(max(450px, 33%), 1fr));
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(max(450px, 100% / $portfolio-tile-max-columns), 1fr)
+  );
   padding: $portfolio-tile-gap;
   gap: $portfolio-tile-gap $portfolio-tile-gap;
 }
@@ -315,7 +315,10 @@ p.portfolio-card-desc-short {
   :last-child {
     margin-bottom: 0;
   }
-  color: $color-text-primary;
+  * {
+    color: $color-tile-overlay-text;
+  }
+
   text-decoration: none;
 }
 
@@ -456,6 +459,22 @@ html {
     transition: all 0.3s;
     pointer-events: none;
   }
+  .portfolio-tile {
+    text-decoration: none;
+  }
+  .portfolio-tile-text-overlay {
+    top: 0;
+    position: relative;
+    left: 0;
+    right: 0;
+    padding: $padding-main;
+    opacity: 1;
+
+    margin-bottom: $padding-main * 2;
+    margin-top: 0;
+    transform: scale(1);
+  }
+
   .portfolio-tile-container,
   .portfolio-card-container {
     grid-template-columns: 100%;
@@ -486,8 +505,7 @@ html {
     justify-content: space-between;
     align-items: center;
     background-color: $color-sidebar-background;
-    a {
-    }
+
     h3 {
       margin: 0;
       font-size: $font-size-l;

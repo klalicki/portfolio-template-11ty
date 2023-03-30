@@ -1,0 +1,11 @@
+/* 
+If you want to add custom CSS, you should do it in this file.
+If you are having a hard time getting your custom CSS to apply, try using more specific section selectors.
+For example, if you want to change the color of h2 elements in the main page area,
+you may need to use
+.text-page h2 instead of just h2.
+
+You can also use !important to override the default CSS, but try to avoid that whenever possible.
+https://dev.to/alvaromontoro/using-important-in-css-75c
+
+*/

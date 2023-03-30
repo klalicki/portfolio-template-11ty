@@ -82,24 +82,6 @@ To nest a list inside another, put 4 spaces before each line you want to nest.
 
 3. etc.
 
-## Code Blocks
-
-If you want to show some code you have written, use a code block.
-
-### Full-Width Code Block
-
-To create a full-width code block, start and end it with a line of 3 backtick characters (`):
-
-```
-this is some code;
-this is some more code;
-this is another line of code!;
-```
-
-### Inline Code Block
-
-If you want to place a `short piece of code` in a regular paragraph, surround it with a pair of backticks (`)
-
 ## Links
 
 To create a link, there are two components:
@@ -145,6 +127,8 @@ One common use for this would be to place an embed code (ie for Youtube, Vimeo, 
 ```
 <iframe width="800" height="400" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
+
+<iframe width="800" height="400" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## Custom Classes and IDs (for custom CSS styling)
 
