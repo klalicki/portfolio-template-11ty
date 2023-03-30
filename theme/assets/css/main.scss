@@ -74,6 +74,7 @@ p {
   line-height: 1.6;
   margin-bottom: 0.75em;
   max-width: $main-col-width;
+
   > img {
     width: 100%;
   }
@@ -212,7 +213,7 @@ article {
   align-items: center;
 
   width: 100%;
-  > *:not(.custom-width) {
+  > * {
     padding-left: $padding-main;
     padding-right: $padding-main;
     width: 100%;
@@ -236,6 +237,7 @@ pre {
 }
 .portfolio-card-tile {
   position: relative;
+  // box-sizing:border-box;
   padding: $padding-main;
   text-decoration: none;
   color: $color-text-primary;
@@ -249,7 +251,9 @@ pre {
   h2 {
     font-size: 1.25rem;
   }
-  &:hover {
+  &:hover,
+  &:focus,
+  &:active {
     background-color: $color-portfolio-card-highlight;
   }
 }
@@ -353,16 +357,25 @@ p.portfolio-card-desc-short {
   justify-content: flex-start;
   align-items: flex-end;
 }
-.portfolio-wide-cta-link {
+.portfolio-wide-cta-link.portfolio-wide-cta-link {
   margin-top: 0.5em;
   display: inline-block;
   font-size: $font-size-sm;
-  padding: 0.5em;
-  background-color: $color-text-link;
+  padding: 0.75em;
+  background-color: transparent;
+  border: 2px solid $portfolio-wide-cta-color;
+  color: $portfolio-wide-cta-color;
+  border-radius: 0.25em;
   width: auto;
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 0.08em;
+  transition: all 0.2s;
+  &:hover {
+    background-color: $portfolio-wide-cta-color;
+    color: $color-page-background;
+    transition: all 0.2s;
+  }
 }
 
 // transitions:
@@ -411,7 +424,9 @@ html {
       display: none;
     }
   }
-
+  .portfolio-wide-text-md {
+    margin-bottom: 0.5em;
+  }
   .sidebar-nav-link-section {
     margin: 0;
     padding-top: $padding-main;
@@ -422,6 +437,7 @@ html {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
   }
+
   .main-nav {
     transform: none;
     background-color: $color-sidebar-background;
@@ -440,7 +456,8 @@ html {
     transition: all 0.3s;
     pointer-events: none;
   }
-  .portfolio-tile-container {
+  .portfolio-tile-container,
+  .portfolio-card-container {
     grid-template-columns: 100%;
   }
   .btn-toggle-menu {
@@ -464,7 +481,7 @@ html {
 
     display: flex;
     padding: 0 $padding-card;
-
+    border-bottom: $weight-top-nav-border solid $color-top-nav-border;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -482,7 +499,7 @@ html {
   main {
     padding-left: 0;
     padding-right: 0;
-    margin-top: 2rem;
+    margin-top: $nav-height-mobile - 1rem;
   }
 }
 
@@ -503,35 +520,6 @@ pre {
 
 // components
 
-section.big-text {
-  background-color: $color-big-text-background;
-  padding: $padding-main * 2;
-  position: relative;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: $padding-main;
-  margin-bottom: $padding-main;
-  // ensure correct margins on big-text component
-  > :first-child {
-    margin-top: 0;
-  }
-  > :last-child {
-    margin-bottom: 0;
-  }
-  p {
-    font-size: $font-size-l;
-  }
-  > * {
-    width: 100%;
-    padding-left: $padding-main;
-    padding-right: $padding-main;
-    max-width: $main-col-width;
-    flex-shrink: 0;
-    color: $color-big-text-text;
-  }
-}
 // inline-nav component
 .component-inline-nav {
   max-width: $main-col-width;
@@ -569,22 +557,6 @@ section.big-text {
 
 // utility classes
 
-.custom-width-125 {
-  max-width: $main-col-width * 1.25;
-}
-.custom-width-150 {
-  max-width: $main-col-width * 1.5;
-}
-.custom-width-200 {
-  max-width: $main-col-width * 2;
-}
-.custom-width-75 {
-  max-width: $main-col-width * 0.75;
-}
-.custom-width-full {
-  width: 100%;
-}
-
 // these styles are used for the per-element staggered transition.
 // this selector is duplicated so it has higher specificity than the 'transition-animation-base' class,
 // since both are applied to the same element, we want the 'hide-item' class to have precedence.
@@ -599,4 +571,13 @@ section.big-text {
   opacity: 1;
   transform: translateX(0);
   transition: all 0.3s;
+}
+
+.custom-width-full {
+  max-width: 100%;
+  padding: 0;
+}
+.custom-width-150 {
+  max-width: min(100%, 1.5 * $main-col-width);
+  padding: 0;
 }

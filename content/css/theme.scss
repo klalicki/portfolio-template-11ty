@@ -42,6 +42,17 @@ $font-size-l: math.pow($font-size-scale-factor, 1) + 0rem; //h3 - works out to a
 $font-size-xl: math.pow($font-size-scale-factor, 2) + 0rem; //h2 -works out to around 2rem
 $font-size-xxl: math.pow($font-size-scale-factor, 3) + 0rem; //h1 - works out to around 2.8rem
 
+//General Spacing
+//These are both used all around the site layout.
+
+//This is commonly used as the space after elements
+//default is 1rem
+$padding-main: 1rem;
+
+//This is commonly used as the space between elements and their containers
+//default is 0.5rem
+$padding-card: 0.5rem;
+
 //Navigation Bar
 // This shows up as a sidebar on desktop, and a top bar on mobile with a pull-down menu.
 
@@ -90,6 +101,22 @@ $color-sidebar-text: black;
 // default is white
 $color-sidebar-highlight: white;
 
+//this sets the color of the rule on the sidebar (shown between the masthead and the pages)
+//default is black;
+$color-sidebar-rule: black;
+
+// this sets the weight of the rule on the sidebar;
+// default is 2px
+$weight-sidebar-rule: 2px;
+
+// This sets the color of the bottom border on the top nav bar on mobile
+// default is black
+$color-top-nav-border: black;
+
+// This sets the thickness of the bottom border on the top nav bar on mobile
+// default is 2px
+$weight-top-nav-border: 2px;
+
 // This sets the height of the nav bar on mobile devices.
 // If you choose a large font size for the mobile nav, you may need to increase this value.
 // default value is 3rem
@@ -97,6 +124,10 @@ $nav-height-mobile: 3rem;
 
 // Page Area
 // These settings control the look and feel of the main content area of the page.
+
+// This line sets the width of the main text column.
+// Default is 50rem
+$main-col-width: 50rem;
 
 // This line sets the background color for the entire page
 // default is white
@@ -131,12 +162,12 @@ $color-next-project-hover: lightpink;
 
 $color-tile-overlay: #910091;
 
+//Portfolio 'Card' Layout
+// This is the layout that uses cards, where the project title is always shown below the thumbnail.
+
 // This line sets the hover color for the 'card' portfolio layout
-$color-portfolio-card-highlight: rgba(40, 173, 0, 0.664);
-
-$color-big-text-background: indigo;
-$color-big-text-text: white;
-
+// default is lightgreen
+$color-portfolio-card-highlight: lightgreen;
 
 // This section is for the 'tile' portfolio layout:
 
@@ -148,11 +179,6 @@ $portfolio-tile-gap: 0px;
 // default is 3
 $portfolio-tile-max-columns: 3;
 
+$min-card-width: 400px;
 
-$min-card-width: 300px;
-
-$padding-main: 1rem;
-$padding-card: 0.5rem;
-
-$main-col-width: 50rem;
-$main-img-width: 50rem;
+$portfolio-wide-cta-color: rgb(255, 123, 0);

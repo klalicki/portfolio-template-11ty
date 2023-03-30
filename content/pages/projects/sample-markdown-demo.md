@@ -27,6 +27,8 @@ eleventyNavigation:
 
 Here is a paragraph of text. To style text in _italic_, use _one_ pair of _underscores_ or _asterisks_ around it. To style text in **bold**, use **two** pairs of **underscores** or **asterisks** around it. To style text in **_bold and italic_**, use **_three_** pairs of **_underscores_** or **_asterisks_** around it.
 
+![](/img/sample/markdown-demo.jpg)
+
 ## Paragraphs
 
 To create paragraphs, use a blank line to separate one or more lines of text. If you don't use a blank line, the two paragraphs will be combined into one in the output.
@@ -88,11 +90,11 @@ If you want to show some code you have written, use a code block.
 
 To create a full-width code block, start and end it with a line of 3 backtick characters (`):
 
-<!-- ```
-const sayHello=()=>{
-alert('hello!')
-}
-``` -->
+```
+this is some code;
+this is some more code;
+this is another line of code!;
+```
 
 ### Inline Code Block
 
@@ -102,18 +104,17 @@ If you want to place a `short piece of code` in a regular paragraph, surround it
 
 To create a link, there are two components:
 
-<!--
 ```
 [link text](URL)
-``` -->
+```
 
 _link text_ refers to the text that appears in the browser, while _URL_ is the web address you want the link to go to.
 
 For example:
 
-<!-- ```
+```
 [Google](https://www.google.com)
-``` -->
+```
 
 will produce the following link:
 
@@ -125,9 +126,9 @@ If the link text and url are the same, you can just surround the link in angle b
 
 For example:
 
-<!-- ```
+```
 <https://www.google.com>
-``` -->
+```
 
 produces the link <https://www.google.com>.
 
@@ -141,9 +142,9 @@ In this site generator (11ty.js) Markdown is processed and rendered into HTML. I
 
 One common use for this would be to place an embed code (ie for Youtube, Vimeo, Figma, Issuu) in a project page. For example:
 
-<!-- ```
+```
 <iframe width="800" height="400" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-``` -->
+```
 
 ## Custom Classes and IDs (for custom CSS styling)
 
@@ -151,13 +152,13 @@ This site is set up to use [markdown-it-attrs](https://www.npmjs.com/package/mar
 
 What this means is that you are able to add your own CSS and style any element however you want. To add a CSS class/ID to an element, put it inside curly brackets at the end of a line.
 
-<!-- ```
+```
 #### This is a sample line of red text{.red-text}
 
 <style>.red-text{
   color:red
   }</style>
-``` -->
+```
 
 will produce:
 
@@ -173,26 +174,8 @@ Notice that I used a style tag to add the color to that element. This works well
 
 You can use custom IDs to create jump links within a page. I added the ID _#section-advanced-markdown_ to one of the headers above, which means I can link to it with the following link:
 
-<!-- ```
+```
 [Advanced Markdown Section](#section-advanced-markdown)
-``` -->
+```
 
 [Advanced Markdown Section](#section-advanced-markdown)
-
-## Special Components
-
-{% bigText %}
-
-## Big Text
-
-This is a special component that displays a bar the full width of the screen. All text within this component is large as well. This could be nice for section headers, or pull quotes, etc.
-
-{% endbigText %}
-
-text after Big Text
-more text after big text
-this is not the end of the page
-
-### another heading
-
-![](/img/sample/markdown-demo.jpg) {.custom-width .custom-width-125}
