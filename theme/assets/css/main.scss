@@ -1,5 +1,6 @@
 @use "reset.css";
 @use "sass:math";
+@use "sass:color";
 @use "../../../content/css/theme.scss" as *;
 
 // sass calculations:
@@ -421,7 +422,7 @@ html {
     max-height: calc(100vh - 3rem);
   }
   .main-nav-hidden {
-    transform: translateY(-100%);
+    transform: translateY(-50%);
     opacity: 0;
     transition: all 0.3s;
   }
@@ -452,6 +453,7 @@ html {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    background-color: $color-sidebar-background;
     h3 {
       margin: 0;
       font-size: $font-size-l;
