@@ -135,6 +135,7 @@ body {
   }
   p {
     margin-bottom: 0;
+    font-size: $font-size-nav-submasthead;
   }
   padding-bottom: $padding-main;
   // padding: $padding-card $padding-main;
@@ -441,7 +442,6 @@ html {
     align-items: center;
     h3 {
       margin: 0;
-      font-size: 1.4rem;
     }
     p {
       display: none;

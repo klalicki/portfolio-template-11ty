@@ -31,7 +31,7 @@ const hideMenu = () => {
 
 barba.use(barbaCss);
 barba.init({
-  prevent: ({ el }) => el.classList && el.classList.contains("barba-prevent"),
+  
   transitions: [
     {
       name: "fade",

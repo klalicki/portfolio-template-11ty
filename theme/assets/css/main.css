@@ -161,6 +161,7 @@ body {
 }
 .site-masthead p {
   margin-bottom: 0;
+  font-size: 1.4rem;
 }
 
 .btn-toggle-menu {
@@ -173,7 +174,7 @@ body {
 }
 
 .nav-list-item {
-  font-size: 1rem;
+  font-size: 1.4rem;
 }
 
 .nav-list-item-has-children ul {
@@ -181,7 +182,7 @@ body {
 }
 
 .nav-list-item-has-children .nav-list-item {
-  font-size: 1rem;
+  font-size: 1.4rem;
 }
 
 .sidebar-nav-link-section {
@@ -478,7 +479,6 @@ html {
   }
   .site-masthead h3 {
     margin: 0;
-    font-size: 1.4rem;
   }
   .site-masthead p {
     display: none;
