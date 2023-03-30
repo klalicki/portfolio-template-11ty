@@ -6,6 +6,7 @@ description_medium: print design
 eleventyNavigation:
   key: Soundwave Productions
   parent: design
+  order: 5
 ---
 
 ## Background

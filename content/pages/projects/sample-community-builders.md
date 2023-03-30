@@ -7,6 +7,7 @@ description_medium: branding, print design, etc.
 eleventyNavigation:
   key: Community Builders
   parent: design
+  order: 2
 ---
 
 ## Background

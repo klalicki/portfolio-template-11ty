@@ -7,6 +7,7 @@ description_medium: markdown
 eleventyNavigation:
   key: Markdown Demo
   parent: design
+  order: 4
 ---
 
 # Basic Markdown

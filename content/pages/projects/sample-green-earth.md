@@ -7,6 +7,7 @@ description_medium: print design
 eleventyNavigation:
   key: Green Earth Brochure
   parent: design
+  order: 3
 ---
 
 ## Introduction

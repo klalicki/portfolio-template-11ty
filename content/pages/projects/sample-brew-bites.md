@@ -6,7 +6,7 @@ description_short: Developing a Brand Identity for a Local Business
 description_medium: branding, print design, etc.
 eleventyNavigation:
   key: Brew & Bites
-  parent:  design
+  parent: design
   order: 10
 ---
 
