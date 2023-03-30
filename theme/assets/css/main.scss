@@ -430,6 +430,11 @@ html {
   }
   .btn-toggle-menu {
     display: block;
+    background-color: transparent;
+    border: none;
+    svg {
+      fill: $color-sidebar-text;
+    }
   }
   .site-masthead {
     z-index: 10;
@@ -442,6 +447,7 @@ html {
     align-items: center;
     h3 {
       margin: 0;
+      font-size: $font-size-l;
     }
     p {
       display: none;

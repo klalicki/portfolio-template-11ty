@@ -466,6 +466,11 @@ html {
   }
   .btn-toggle-menu {
     display: block;
+    background-color: transparent;
+    border: none;
+  }
+  .btn-toggle-menu svg {
+    fill: rgb(0, 61, 61);
   }
   .site-masthead {
     z-index: 10;
@@ -479,6 +484,7 @@ html {
   }
   .site-masthead h3 {
     margin: 0;
+    font-size: 1.4rem;
   }
   .site-masthead p {
     display: none;
