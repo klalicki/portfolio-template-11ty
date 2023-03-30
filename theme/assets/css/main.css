@@ -236,6 +236,10 @@ article {
   align-items: center;
   width: 100%;
 }
+article > iframe {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
 article > * {
   padding-left: 1rem;
   padding-right: 1rem;

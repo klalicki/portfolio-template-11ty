@@ -210,6 +210,10 @@ article {
   align-items: center;
 
   width: 100%;
+  > iframe {
+    margin-top: $padding-main;
+    margin-bottom: $padding-main;
+  }
   > * {
     padding-left: $padding-main;
     padding-right: $padding-main;
