@@ -97,8 +97,10 @@ main {
   }
   ul,
   ol {
+    margin-left: $padding-main * 2;
     li {
       margin-bottom: 0.25em;
+      line-height: 1.4;
       p {
         margin-bottom: 0.25em;
       }

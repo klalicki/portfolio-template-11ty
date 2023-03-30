@@ -118,9 +118,14 @@ main * {
 main a {
   color: magenta;
 }
+main ul,
+main ol {
+  margin-left: 2rem;
+}
 main ul li,
 main ol li {
   margin-bottom: 0.25em;
+  line-height: 1.4;
 }
 main ul li p,
 main ol li p {
