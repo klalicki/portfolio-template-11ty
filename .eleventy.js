@@ -16,7 +16,7 @@ const markdownLib = markdownIt(markdownItOptions).use(markdownItAttrs);
 module.exports = function (eleventyConfig) {
   // add eleventy navigation plugin
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
-  eleventyConfig.addPlugin(lazyImagesPlugin, {});
+  eleventyConfig.addPlugin(lazyImagesPlugin, { appendInitScript: false });
 
   // Return your Object options:
   eleventyConfig.addPassthroughCopy({ "./theme/assets": "assets" });
