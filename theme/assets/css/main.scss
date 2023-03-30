@@ -548,6 +548,7 @@ section.big-text {
 .component-inline-nav .sibling-navigation {
   padding-left: 0;
   padding-right: 0;
+  flex-wrap: wrap;
   a {
     padding: $padding-main;
   }
