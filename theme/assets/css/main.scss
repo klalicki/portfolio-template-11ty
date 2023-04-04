@@ -335,9 +335,15 @@ p.portfolio-card-desc-short {
 }
 /* wide (UX) portfolio layout */
 .portfolio-wide-tile {
-  a {
+  > a {
     color: $color-text-primary;
     text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    &:hover {
+      transform: translateX($padding-card);
+      transition: all 0.3s;
+    }
   }
 }
 .portfolio-wide-img {
