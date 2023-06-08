@@ -7,7 +7,7 @@ thumbnail: /img/work-photos/4_copy.jpg
 description_short:
 description_medium:
 eleventyNavigation:
-  key: BFA Thesis
+  key: Invasive
   parent: Portfolio
 ---
 

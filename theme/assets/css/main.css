@@ -73,15 +73,15 @@ body {
 }
 
 h1 {
-  font-size: 1.728rem;
+  font-size: 2.744rem;
 }
 
 h2 {
-  font-size: 1.44rem;
+  font-size: 1.96rem;
 }
 
 h3 {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 h4,
@@ -320,7 +320,7 @@ pre {
 }
 
 .portfolio-wide-text-sm {
-  font-size: 0.8333333333rem;
+  font-size: 0.7142857143rem;
 }
 
 .portfolio-wide-text-md {
@@ -396,7 +396,7 @@ html {
     padding-bottom: 2rem;
   }
   .sidebar-nav-link-section a {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
   }
@@ -481,7 +481,7 @@ section.big-text > :last-child {
   margin-bottom: 0;
 }
 section.big-text p {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 section.big-text > * {
   width: 100%;
