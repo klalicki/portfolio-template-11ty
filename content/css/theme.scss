@@ -19,7 +19,7 @@ $font-size-mobile: 100%;
 // Setting this to 1 will make all fonts on the website the same size.
 // I would suggest a value between 1.2 and 1.5
 // default is 1.41
-$font-size-scale-factor: 1.4;
+$font-size-scale-factor: 1.2;
 
 // COLORS:
 
@@ -57,7 +57,7 @@ $border-color: black;
 
 $min-card-width: 300px;
 
-$padding-main: 1rem;
+$padding-main: 2rem;
 $padding-card: 0.5rem;
 
 $main-col-width: 40rem;
@@ -73,6 +73,11 @@ $sidebar-max-width: 500px;
   color: white;
   font-size: 1.5rem;
   font-family: $theme-font-stack-main;
+}
+
+.component-inline-nav .sibling-navigation a,
+.component-inline-nav .sibling-navigation a:visited {
+  color: black !important;
 }
 
 @media (min-width: 720px) {
