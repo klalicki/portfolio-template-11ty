@@ -17,4 +17,4 @@ In my free time, I run my Etsy Shop, [TauraMori](https://www.etsy.com/shop/Taura
 
 - Connect on [LinkedIn](https://www.linkedin.com/in/christina-borghoff-2b0182123/)
 - Follow TauraMori on [Instagram](https://www.instagram.com/tauramori/)
-- Send me an [email](mailto:<!--o-->cmkborgho<!--o-->ff@g<!--o-->mail.com)
+- Send me an at cmkborghoff[at]gmail[.com]
