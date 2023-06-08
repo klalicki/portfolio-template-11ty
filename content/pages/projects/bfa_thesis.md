@@ -11,20 +11,32 @@ eleventyNavigation:
   parent: Portfolio
 ---
 
-## Trapa natans
+## _Trapa natans_ (Water Chestnut, 'Devil's Head')
 
 ![Trapa natans](/img/work-photos/1_copy.jpg){.pair}![Trapa natans](/img/work-photos/2_copy.jpg){.pair}
-also known as the water chestnut or 'Devil's Head'
+Brass, copper, enamel, fabric, thread, leather
 
-## Poppy
+## _Papaver somniferum_ (Poppy)
 
 ![Poppy](/img/work-photos/3_copy.jpg){.pair}![Poppy](/img/work-photos/4_copy.jpg){.pair}
+Copper, reather, ribbon, thread
 
-## Queen Anne's Lace
+## _Daucus carota_ (Queen Anne's Lace)
 
-![Queen Anne's Lace](/img/work-photos/5_copy.jpg){.pair}![Queen Anne's Lace](/img/work-photos/6_copy.jpg){.pair}
+![Queen Anne's Lace](/img/work-photos/5_copy.jpg)![Queen Anne's Lace](/img/work-photos/6_copy.jpg)
+Copper, leather
 
-Queen Anne's Lace
+## _Heracleum mantegazzianum_ (Giant Hogweed)
+
+![Poppy](/img/work-photos/7_copy.jpg)
+![Poppy](/img/work-photos/8_copy.jpg)
+Copper, enamel, leather, silver, thermoplastic, thread
+
+## _Cichorium intybus_ (Chicory)
+
+![Chicory](/img/work-photos/9_copy.jpg)
+![Chicory](/img/work-photos/10_copy.jpg)
+Copper, leather, paint, string
 
 ## About the project
 
