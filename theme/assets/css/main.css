@@ -33,6 +33,20 @@ body {
 
 /* This line sets the default font for most text, including the body text and navigation */
 /* This line sets the font for headers, including the site title*/
+.btn-toggle-menu {
+  display: none;
+  background: transparent;
+  border: 0;
+  color: white;
+  font-size: 1.5rem;
+  font-family: "Montserrat Alternates", sans-serif;
+}
+
+@media (min-width: 720px) {
+  .site-masthead h3 {
+    font-size: 58px;
+  }
+}
 :root {
   font-size: 130%;
   font-family: "Montserrat Alternates", sans-serif;

@@ -1,10 +1,10 @@
 /* font imports here */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;800&family=Viaoda+Libre&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;800&family=Viaoda+Libre&display=swap");
 /* This line sets the default font for most text, including the body text and navigation */
-$theme-font-stack-main: 'Montserrat Alternates', sans-serif;
+$theme-font-stack-main: "Montserrat Alternates", sans-serif;
 
 /* This line sets the font for headers, including the site title*/
-$theme-font-stack-headers: 'Viaoda Libre', cursive;
+$theme-font-stack-headers: "Viaoda Libre", cursive;
 
 // This line sets the base font size for desktop
 // default is 110%
@@ -65,3 +65,18 @@ $main-col-width: 40rem;
 $sidebar-width: 30%;
 $sidebar-min-width: 250px;
 $sidebar-max-width: 500px;
+
+.btn-toggle-menu {
+  display: none;
+  background: transparent;
+  border: 0;
+  color: white;
+  font-size: 1.5rem;
+  font-family: $theme-font-stack-main;
+}
+
+@media (min-width: 720px) {
+  .site-masthead h3 {
+    font-size: 58px;
+  }
+}
