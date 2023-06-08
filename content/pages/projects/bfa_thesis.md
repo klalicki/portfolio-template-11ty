@@ -5,7 +5,7 @@ subset: gd
 order:
 thumbnail: /img/work-photos/4_copy.jpg
 description_short:
-description_medium: 
+description_medium:
 eleventyNavigation:
   key: BFA Thesis
   parent: Portfolio
@@ -13,16 +13,27 @@ eleventyNavigation:
 
 ## Trapa natans
 
-
-
-![Trapa natans](/img/work-photos/1_copy.jpg)
-
-![Trapa natans](/img/work-photos/2_copy.jpg)
+![Trapa natans](/img/work-photos/1_copy.jpg){.pair}![Trapa natans](/img/work-photos/2_copy.jpg){.pair}
+also known as the water chestnut or 'Devil's Head'
 
 ## Poppy
 
-![Poppy](/img/work-photos/3_copy.jpg)
-
-![Poppy](/img/work-photos/4_copy.jpg)
+![Poppy](/img/work-photos/3_copy.jpg){.pair}![Poppy](/img/work-photos/4_copy.jpg){.pair}
 
 ## Queen Anne's Lace
+
+![Queen Anne's Lace](/img/work-photos/5_copy.jpg){.pair}![Queen Anne's Lace](/img/work-photos/6_copy.jpg){.pair}
+
+Queen Anne's Lace
+
+## About the project
+
+The body of work I produced for my undergraduate BFA thesis is an exploration of invasive species native to New York.
+
+Focusing on plants that are seen as ugly or unwanted, I looked closer at their form and anatomy. What makes these plants different from popularly cultivated ones? A focus of this project was replicating and understanding the forms of nature. I think the life cycles and stages of a plant’s growth make it much more complex and interesting than what we usually notice a plant for.
+
+Over the course of this year long project, I explored, researched, and dissected forms to understand how certain plants grow, populate, and decay. From this gathered knowledge, I experimented in how to construct these forms and represent their life cycle and function through such a rigid media.
+
+Each piece focuses on a different invasive species, and is named for its scientific latin name, which further deteches us from our preconveived notions about that particiular oragnism and why we dislike it, allowing the viwer or wearer to appreciate it for it's beauty, deteching the negative context.
+
+All of the wearable pieces were produced through a mixture of hand metal and leather working, as well as digital methods and consultation available to me through the HVAMC (Hudson Valley Advanced Manufacturing Center) Digital Fabrication Lab on the SUNY New Paltz campus.

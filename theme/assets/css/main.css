@@ -52,6 +52,16 @@ body {
   color: white;
 }
 
+.pair {
+  display: inline-block;
+  width: 100%;
+}
+@media (min-width: 480px) {
+  .pair {
+    width: 49%;
+  }
+}
+
 @media (min-width: 720px) {
   .site-masthead h3 {
     font-size: 58px;
