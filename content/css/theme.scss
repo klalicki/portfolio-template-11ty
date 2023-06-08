@@ -80,6 +80,11 @@ $sidebar-max-width: 500px;
   color: black !important;
 }
 
+.portfolio-tile-text-overlay {
+  background: linear-gradient(#005632, #285d00);
+  color: white;
+}
+
 @media (min-width: 720px) {
   .site-masthead h3 {
     font-size: 58px;

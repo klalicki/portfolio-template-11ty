@@ -7,4 +7,4 @@ eleventyNavigation:
   key: Portfolio
 ---
 
-Any text in this document appears above the project grid in the Portfolio view
+Selected jewelry and design work
