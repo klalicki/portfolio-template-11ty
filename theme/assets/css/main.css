@@ -314,7 +314,7 @@ p.portfolio-card-desc-short {
   position: relative;
   overflow: hidden;
   width: 100%;
-  aspect-ratio: 1.7777777778;
+  aspect-ratio: 1.5;
   background-size: cover;
   background-position: center;
 }
