@@ -1,6 +1,6 @@
 ---
 layout: portfolio.njk
-portfolio_type: wide
+portfolio_type: tile
 eleventyNavigation:
   title: Design Portfolio
   key: design

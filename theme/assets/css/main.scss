@@ -286,10 +286,10 @@ p.portfolio-card-desc-short {
 .portfolio-tile {
   position: relative;
   overflow: hidden;
-  img {
-    width: 100%;
-    display: block;
-  }
+  width: 100%;
+  aspect-ratio: $portfolio-tile-aspect-ratio;
+  background-size: cover;
+  background-position: center;
 }
 .portfolio-tile-project-desc-short {
   font-size: $font-size-l;

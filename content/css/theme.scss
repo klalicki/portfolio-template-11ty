@@ -172,6 +172,11 @@ $color-tile-overlay-text: black;
 // default is 0px
 $portfolio-tile-gap: 0px;
 
+//This line sets the aspect ratio of portfolio tiles
+// 1 / 1 is square
+// default is 16 / 9
+$portfolio-tile-aspect-ratio: 16 / 9;
+
 // This line sets the maximum number of tiles allowed in one line
 // default is 3
 $portfolio-tile-max-columns: 3;

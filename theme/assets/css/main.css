@@ -310,10 +310,10 @@ p.portfolio-card-desc-short {
 .portfolio-tile {
   position: relative;
   overflow: hidden;
-}
-.portfolio-tile img {
   width: 100%;
-  display: block;
+  aspect-ratio: 1.7777777778;
+  background-size: cover;
+  background-position: center;
 }
 
 .portfolio-tile-project-desc-short {
