@@ -168,9 +168,19 @@ $color-tile-overlay: white;
 //default is black
 $color-tile-overlay-text: black;
 
+// This line sets the opacity of the overlay on the tile layout
+// This value ranges from 0 (fully transparent/invisible) to 1 (fully opaque)
+// recommended values from 0.9 to 1 - any lower may be difficult to read.
+// default is 1 (fully opaque)
+$portfolio-tile-overlay-opacity: 1;
+
 // This line sets the gap between tiles
 // default is 0px
-$portfolio-tile-gap: 0px;
+$portfolio-tile-gap: 2rem;
+
+// this line sets the inset amount of the overlay on the tile layout
+// default is $padding-main (the sitewide padding amount)
+$portfolio-tile-overlay-inset: $padding-main;
 
 //This line sets the aspect ratio of portfolio tiles
 // 1 / 1 is square

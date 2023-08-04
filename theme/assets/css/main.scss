@@ -305,10 +305,10 @@ p.portfolio-card-desc-short {
   justify-content: center;
   text-align: center;
   position: absolute;
-  top: $padding-main;
-  left: $padding-main;
-  right: $padding-main;
-  bottom: $padding-main;
+  top: $portfolio-tile-overlay-inset;
+  left: $portfolio-tile-overlay-inset;
+  right: $portfolio-tile-overlay-inset;
+  bottom: $portfolio-tile-overlay-inset;
   opacity: 0;
   background-color: $color-tile-overlay;
   transform: scale(90%);
@@ -329,7 +329,7 @@ p.portfolio-card-desc-short {
 .portfolio-tile:focus .portfolio-tile-text-overlay,
 .portfolio-tile:hover .portfolio-tile-text-overlay {
   pointer-events: all;
-  opacity: 1;
+  opacity: $portfolio-tile-overlay-opacity;
   transform: scale(1);
   transition: all 0.5s;
 }
