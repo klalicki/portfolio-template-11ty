@@ -317,6 +317,10 @@ p.portfolio-card-desc-short {
   aspect-ratio: 1.5;
   background-size: cover;
   background-position: center;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
 }
 
 .portfolio-tile-project-desc-short {
@@ -334,14 +338,9 @@ p.portfolio-card-desc-short {
   align-items: center;
   justify-content: center;
   text-align: center;
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  right: 1rem;
-  bottom: 1rem;
+  flex-grow: 1;
   opacity: 0;
   background-color: white;
-  transform: scale(90%);
   transition: all 0.5s;
   text-decoration: none;
 }
@@ -355,7 +354,7 @@ p.portfolio-card-desc-short {
   color: black;
 }
 
-.portfolio-tile:focus .portfolio-tile-text-overlay,
+.portfolio-tile:focus-within .portfolio-tile-text-overlay,
 .portfolio-tile:hover .portfolio-tile-text-overlay {
   pointer-events: all;
   opacity: 1;
