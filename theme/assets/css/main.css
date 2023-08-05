@@ -341,6 +341,7 @@ p.portfolio-card-desc-short {
   flex-grow: 1;
   opacity: 0;
   background-color: white;
+  transform: scale(90%);
   transition: all 0.5s;
   text-decoration: none;
 }

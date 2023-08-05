@@ -309,14 +309,10 @@ p.portfolio-card-desc-short {
   justify-content: center;
   text-align: center;
   flex-grow: 1;
-  // position: absolute;
-  // top: $portfolio-tile-overlay-inset;
-  // left: $portfolio-tile-overlay-inset;
-  // right: $portfolio-tile-overlay-inset;
-  // bottom: $portfolio-tile-overlay-inset;
+
   opacity: 0;
   background-color: $color-tile-overlay;
-  // transform: scale(90%);
+  transform: scale(90%);
 
   // width: calc(100% - 2 * $portfolio-tile-overlay-inset);
   transition: all 0.5s;
