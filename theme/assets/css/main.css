@@ -305,7 +305,7 @@ p.portfolio-card-desc-short {
 
 .portfolio-tile-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(max(450px, 33.3333333333%), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, max(450px, 33.3333333333%)), 1fr));
   padding: 2rem;
   gap: 2rem 2rem;
 }
@@ -320,7 +320,7 @@ p.portfolio-card-desc-short {
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: stretch;
+  justify-content: center;
 }
 
 .portfolio-tile-project-desc-short {
@@ -338,7 +338,7 @@ p.portfolio-card-desc-short {
   align-items: center;
   justify-content: center;
   text-align: center;
-  flex-grow: 1;
+  flex: 1 0 auto;
   opacity: 0;
   background-color: white;
   transform: scale(90%);
@@ -514,8 +514,6 @@ html {
     right: 0;
     padding: 1rem;
     opacity: 1;
-    margin-bottom: 2rem;
-    margin-top: 0;
     transform: scale(1);
   }
   .sidebar-rule {
