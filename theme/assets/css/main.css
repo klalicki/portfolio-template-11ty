@@ -314,13 +314,18 @@ p.portfolio-card-desc-short {
   position: relative;
   overflow: hidden;
   width: 100%;
-  aspect-ratio: 1.5;
+  height: fit-content;
   background-size: cover;
   background-position: center;
-  padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.portfolio-tile-image {
+  aspect-ratio: 1.5;
+  background-size: cover;
+  background-position: center;
 }
 
 .portfolio-tile-project-desc-short {
@@ -332,6 +337,7 @@ p.portfolio-card-desc-short {
 }
 
 .portfolio-tile-text-overlay {
+  position: absolute;
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -339,6 +345,8 @@ p.portfolio-card-desc-short {
   justify-content: center;
   text-align: center;
   flex: 1 0 auto;
+  min-height: calc(100% - 2rem);
+  width: calc(100% - 2rem);
   opacity: 0;
   background-color: white;
   transform: scale(90%);
@@ -508,10 +516,7 @@ html {
     text-decoration: none;
   }
   .portfolio-tile-text-overlay {
-    top: 0;
     position: relative;
-    left: 0;
-    right: 0;
     padding: 1rem;
     opacity: 1;
     transform: scale(1);

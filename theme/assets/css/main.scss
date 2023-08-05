@@ -278,7 +278,7 @@ p.portfolio-card-desc-short {
   display: grid;
   grid-template-columns: repeat(
     auto-fit,
-    minmax(min(100%,max(450px, 100% / $portfolio-tile-max-columns)), 1fr)
+    minmax(min(100%, max(450px, 100% / $portfolio-tile-max-columns)), 1fr)
   );
   padding: $portfolio-tile-gap;
   gap: $portfolio-tile-gap $portfolio-tile-gap;
@@ -287,13 +287,18 @@ p.portfolio-card-desc-short {
   position: relative;
   overflow: hidden;
   width: 100%;
-  aspect-ratio: $portfolio-tile-aspect-ratio;
+  height: fit-content;
   background-size: cover;
   background-position: center;
-  padding: $portfolio-tile-overlay-inset;
+  // padding: $portfolio-tile-overlay-inset;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+.portfolio-tile-image {
+  aspect-ratio: $portfolio-tile-aspect-ratio;
+  background-size: cover;
+  background-position: center;
 }
 .portfolio-tile-project-desc-short {
   font-size: $font-size-l;
@@ -302,6 +307,7 @@ p.portfolio-card-desc-short {
   font-size: $font-size-md;
 }
 .portfolio-tile-text-overlay {
+  position: absolute;
   padding: $padding-main;
   display: flex;
   flex-direction: column;
@@ -309,7 +315,8 @@ p.portfolio-card-desc-short {
   justify-content: center;
   text-align: center;
   flex: 1 0 auto;
-
+  min-height: calc(100% - 2 * $portfolio-tile-overlay-inset);
+  width: calc(100% - 2 * $portfolio-tile-overlay-inset);
   opacity: 0;
   background-color: $color-tile-overlay;
   transform: scale(90%);
@@ -477,10 +484,7 @@ html {
     text-decoration: none;
   }
   .portfolio-tile-text-overlay {
-    top: 0;
     position: relative;
-    left: 0;
-    right: 0;
     padding: $padding-main;
     opacity: 1;
 
@@ -622,3 +626,7 @@ pre {
   margin-top: $padding-main;
   margin-bottom: $padding-main;
 }
+
+// * {
+//   border: 1px solid red;
+// }
