@@ -371,17 +371,20 @@ p.portfolio-card-desc-short {
 }
 .portfolio-tile-click-area:focus {
   outline: none !important;
+  position: static;
 }
 .portfolio-tile-text-overlay:focus-within {
   outline: 3px solid $color-focus-ring;
 }
 .portfolio-tile-click-area::after {
   content: "";
+  // background-color: yellow;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+  z-index: 10;
 }
 .portfolio-tile-click-area:focus::after {
   // outline: 3px solid $color-focus-ring;
@@ -391,7 +394,7 @@ p.portfolio-card-desc-short {
 }
 .portfolio-tile:focus-within .portfolio-tile-text-overlay,
 .portfolio-tile:hover .portfolio-tile-text-overlay {
-  pointer-events: all;
+  // pointer-events: all;
   opacity: $portfolio-tile-overlay-opacity;
   transform: scale(1);
   transition: all 0.5s;
