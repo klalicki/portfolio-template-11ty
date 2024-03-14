@@ -16,7 +16,11 @@
   <body data-barba="wrapper" lang="en">
     {% block sidebar %} {% include 'partials/sidebar.njk' %} {% endblock %}
 
-    <main data-barba="container" data-barba-namespace="{{page.url}}">
+    <main
+      data-barba="container"
+      data-barba-namespace="{{page.url}}"
+      id="main-content"
+    >
       {% block main %}
       <article class="text-page">
         {% if hideDefaultTitle==true %} {% else %}

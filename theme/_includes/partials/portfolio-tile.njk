@@ -5,7 +5,7 @@
     style="background-image:url('{{project.thumbnail}}');"
   ></div>
   #}
-  <a href="{{project.page.url}}" tabindex="-1">
+  <a href="{{project.page.url}}" class="portfolio-tile-image-link" tabindex="-1">
     <img
       src="{{project.thumbnail}}"
       alt="{{project.thumbnailAlt if project.thumbnailAlt else project.description_short}}"

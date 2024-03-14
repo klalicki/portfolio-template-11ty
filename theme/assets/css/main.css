@@ -270,6 +270,22 @@ pre {
   padding: 0.5rem;
 }
 
+.skip-link {
+  position: fixed;
+  background-color: white;
+  padding: 1rem;
+  z-index: 100000;
+  opacity: 0;
+  pointer-events: none;
+  text-decoration: none;
+  color: black;
+}
+
+.skip-link:focus {
+  opacity: 1;
+  pointer-events: all;
+}
+
 /* Portfolio Card */
 .portfolio-card-container {
   display: grid;
@@ -383,14 +399,25 @@ p.portfolio-card-desc-short {
   margin-bottom: 0.5em;
 }
 
+.portfolio-tile-click-area:focus {
+  outline: none !important;
+}
+
+.portfolio-tile-text-overlay:focus-within {
+  outline: 3px solid rgb(255, 46, 151);
+}
+
 .portfolio-tile-click-area::after {
-  border: 1px solid red;
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+}
+
+.portfolio-tile-image-link:focus {
+  outline: none;
 }
 
 .portfolio-tile:focus-within .portfolio-tile-text-overlay,
@@ -497,7 +524,7 @@ html {
 
 @media (max-width: 720px) {
   :root {
-    font-size: 100%;
+    font-size: 120%;
   }
   .main-nav-container {
     position: fixed;
