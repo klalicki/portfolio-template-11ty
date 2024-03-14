@@ -34,12 +34,11 @@ module.exports = async function (eleventyConfig) {
   }
 
   // Return your Object options:
-  eleventyConfig.addPassthroughCopy({ "./theme/assets": "assets" });
-  // eleventyConfig.addPassthroughCopy({ "./img": "img" });
-  eleventyConfig.addPassthroughCopy({ "./theme/assets/js": "assets/js" });
+  eleventyConfig.addPassthroughCopy({ "theme/assets": "assets" });
   eleventyConfig.addPassthroughCopy({
-    "./content/css/custom.css": "assets/css/custom.css",
+    "src/css/custom.css": "assets/css/custom.css",
   });
+
   eleventyConfig.watchIgnores.add("theme/assets/css/main.css");
   eleventyConfig.addWatchTarget("./content/");
   // adds custom collections for projects and pages which are sorted by an 'order' parameter in front matter.
@@ -143,7 +142,7 @@ module.exports = async function (eleventyConfig) {
       sizes: "90vw", // I set a default `sizes` attribute here — the plugin errored out without it and I didn't want to set it per image
     },
     outputDir: "./dist/img/",
-    urlPath: "img/",
+    urlPath: "",
     filenameFormat: (id, src, width, format) => {
       const { name } = path.parse(src);
       return `${name}-${width}w.${format}`;
@@ -172,7 +171,7 @@ module.exports = async function (eleventyConfig) {
     ...p,
     passthroughFileCopy: true,
     dir: {
-      input: "content/pages",
+      input: "src/content",
       includes: "../../theme/_includes",
       data: "../data",
 
