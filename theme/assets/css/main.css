@@ -109,6 +109,9 @@ p > img {
   width: 100%;
 }
 
+main * {
+  color: black;
+}
 main hr {
   border-bottom: 2px solid black;
   border-top: none;
@@ -119,9 +122,6 @@ main h3,
 main h4,
 main h5,
 main h6 {
-  color: black;
-}
-main * {
   color: black;
 }
 main a {

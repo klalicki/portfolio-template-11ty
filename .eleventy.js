@@ -3,20 +3,21 @@ const markdownItAttrs = require("markdown-it-attrs");
 const sass = require("sass");
 const fs = require("fs");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
-const lazyImagesPlugin = require("eleventy-plugin-lazyimages");
 const embedYouTube = require("eleventy-plugin-youtube-embed");
-const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 const urlBase = process.env.BASE_URL || "";
+const path = require("path");
 
 const markdownItOptions = {
   html: true,
   breaks: true,
   linkify: true,
 };
-
+console.log("version ");
 const markdownLib = markdownIt(markdownItOptions).use(markdownItAttrs);
 
-module.exports = function (eleventyConfig) {
+module.exports = async function (eleventyConfig) {
+  const { EleventyHtmlBasePlugin } = await import("@11ty/eleventy");
+  const { eleventyImageTransformPlugin } = await import("@11ty/eleventy-img");
   // add eleventy navigation plugin
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
@@ -32,16 +33,19 @@ module.exports = function (eleventyConfig) {
     p = { pathPrefix: urlBase };
   }
 
-  // eleventyConfig.addPlugin(lazyImagesPlugin, { appendInitScript: false });
   // Return your Object options:
-  eleventyConfig.addPassthroughCopy({ "./theme/assets": "assets" });
-  eleventyConfig.addPassthroughCopy({ "./img": "img" });
-  eleventyConfig.addPassthroughCopy({ "./theme/assets/js": "assets/js" });
+  eleventyConfig.addPassthroughCopy({ "theme/assets": "assets" });
+  eleventyConfig.addPassthroughCopy({ "src/content/img": "img" });
+
   eleventyConfig.addPassthroughCopy({
-    "./content/css/custom.css": "assets/css/custom.css",
+    "src/css/custom.css": "assets/css/custom.css",
   });
+
   eleventyConfig.watchIgnores.add("theme/assets/css/main.css");
   eleventyConfig.addWatchTarget("./content/");
+  eleventyConfig.addWatchTarget("theme/assets/main.scss");
+
+  eleventyConfig.addWatchTarget("src/css/");
   // adds custom collections for projects and pages which are sorted by an 'order' parameter in front matter.
 
   // adds a custom collection that is sorted by the eleventyNavigation order parameter in front matter.
@@ -132,6 +136,23 @@ module.exports = function (eleventyConfig) {
 
     return navSiblings;
   });
+  eleventyConfig;
+  eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
+    extensions: "html",
+    formats: ["webp", "jpeg"], // I'm generating `avif` files, the docs include just `webp` and `jpeg`
+    widths: [480, 960, 1440], // I moved the explicit widths over from my old shortcode
+    defaultAttributes: {
+      loading: "lazy",
+      decoding: "async",
+      sizes: "90vw", // I set a default `sizes` attribute here — the plugin errored out without it and I didn't want to set it per image
+    },
+    outputDir: "./dist/img/",
+    urlPath: "",
+    filenameFormat: (id, src, width, format) => {
+      const { name } = path.parse(src);
+      return `${name}-${width}w.${format}`;
+    },
+  });
 
   eleventyConfig.on("eleventy.before", () => {
     try {
@@ -149,11 +170,13 @@ module.exports = function (eleventyConfig) {
     }
   });
 
+  // image transform plugin
+
   return {
     ...p,
     passthroughFileCopy: true,
     dir: {
-      input: "content/pages",
+      input: "src/content",
       includes: "../../theme/_includes",
       data: "../data",
 

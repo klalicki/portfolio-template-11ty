@@ -22,14 +22,16 @@
   },
   "homepage": "https://github.com/klalicki/portfolio-template-11ty#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.0",
+    "@11ty/eleventy": "3.0.0-alpha.5",
+    "@11ty/eleventy-img": "^4.0.2",
     "@11ty/eleventy-navigation": "^0.3.5",
-    "eleventy-plugin-lazyimages": "^2.1.2",
     "lazysizes": "^5.3.2",
     "webpack": "^5.76.3",
     "webpack-cli": "^5.0.1"
   },
   "dependencies": {
+    "@11ty/eleventy": "3.0.0-alpha.5",
+    "@11ty/eleventy-img": "^4.0.2",
     "@barba/core": "^2.9.7",
     "@barba/css": "^2.1.15",
     "eleventy-plugin-youtube-embed": "^1.8.1",
