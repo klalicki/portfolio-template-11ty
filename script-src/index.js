@@ -1,6 +1,5 @@
 import barba from "@barba/core";
 import barbaCss from "@barba/css";
-import lazySizes from "lazysizes";
 
 const clearMenuActive = () => {
   document.querySelectorAll(".active").forEach((item) => {
@@ -40,7 +39,6 @@ barba.init({
     },
   ],
 });
-
 
 const hideItems = () => {
   const itemList = document.querySelectorAll(

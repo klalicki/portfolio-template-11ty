@@ -32,7 +32,7 @@ module.exports = function (eleventyConfig) {
     p = { pathPrefix: urlBase };
   }
 
-  eleventyConfig.addPlugin(lazyImagesPlugin, { appendInitScript: false });
+  // eleventyConfig.addPlugin(lazyImagesPlugin, { appendInitScript: false });
   // Return your Object options:
   eleventyConfig.addPassthroughCopy({ "./theme/assets": "assets" });
   eleventyConfig.addPassthroughCopy({ "./img": "img" });
