@@ -1,53 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ eleventyNavigation.title if eleventyNavigation.title else eleventyNavigation.key }}</title>
-    <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="stylesheet" href="/assets/css/custom.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      {{ eleventyNavigation.title if eleventyNavigation.title else
+      eleventyNavigation.key }} | {{siteInfo.designerName}}
+    </title>
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/css/custom.css" />
     <link href="{{siteInfo.favicon}}" rel="icon" type="image/x-icon" />
-</head>
+  </head>
 
-<body data-barba="wrapper" lang="en">
-    
-    
-        {% block sidebar %}
-        {% include 'partials/sidebar.njk' %}
-        {% endblock %}
+  <body data-barba="wrapper" lang="en">
+    {% block sidebar %} {% include 'partials/sidebar.njk' %} {% endblock %}
 
+    <main
+      data-barba="container"
+      data-barba-namespace="{{page.url}}"
+      id="main-content"
+    >
+      {% block main %}
+      <article class="text-page">
+        {% if hideDefaultTitle==true %} {% else %}
+        <h1 class="page-title">
+          {{ eleventyNavigation.key if eleventyNavigation.key else title }}
+        </h1>
+        {% endif %} {{content | safe}}
+      </article>
 
-    <main data-barba="container" data-barba-namespace="{{page.url}}">
-
-        {% block main %}
-        <article class = "text-page">
-           
-            
-            {% if hideDefaultTitle==true %}
-            
-                
-
-            {% else %}
-            <h1 class="page-title">{{ eleventyNavigation.key if eleventyNavigation.key else title }}</h1>
-            {% endif %}
-            
-            {{content | safe}}
-        </article>
-
-        {% endblock %}
-        {% block afterMain %}
-            
-        {% endblock %}
-        
-
+      {% endblock %} {% block afterMain %} {% endblock %}
     </main>
 
-{% block splash %}
-        
-    {% endblock %}
-</body>
-<script src="/assets/js/bundle.js"></script>
-
+    {% block splash %} {% endblock %}
+  </body>
+  <script src="/assets/js/bundle.js"></script>
 </html>

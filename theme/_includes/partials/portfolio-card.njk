@@ -1,12 +1,12 @@
 <a href="{{project.page.url}}" class="portfolio-card-tile">
-
-
-  <img src="{{project.thumbnail}}" alt="{{project.description_short}}">
-  <h2 href="{{project.page.url}}"> {{project.eleventyNavigation.key}}</h2>
+  <img
+    src="{{project.thumbnail}}"
+    alt="{{project.thumbnailAlt if project.thumbnailAlt else project.description_short}}"
+  />
+  <h2 href="{{project.page.url}}">{{project.eleventyNavigation.key}}</h2>
   {% if project.description_short %}
   <p class="portfolio-card-desc-short">{{project.description_short}}</p>
-  {% endif %}
-  {% if project.description_medium %}
+  {% endif %} {% if project.description_medium %}
   <p class="portfolio-card-desc-med">{{project.description_medium}}</p>
   {% endif %}
 </a>

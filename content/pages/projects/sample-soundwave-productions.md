@@ -1,6 +1,7 @@
 ---
 layout: project.njk
 thumbnail: /img/sample/soundwave-productions-tile.jpg
+thumbnailAlt: Thumbnail alt text goes here
 description_short: Designing a Promotional Poster for a Music Festival
 description_medium: print design
 eleventyNavigation:

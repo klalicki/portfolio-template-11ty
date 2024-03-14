@@ -122,8 +122,13 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.on("eleventy.before", () => {
     try {
+      const warningMessage =
+        "/* WARNING: This file is overwritten at every build. Please do not try editing it. \n If you are trying to customize styling, please edit main.scss instead:\n main.scss is automatically compiled into this file at build time. */ \n";
       let compiled = sass.compile("theme/assets/css/main.scss", {});
-      fs.writeFileSync("theme/assets/css/main.css", compiled.css);
+      fs.writeFileSync(
+        "theme/assets/css/main.css",
+        warningMessage + compiled.css
+      );
       console.log("successfully built and wrote SASS!");
     } catch (err) {
       console.log("error compiling SASS!");

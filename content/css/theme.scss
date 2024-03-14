@@ -22,8 +22,8 @@ $theme-font-stack-headers: "IBM Plex Serif", serif;
 $font-size-base: 110%;
 
 // This line sets the base font size for mobile
-// default is 100%
-$font-size-mobile: 100%;
+// default is 120%
+$font-size-mobile: 120%;
 
 // This line controls the amount of variation between font sizes.
 // Increasing this number will make headers larger overall.
@@ -93,13 +93,21 @@ $nav-project-indent: 1em;
 // default is a light gray (#c0c0c0)
 $color-sidebar-background: #c0c0c0;
 
+// This line sets the color of the navigation panel that appears when you click the hamburger on mobile
+// default is matched to the sidebar/top bar color
+$color-mobile-nav-background: $color-sidebar-background;
+
 // This line sets the text color for the sidebar area, and for the top bar on mobile
 // default is black
 $color-sidebar-text: black;
 
 //This line sets the color of the sidebar highlight (shown on the current page);
+// default is pale yellow
+$color-sidebar-highlight: rgb(253, 255, 213);
+
+//This line sets the hover color of the sidebar elements (shown on the current page);
 // default is white
-$color-sidebar-highlight: white;
+$color-sidebar-hover: white;
 
 //this sets the color of the rule on the sidebar (shown between the masthead and the pages)
 //default is black;
@@ -141,6 +149,10 @@ $color-text-primary: black;
 // default is black
 $color-text-headers: black;
 
+// This line sets the color of the focus ring
+// default is hot pink
+$color-focus-ring: rgb(255, 46, 151);
+
 // This line sets the color of borders and rules on the page
 // Set this to transparent to get rid of them entirely
 // default is black
@@ -168,9 +180,24 @@ $color-tile-overlay: white;
 //default is black
 $color-tile-overlay-text: black;
 
+// This line sets the opacity of the overlay on the tile layout
+// This value ranges from 0 (fully transparent/invisible) to 1 (fully opaque)
+// recommended values from 0.9 to 1 - any lower may be difficult to read.
+// default is 1 (fully opaque)
+$portfolio-tile-overlay-opacity: 1;
+
 // This line sets the gap between tiles
 // default is 0px
-$portfolio-tile-gap: 0px;
+$portfolio-tile-gap: 2rem;
+
+// this line sets the inset amount of the overlay on the tile layout
+// default is $padding-main (the sitewide padding amount)
+$portfolio-tile-overlay-inset: $padding-main;
+
+//This line sets the aspect ratio of portfolio tiles
+// 1 / 1 is square
+// default is 3 / 2
+$portfolio-tile-aspect-ratio: 3 / 2;
 
 // This line sets the maximum number of tiles allowed in one line
 // default is 3
@@ -186,6 +213,11 @@ $color-portfolio-card-highlight: lightgreen;
 //This is the minimum width of a card in the 'card' portfolio layout.
 // default is 400px
 $min-card-width: 400px;
+
+//This line sets the aspect ratio of portfolio tiles
+// 1 / 1 is square
+// default is 3 / 2
+$portfolio-card-aspect-ratio: 3 / 2;
 
 //This section is for the 'wide' portfolio layout:
 

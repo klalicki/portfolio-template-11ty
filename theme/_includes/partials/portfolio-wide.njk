@@ -1,19 +1,20 @@
-    <article class="portfolio-wide-tile">
-        <a href="{{project.page.url}}"><h2>{{ project.eleventyNavigation.key }} »</h2></a>
-        <img class="portfolio-wide-img" src="{{project.thumbnail}}" alt="{{project.description_short}}">
-        <div class="portfolio-wide-text-wrapper">
-          <p class="portfolio-wide-text-md">{{project.description_short}}</p>
-          <div class="portfolio-wide-right-panel">
- <p class="portfolio-wide-text-sm">{{project.description_medium}}</p>
-            <a href="{{project.page.url}}" class="portfolio-wide-cta-link">
-              {% if project.cta_text %}
-                {{project.cta_text}} →
-                {% else %}
-                View Project →
-              {% endif %}
-            </a>
-          </div>
-         
-          
-        </div>
-      </article>
+<article class="portfolio-wide-tile">
+  <a href="{{project.page.url}}"
+    ><h2>{{ project.eleventyNavigation.key }} »</h2></a
+  >
+  <img
+    class="portfolio-wide-img"
+    src="{{project.thumbnail}}"
+    alt="{{project.thumbnailAlt if project.thumbnailAlt else project.description_short}}"
+  />
+  <div class="portfolio-wide-text-wrapper">
+    <p class="portfolio-wide-text-md">{{project.description_short}}</p>
+    <div class="portfolio-wide-right-panel">
+      <p class="portfolio-wide-text-sm">{{project.description_medium}}</p>
+      <a href="{{project.page.url}}" class="portfolio-wide-cta-link">
+        {% if project.cta_text %} {{project.cta_text}} → {% else %} View Project
+        → {% endif %}
+      </a>
+    </div>
+  </div>
+</article>

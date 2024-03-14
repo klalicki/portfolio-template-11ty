@@ -15,9 +15,10 @@ const setNewMenuItem = (targetItem) => {
   });
   console.log(item);
 };
+//sidebar-nav-link-section nav-link-section-hidden
 const menuButtonSelector = ".btn-toggle-menu";
-const menuPanelSelector = ".main-nav";
-const classToToggle = "main-nav-hidden";
+const menuPanelSelector = ".sidebar-nav-link-section";
+const classToToggle = "nav-link-section-hidden";
 
 const toggleHandler = () => {
   document.querySelector(menuPanelSelector).classList.toggle(classToToggle);
@@ -31,7 +32,6 @@ const hideMenu = () => {
 
 barba.use(barbaCss);
 barba.init({
-  
   transitions: [
     {
       name: "fade",
@@ -40,17 +40,7 @@ barba.init({
     },
   ],
 });
-const tileTouchHandler = (e) => {
-  e.preventDefault();
-  console.log(e);
-};
 
-const addTileListeners = () => {
-  document.querySelectorAll(".portfolio-tile").forEach((item) => {
-    item.addEventListener("touchstart", tileTouchHandler);
-  });
-};
-addTileListeners();
 
 const hideItems = () => {
   const itemList = document.querySelectorAll(
