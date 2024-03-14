@@ -140,6 +140,19 @@ main ol li p {
   margin-bottom: 0.25em;
 }
 
+*:focus {
+  outline: 3px solid rgb(255, 46, 151);
+  position: relative;
+  z-index: 100;
+}
+
+.site-masthead:focus-within {
+  background-color: white;
+  outline: 3px solid rgb(255, 46, 151);
+  position: relative;
+  z-index: 100;
+}
+
 body {
   margin: 0;
 }
@@ -158,7 +171,7 @@ body {
 .site-masthead {
   z-index: 10;
   position: relative;
-  padding-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 .site-masthead a {
   color: black;
@@ -182,7 +195,7 @@ body {
 }
 
 .active {
-  background-color: white;
+  background-color: rgb(253, 255, 213);
   transition: background-color 0.2s;
 }
 
@@ -212,7 +225,7 @@ body {
   padding: 0.25rem;
   transition: background-color 0.2s;
 }
-.sidebar-nav-link-section a:hover {
+.sidebar-nav-link-section a:hover, .sidebar-nav-link-section a:focus {
   background-color: white;
 }
 
@@ -489,8 +502,7 @@ html {
   }
   .sidebar-nav-link-section {
     margin: 0;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding: 1rem;
   }
   .sidebar-nav-link-section a {
     font-size: 1.4rem;
@@ -499,17 +511,29 @@ html {
   }
   .main-nav {
     transform: none;
-    background-color: #c0c0c0;
+    background-color: transparent;
     opacity: 1;
-    width: 100vw;
+    position: absolute;
+    left: 0;
+    width: 100%;
     transition: all 0.3s;
-    padding-left: 1rem;
+    padding-left: 0;
     padding-bottom: 1rem;
     overflow-y: auto;
     overflow-x: hidden;
     max-height: calc(100vh - 3rem);
+    pointer-events: none;
   }
   .main-nav-hidden {
+    transition: all 0.3s;
+    pointer-events: none;
+  }
+  .sidebar-nav-link-section {
+    transition: all 0.3s;
+    background-color: #c0c0c0;
+    pointer-events: all;
+  }
+  .nav-link-section-hidden {
     transform: translateY(-50%);
     opacity: 0;
     transition: all 0.3s;
@@ -534,7 +558,11 @@ html {
   .btn-toggle-menu {
     display: block;
     border: none;
-    position: relative;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 100;
+    pointer-events: all;
     padding: 0.5rem;
     background-color: transparent;
   }

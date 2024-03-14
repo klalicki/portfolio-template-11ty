@@ -93,13 +93,21 @@ $nav-project-indent: 1em;
 // default is a light gray (#c0c0c0)
 $color-sidebar-background: #c0c0c0;
 
+// This line sets the color of the navigation panel that appears when you click the hamburger on mobile
+// default is matched to the sidebar/top bar color
+$color-mobile-nav-background: $color-sidebar-background;
+
 // This line sets the text color for the sidebar area, and for the top bar on mobile
 // default is black
 $color-sidebar-text: black;
 
 //This line sets the color of the sidebar highlight (shown on the current page);
+// default is pale yellow
+$color-sidebar-highlight: rgb(253, 255, 213);
+
+//This line sets the hover color of the sidebar elements (shown on the current page);
 // default is white
-$color-sidebar-highlight: white;
+$color-sidebar-hover: white;
 
 //this sets the color of the rule on the sidebar (shown between the masthead and the pages)
 //default is black;
@@ -140,6 +148,10 @@ $color-text-primary: black;
 //This line sets the text color for header elements
 // default is black
 $color-text-headers: black;
+
+// This line sets the color of the focus ring
+// default is hot pink
+$color-focus-ring: rgb(255, 46, 151);
 
 // This line sets the color of borders and rules on the page
 // Set this to transparent to get rid of them entirely

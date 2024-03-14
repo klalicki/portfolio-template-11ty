@@ -114,6 +114,17 @@ main {
   }
 }
 
+*:focus {
+  outline: 3px solid $color-focus-ring;
+  position: relative;
+  z-index: 100;
+}
+.site-masthead:focus-within {
+  background-color: $color-sidebar-hover;
+  outline: 3px solid $color-focus-ring;
+  position: relative;
+  z-index: 100;
+}
 body {
   margin: 0;
 }
@@ -142,7 +153,7 @@ body {
     margin-bottom: 0;
     font-size: $font-size-nav-submasthead;
   }
-  padding-bottom: $padding-main;
+  margin-bottom: $padding-main;
   // padding: $padding-card $padding-main;
 }
 .sidebar-rule {
@@ -181,8 +192,9 @@ body {
     display: inline-block;
     padding: 0.25rem;
     transition: background-color 0.2s;
-    &:hover {
-      background-color: $color-sidebar-highlight;
+    &:hover,
+    &:focus {
+      background-color: $color-sidebar-hover;
     }
   }
 }
@@ -442,6 +454,7 @@ html {
   :root {
     font-size: $font-size-mobile;
   }
+
   .main-nav-container {
     position: fixed;
     padding: 0;
@@ -459,8 +472,7 @@ html {
   }
   .sidebar-nav-link-section {
     margin: 0;
-    padding-top: $padding-main;
-    padding-bottom: $padding-main;
+    padding: $padding-main;
   }
   .sidebar-nav-link-section a {
     font-size: $font-size-l;
@@ -470,17 +482,32 @@ html {
 
   .main-nav {
     transform: none;
-    background-color: $color-sidebar-background;
+    background-color: transparent;
     opacity: 1;
-    width: 100vw;
+    position: absolute;
+    left: 0;
+    width: 100%;
     transition: all 0.3s;
-    padding-left: $padding-main;
+    padding-left: 0;
     padding-bottom: $padding-main;
     overflow-y: auto;
     overflow-x: hidden;
     max-height: calc(100vh - $nav-height-mobile);
+    pointer-events: none;
   }
+
   .main-nav-hidden {
+    // transform: translateY(-50%);
+    // opacity: 0;
+    transition: all 0.3s;
+    pointer-events: none;
+  }
+  .sidebar-nav-link-section {
+    transition: all 0.3s;
+    background-color: $color-mobile-nav-background;
+    pointer-events: all;
+  }
+  .nav-link-section-hidden {
     transform: translateY(-50%);
     opacity: 0;
     transition: all 0.3s;
@@ -506,7 +533,11 @@ html {
   .btn-toggle-menu {
     display: block;
     border: none;
-    position: relative;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 100;
+    pointer-events: all;
     padding: $padding-card;
     background-color: transparent;
     svg {
@@ -515,7 +546,7 @@ html {
       fill: $color-sidebar-text;
     }
     &:hover {
-      background-color: $color-sidebar-highlight;
+      background-color: $color-sidebar-hover;
     }
   }
   .site-masthead {
