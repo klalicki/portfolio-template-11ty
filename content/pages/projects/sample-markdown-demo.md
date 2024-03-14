@@ -123,13 +123,21 @@ For this to work, it must be a full URL - it must include http:// or https:// at
 
 In this site generator (11ty.js) Markdown is processed and rendered into HTML. If you place valid HTML code within a Markdown file, it will _probably_ work.
 
-One common use for this would be to place an embed code (ie for Youtube, Vimeo, Figma, Issuu) in a project page. For example:
+One common use for this would be to place an embed code (ie for Youtube, Vimeo, Figma, Issuu) in a project page.
+
+## Embedding a YouTube video
+
+This site generator also now has a plugin installed to automatically convert YouTube links into embed codes. To place a YouTube video, just copy its URL and place it on its own line. ex:
 
 ```
-<iframe width="800" height="400" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+here is some text
+
+https://www.youtube.com/embed/dQw4w9WgXcQ
+
+here is some more text
 ```
 
-<iframe width="800" height="400" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+https://www.youtube.com/embed/dQw4w9WgXcQ
 
 ## Custom Classes and IDs (for custom CSS styling)
 

@@ -611,3 +611,10 @@ pre {
   max-width: min(100%, 1.5 * $main-col-width);
   padding: 0;
 }
+
+// these styles are used for the youtube embed plugin
+
+.eleventy-plugin-youtube-embed {
+  margin-top: $padding-main;
+  margin-bottom: $padding-main;
+}

@@ -4,6 +4,7 @@ const sass = require("sass");
 const fs = require("fs");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const lazyImagesPlugin = require("eleventy-plugin-lazyimages");
+const embedYouTube = require("eleventy-plugin-youtube-embed");
 
 const markdownItOptions = {
   html: true,
@@ -17,6 +18,7 @@ module.exports = function (eleventyConfig) {
   // add eleventy navigation plugin
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
   eleventyConfig.addPlugin(lazyImagesPlugin, { appendInitScript: false });
+  eleventyConfig.addPlugin(embedYouTube);
 
   // Return your Object options:
   eleventyConfig.addPassthroughCopy({ "./theme/assets": "assets" });

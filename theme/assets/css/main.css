@@ -631,3 +631,8 @@ pre {
   max-width: min(100%, 75rem);
   padding: 0;
 }
+
+.eleventy-plugin-youtube-embed {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}

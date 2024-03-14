@@ -30,6 +30,7 @@
   "dependencies": {
     "@barba/core": "^2.9.7",
     "@barba/css": "^2.1.15",
+    "eleventy-plugin-youtube-embed": "^1.8.1",
     "markdown-it-attrs": "^4.1.6",
     "sass": "^1.59.3"
   }
