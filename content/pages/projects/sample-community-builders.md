@@ -1,7 +1,7 @@
 ---
 layout: project.njk
 
-thumbnail: /img/sample/community-builders-tile.jpg
+thumbnail: ../../img/sample/community-builders-tile.jpg
 thumbnailAlt: Thumbnail alt text goes here
 
 description_short: Redesigning a Local Nonprofit's Branding for Increased Engagement
