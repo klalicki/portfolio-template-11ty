@@ -27,7 +27,7 @@ module.exports = function (eleventyConfig) {
   if (process.env.NODE_ENV === "build") {
     console.log("running in production");
     console.log("URL base is " + urlBase);
-    eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
+    eleventyConfig.addPlugin(EleventyHtmlBasePlugin, { baseHref: urlBase });
     // this should be set
     p = { pathPrefix: urlBase };
   }
