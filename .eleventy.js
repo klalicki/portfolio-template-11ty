@@ -43,6 +43,9 @@ module.exports = async function (eleventyConfig) {
 
   eleventyConfig.watchIgnores.add("theme/assets/css/main.css");
   eleventyConfig.addWatchTarget("./content/");
+  eleventyConfig.addWatchTarget("theme/assets/main.scss");
+
+  eleventyConfig.addWatchTarget("src/css/");
   // adds custom collections for projects and pages which are sorted by an 'order' parameter in front matter.
 
   // adds a custom collection that is sorted by the eleventyNavigation order parameter in front matter.

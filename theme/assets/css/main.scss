@@ -79,6 +79,9 @@ p {
   }
 }
 main {
+  * {
+    color: $color-text-primary;
+  }
   hr {
     border-bottom: $border-width solid $color-borders;
     border-top: none;
@@ -91,9 +94,7 @@ main {
   h6 {
     color: $color-text-headers;
   }
-  * {
-    color: $color-text-primary;
-  }
+
   a {
     color: $color-text-link;
   }
