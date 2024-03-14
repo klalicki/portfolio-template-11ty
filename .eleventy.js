@@ -19,7 +19,7 @@ const markdownLib = markdownIt(markdownItOptions).use(markdownItAttrs);
 module.exports = function (eleventyConfig) {
   // add eleventy navigation plugin
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
-  eleventyConfig.addPlugin(lazyImagesPlugin, { appendInitScript: false });
+
   eleventyConfig.addPlugin(embedYouTube);
 
   let p = {};
@@ -32,6 +32,7 @@ module.exports = function (eleventyConfig) {
     p = { pathPrefix: urlBase };
   }
 
+  eleventyConfig.addPlugin(lazyImagesPlugin, { appendInitScript: false });
   // Return your Object options:
   eleventyConfig.addPassthroughCopy({ "./theme/assets": "assets" });
   eleventyConfig.addPassthroughCopy({ "./img": "img" });
