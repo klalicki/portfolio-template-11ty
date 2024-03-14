@@ -442,7 +442,7 @@ html {
     left: 0;
     top: 0;
     right: 0;
-    width: 100vw;
+    width: 100%;
     height: $nav-height-mobile;
     hr {
       display: none;
@@ -500,6 +500,7 @@ html {
   .btn-toggle-menu {
     display: block;
     border: none;
+    position: relative;
     padding: $padding-card;
     background-color: transparent;
     svg {
@@ -517,7 +518,8 @@ html {
     height: $nav-height-mobile;
 
     display: flex;
-    padding: 0 $padding-card;
+    padding: 0;
+    padding-left: $padding-card;
     border-bottom: $weight-top-nav-border solid $color-top-nav-border;
     flex-direction: row;
     justify-content: space-between;
