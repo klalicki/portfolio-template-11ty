@@ -327,9 +327,8 @@ p.portfolio-card-desc-short {
 }
 
 .portfolio-tile-image {
-  aspect-ratio: 3;
-  background-size: cover;
-  background-position: center;
+  aspect-ratio: 1.5;
+  object-fit: cover;
 }
 
 .portfolio-tile-project-desc-short {
@@ -350,7 +349,7 @@ p.portfolio-card-desc-short {
   text-align: center;
   flex: 1 0 auto;
   min-height: calc(100% - 2rem);
-  width: calc(100% - 2rem);
+  width: calc(min(100%, 50rem) - 2rem - 2rem);
   opacity: 0;
   background-color: white;
   transform: scale(90%);
