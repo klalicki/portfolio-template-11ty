@@ -22,6 +22,16 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(lazyImagesPlugin, { appendInitScript: false });
   eleventyConfig.addPlugin(embedYouTube);
 
+  let p = {};
+  console.log("environment is " + process.env.NODE_ENV);
+  if (process.env.NODE_ENV === "build") {
+    console.log("running in production");
+    console.log("URL base is " + urlBase);
+    eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
+    // this should be set
+    p = { pathPrefix: urlBase };
+  }
+
   // Return your Object options:
   eleventyConfig.addPassthroughCopy({ "./theme/assets": "assets" });
   eleventyConfig.addPassthroughCopy({ "./img": "img" });
@@ -137,14 +147,6 @@ module.exports = function (eleventyConfig) {
       console.log(err);
     }
   });
-
-  let p = {};
-  if (process.env.NODE_ENV === "build") {
-    console.log("running in production");
-    eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
-    // this should be set
-    p = { pathPrefix: urlBase };
-  }
 
   return {
     ...p,
