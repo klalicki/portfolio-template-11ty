@@ -32,6 +32,8 @@ In the terminal you will see a line "Server at http://localhost:8080/". You shou
 `/content/css/theme.scss`: This file contains a series of SASS variables that control various parameters of the site's appearance.
 `/content/css/custom.css`: This file is for adding custom styling.
 
-### Front Matter
- 
-This project uses YAML front-matter to control various attributes of a page's appearance:
+# Sample sites
+
+Here are some sites built using this template:
+
+- [Christina Borghoff](https://christinaborghoff.com)
