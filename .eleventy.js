@@ -35,6 +35,8 @@ module.exports = async function (eleventyConfig) {
 
   // Return your Object options:
   eleventyConfig.addPassthroughCopy({ "theme/assets": "assets" });
+  eleventyConfig.addPassthroughCopy({ "src/content/img": "img" });
+
   eleventyConfig.addPassthroughCopy({
     "src/css/custom.css": "assets/css/custom.css",
   });
@@ -134,8 +136,8 @@ module.exports = async function (eleventyConfig) {
   eleventyConfig;
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
     extensions: "html",
-    formats: ["avif", "webp", "jpeg"], // I'm generating `avif` files, the docs include just `webp` and `jpeg`
-    widths: [320, 570, 880, 1024, 1248], // I moved the explicit widths over from my old shortcode
+    formats: ["webp", "jpeg"], // I'm generating `avif` files, the docs include just `webp` and `jpeg`
+    widths: [480, 960, 1440], // I moved the explicit widths over from my old shortcode
     defaultAttributes: {
       loading: "lazy",
       decoding: "async",

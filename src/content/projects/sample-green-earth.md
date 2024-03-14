@@ -19,6 +19,12 @@ For my graphic design senior thesis project, I designed a print publication for 
 
 The publication I designed was a tri-fold brochure that could be distributed at events, mailed out to potential donors, or left in strategic locations to reach a wider audience. The brochure had six panels, with three panels on each side, and included information about the organization's mission, programs, and impact, as well as ways to donate or get involved.
 
+## Large Image
+
+Here's an example of a large image - this is a 13MB jpg of a cat. The site generator will automatically reduce the resolution and size of this for you!
+
+![A large cat](/img/sample/larger-image.jpg)
+
 ## Design Process
 
 To start the design process, I researched similar nonprofit publications and identified the key elements that were necessary to create an effective brochure. I then worked closely with the Green Earth team to understand their brand identity and messaging, and to incorporate their feedback into the design.
