@@ -2,6 +2,7 @@
 layout: project.njk
 
 thumbnail: /img/sample/brews-bites-tile.jpg
+thumbnailAlt: Thumbnail alt text goes here
 description_short: Developing a Brand Identity for a Local Business
 description_medium: branding, print design, etc.
 eleventyNavigation:

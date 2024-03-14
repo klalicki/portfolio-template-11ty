@@ -2,6 +2,7 @@
 layout: project.njk
 
 thumbnail: /img/sample/markdown-demo.jpg
+thumbnailAlt: Thumbnail alt text goes here
 description_short: a sample project page showing different ways to format text in Markdown.
 description_medium: markdown
 eleventyNavigation:
