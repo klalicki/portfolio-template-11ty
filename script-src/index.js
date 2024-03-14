@@ -40,17 +40,7 @@ barba.init({
     },
   ],
 });
-const tileTouchHandler = (e) => {
-  e.preventDefault();
-  console.log(e);
-};
 
-const addTileListeners = () => {
-  document.querySelectorAll(".portfolio-tile").forEach((item) => {
-    item.addEventListener("touchstart", tileTouchHandler);
-  });
-};
-addTileListeners();
 
 const hideItems = () => {
   const itemList = document.querySelectorAll(
