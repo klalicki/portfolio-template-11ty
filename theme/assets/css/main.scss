@@ -248,7 +248,10 @@ pre {
     color: $color-text-primary;
     text-decoration: none;
   }
-
+  img {
+    aspect-ratio: $portfolio-card-aspect-ratio;
+    object-fit: cover;
+  }
   h2 {
     font-size: 1.25rem;
   }
@@ -551,9 +554,12 @@ code {
   line-height: 1.2;
 }
 pre {
-  background-color: yellow;
-  padding-top: $padding-main;
-  padding-bottom: $padding-main;
+  background-color: rgb(0, 0, 87);
+  color: lightblue;
+  padding: $padding-main;
+}
+pre * {
+  color: rgb(219, 246, 255);
 }
 
 // components

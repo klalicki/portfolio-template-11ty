@@ -2,6 +2,7 @@
 layout: project.njk
 
 thumbnail: /img/sample/green-earth-tile.jpg
+thumbnailAlt: Logo of an abstract earth
 description_short: Creating a Print Publication for a Nonprofit Organization
 description_medium: print design
 eleventyNavigation:

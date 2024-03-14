@@ -278,6 +278,10 @@ pre {
   color: black;
   text-decoration: none;
 }
+.portfolio-card-tile img {
+  aspect-ratio: 1.5;
+  object-fit: cover;
+}
 .portfolio-card-tile h2 {
   font-size: 1.25rem;
 }
@@ -323,7 +327,7 @@ p.portfolio-card-desc-short {
 }
 
 .portfolio-tile-image {
-  aspect-ratio: 1.5;
+  aspect-ratio: 3;
   background-size: cover;
   background-position: center;
 }
@@ -580,9 +584,13 @@ code {
 }
 
 pre {
-  background-color: yellow;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  background-color: rgb(0, 0, 87);
+  color: lightblue;
+  padding: 1rem;
+}
+
+pre * {
+  color: rgb(219, 246, 255);
 }
 
 .component-inline-nav {

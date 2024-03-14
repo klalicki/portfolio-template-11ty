@@ -185,7 +185,7 @@ $portfolio-tile-overlay-inset: $padding-main;
 //This line sets the aspect ratio of portfolio tiles
 // 1 / 1 is square
 // default is 3 / 2
-$portfolio-tile-aspect-ratio: 3 / 2;
+$portfolio-tile-aspect-ratio: 6 / 2;
 
 // This line sets the maximum number of tiles allowed in one line
 // default is 3
@@ -201,6 +201,11 @@ $color-portfolio-card-highlight: lightgreen;
 //This is the minimum width of a card in the 'card' portfolio layout.
 // default is 400px
 $min-card-width: 400px;
+
+//This line sets the aspect ratio of portfolio tiles
+// 1 / 1 is square
+// default is 3 / 2
+$portfolio-card-aspect-ratio: 3 / 2;
 
 //This section is for the 'wide' portfolio layout:
 
