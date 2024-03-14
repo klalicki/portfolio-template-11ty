@@ -5,6 +5,8 @@ const fs = require("fs");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const lazyImagesPlugin = require("eleventy-plugin-lazyimages");
 const embedYouTube = require("eleventy-plugin-youtube-embed");
+const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
+const urlBase = process.env.BASE_URL || "";
 
 const markdownItOptions = {
   html: true,
@@ -136,7 +138,16 @@ module.exports = function (eleventyConfig) {
     }
   });
 
+  let p = {};
+  if (process.env.NODE_ENV === "build") {
+    console.log("running in production");
+    eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
+    // this should be set
+    p = { pathPrefix: urlBase };
+  }
+
   return {
+    ...p,
     passthroughFileCopy: true,
     dir: {
       input: "content/pages",
