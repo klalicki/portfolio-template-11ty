@@ -5,15 +5,20 @@
     style="background-image:url('{{project.thumbnail}}');"
   ></div>
   #}
-  <img
-    src="{{project.thumbnail}}"
-    alt="{{project.thumbnailAlt if project.thumbnailAlt else project.description_short}}"
-    class="portfolio-tile-image"
-  />
-  <a href="{{project.page.url}}" class="portfolio-tile-text-overlay">
-    <h2 class="portfolio-tile-project-title" href="{{project.url}}">
-      {{ project.eleventyNavigation.key }}
-    </h2>
+  <a href="{{project.page.url}}" tabindex="-1">
+    <img
+      src="{{project.thumbnail}}"
+      alt="{{project.thumbnailAlt if project.thumbnailAlt else project.description_short}}"
+      class="portfolio-tile-image"
+  /></a>
+
+  <div class="portfolio-tile-text-overlay">
+    <a href="{{project.page.url}}" class="portfolio-tile-click-area">
+      <h2 class="portfolio-tile-project-title" href="{{project.url}}">
+        {{ project.eleventyNavigation.key }}
+      </h2></a
+    >
+
     {% if project.description_short %}
     <p class="portfolio-tile-project-desc-short">
       {{project.description_short}}
@@ -23,5 +28,5 @@
       {{project.description_medium}}
     </p>
     {% endif %}
-  </a>
+  </div>
 </article>

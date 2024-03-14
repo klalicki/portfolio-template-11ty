@@ -350,8 +350,19 @@ p.portfolio-card-desc-short {
   * {
     color: $color-tile-overlay-text;
   }
-
+}
+.portfolio-tile-click-area {
   text-decoration: none;
+  margin-bottom: 0.5em;
+}
+.portfolio-tile-click-area::after {
+  border: 1px solid red;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .portfolio-tile:focus-within .portfolio-tile-text-overlay,

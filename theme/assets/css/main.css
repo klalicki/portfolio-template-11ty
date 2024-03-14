@@ -367,7 +367,6 @@ p.portfolio-card-desc-short {
   background-color: white;
   transform: scale(90%);
   transition: all 0.5s;
-  text-decoration: none;
 }
 .portfolio-tile-text-overlay :first-child {
   margin-top: 0;
@@ -377,6 +376,21 @@ p.portfolio-card-desc-short {
 }
 .portfolio-tile-text-overlay * {
   color: black;
+}
+
+.portfolio-tile-click-area {
+  text-decoration: none;
+  margin-bottom: 0.5em;
+}
+
+.portfolio-tile-click-area::after {
+  border: 1px solid red;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .portfolio-tile:focus-within .portfolio-tile-text-overlay,
